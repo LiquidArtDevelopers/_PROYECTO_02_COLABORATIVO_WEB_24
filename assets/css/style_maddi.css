@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos TAG */
+nav, header, main, footer {
+    width: 100%;
+    max-width: 1920px;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Variables */
+:root {
+    --font1: ;
+    --font2: ;
+    --color1: ;
+    --color2: ;
+    --color3: ;
+}
+
+
+/* Colores */
+.color1 {color: var(--color1);}
+.color2 {color: var(--color2);}
+.color3 {color: var(--color3);}
+
+/* Textos */
+
+
+/* Componentes */
+
+
+/* Anchuras */
+
+
+/* Margenes */
+
+
+/* Flex */
+.flrowBC {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flrowCC {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flrowSS {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flcolCC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flcolCS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flcolSS {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
