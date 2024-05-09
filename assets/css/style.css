@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+header{ /* MOBILE */
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+
+    background-image: url('../img/proyecto-web-colaborativo-area_340.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    opacity: .5;;
+}
+@media only screen and (min-width:800px){ /* TABLET */
+    header{
+        background-image: url('../img/proyecto-web-colaborativo-area_800.jpg');
+    }
+}
+@media only screen and(min-width:1400px){ /* DESKTOP */
+    header{
+        background-image: url('../img/proyecto-web-colaborativo-area_1400.jpg');
+    }
+}
+@media only screen and(min-width:1800px){ /* DESKTOP 2K*/
+    header{
+        background-image: url('../img/proyecto-web-colaborativo-area_1800.jpg');
+    }
+}
