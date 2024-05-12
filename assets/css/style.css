@@ -14,9 +14,9 @@
 ::-webkit-scrollbar {
     display: none;
 }
-@media only screen and(min-width:1400px){ /* DESKTOP */
+@media only screen and (min-width:1400px){ /* DESKTOP */
     ::-webkit-scrollbar {
-        display: inherit;
+        display: initial;
     }
 }
 
