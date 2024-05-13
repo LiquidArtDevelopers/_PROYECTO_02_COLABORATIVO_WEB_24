@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* estilos que afectan al scrollbar (pseudo elemento) */
+::-webkit-scrollbar {display: none;}
+
+@media only screen and (min-width:1350px){ /* DESKTOP */
+    ::-webkit-scrollbar {display:initial!important;}
+}
+
+
 /* Estilos TAG */
 nav, header, main, footer {
     width: 100%;
@@ -20,14 +28,23 @@ body {
     align-items: center;
 }
 
+section {
+    width: 100%;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
 /* Variables */
 :root {
-    --font1: ;
+    --font1: "Montserrat", sans-serif;
     --font2: ;
-    --color1: ;
-    --color2: ;
-    --color3: ;
+    --color1: white;
+    --color2: black;
+    --color3: rgb(84, 121, 23);
 }
 
 
@@ -36,13 +53,65 @@ body {
 .color2 {color: var(--color2);}
 .color3 {color: var(--color3);}
 
-/* Textos */
 
+/* Textos */
+p {
+    font-family: var(--font1);
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color2);
+}
+
+h1 {
+    font-family: var(--font1);
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: normal;
+}
+@media only screen and (min-width:600px){ /* TABLET */
+    h1 {font-size: 6rem;}
+}
+
+h2 {
+    font-family: var(--font1);
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-family: var(--font1);
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;  
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.txtC {text-align: center;}
+
+a, a:visited { /* Enlaces */
+    text-decoration: none;
+    font-family: var(--font1);
+    color: inherit;
+}
 
 /* Componentes */
 
 
 /* Anchuras */
+.w100 {width: 100%;}
+.w50 {width: 50%;}
 
 
 /* Margenes */
@@ -90,3 +159,65 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+/* HERO */
+nav {
+    height: 6vh;
+    background-color: var(--color2);
+}
+
+header {
+    height: 94vh;
+    background-image: url(https://dummyimage.com/430x900);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 10vh;
+}
+@media only screen and (min-width:600px){ /* TABLET */
+    header {background-image: url(https://dummyimage.com/1024x1350);}
+}
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    header {background-image: url(https://dummyimage.com/1920x1000);}
+}
+
+
+/* Articulo tipo 1 */
+.articulo1 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cajaimg1  {
+    width: 100%;
+}
+
+.cajaimg1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.cajatxt1 {
+    width: 90%;
+}
+
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    .articulo1 {
+        width: 80%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .cajaimg1  {width: 48%;}
+
+    .cajatxt1 {width: 48%;}
+}
+
