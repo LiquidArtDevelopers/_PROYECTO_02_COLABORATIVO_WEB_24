@@ -1,0 +1,53 @@
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    --fuente01: "Josefin Sans", sans-serif;
+    --fuente02: "Barlow Condensed", sans-serif;
+    --color1: white;
+    --color2: black;
+    --color3: rgb(97, 47, 97);
+}
+
+/* FUENTES*/
+@font-face {
+  font-family: 'barlow';
+  src: url(../fonts/Barlow_Condensed/Barlow_Condensed/BarlowCondensed-Black.ttf)
+}
+
+/* ENCABEZADOS */
+
+h1{
+  font-family: var(--fuente01);
+  text-align: center;
+  font-size: 3rem;
+
+}
+h2{
+  font-size: 2rem;
+}
+
+
+/* TAGS */
+nav, header, main {
+  width: 100%;
+  max-width: 1920px;
+}
+body {
+  width: 100%;
+  max-width: 100%;
+}  
+section {
+  width: 100%; 
+}  
+
+
+/* NAV */
+
+/* HEADER */
