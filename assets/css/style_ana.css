@@ -20,11 +20,22 @@ src: url(../fonts/IndieFlower-Regular.ttf);
 body{
 width: 100%;
 }
-nav,main,header,footer,section{
+                                          
+nav,main,header,footer{
 width: 100%;
 max-width: 2500px;
 
 }
+section{
+    width: 100%;
+    padding-bottom: 70px;
+}
+article{
+    width: 90%;
+    margin-top: 20px;
+    gap: 2rem;
+}
+
 nav{
 display: flex;
 flex-direction: row;
@@ -32,15 +43,13 @@ justify-content: space-between;
 padding: 1.5rem 1.5rem;
 background-color: #b37bad;
 height: 140px;
-
 }
 
 
 @media only screen and (max-width: 800px) {
 
 nav,main,header,footer,section,article {
-    width: 100vw;
-    
+    width: 100vw; 
 }
 
 nav {
@@ -51,14 +60,15 @@ width: 100vw;
 
 
 header{
-width: 100vw;
-height:100vh;
-background-image: url(../img/proyecto-web-colaborativo-area_1400.jpg);
+width: 1920px;
+height:1080px;
+background-image: url("https://dummyimage.com/1920x1080");
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
 justify-content: center;
 align-items: center;
+margin-bottom:60px ;
 }
 
 header div{
@@ -86,6 +96,23 @@ h1{
     font-weight: 700;
     font-size: 100px;
 }
+h2{ font-family: var(--fuente02);
+    font-weight: 700;
+    font-size:3.5rem;;
+}
+
+h3{ font-family: var(--fuente02);
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+    
+p{ font-family: var(--fuente01);
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+    
 
 /*Tamaños y flex*/
 
@@ -97,8 +124,8 @@ h1{
 .w90{
     width:90% ;
 }
-.w80{
-    width: 80%;
+.w50{
+    width: 50%;
 }
 .w40{
     width: 40%;
@@ -199,7 +226,110 @@ h1{
 }
 }
 
+/* Botones */
+.boton{
+    font-weight: 600;
+    color: var(--color01);
+    width: 100px;
+    padding: 5px;
+    background-color: var(--color02);
+    margin-top:1.5rem;
+    transition-duration:  0.5s;
+    text-decoration: none;
+    border-radius: 5%;
+    text-align: center;  
+ }
 
+ 
+ 
+ :hover.boton{
+     background-color: var(--color01);
+     color: var(--color02); 
+ }
+ 
+ @media only screen and (max-width: 800px) {
+ 
+ .boton{
+     font-weight: 400;
+     width: 100px;
+     padding: 5px;
+     margin-top: 1.5rem;
+ }
+      
+ }    
+ 
+/* Mis estilos */
+.seccion1{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center;   
+    
+}
+.seccion1 div{
+    text-align: left;
+    row-gap: 1rem;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+.segunda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-wrap: wrap;
+    align-items: center;
+    column-gap:1.4rem;
+    width: 80%;
+
+}
+.tercera{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.tercera div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ 
+    width: 100%;
+
+}
+
+.cuarta{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center; 
+
+ }
+.cuarta div{
+    text-align: left;
+    row-gap: 1rem;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: 40%; 
+}
+
+.quinta{
+display: flex;
+flex-direction: row;
+justify-content: center;
+text-wrap: wrap;
+align-items: center;
+column-gap:1rem;
+width: 100%;
+
+}
 
 /* Footer */
 
@@ -235,4 +365,10 @@ footer ul{
 display: none;
 }
 
+}
+.fondo{
+    background-color: blueviolet;
+}
+.fondo2{
+    background-color: rgb(92, 29, 10);
 }
