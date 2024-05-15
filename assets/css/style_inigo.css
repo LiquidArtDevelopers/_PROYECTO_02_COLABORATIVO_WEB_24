@@ -46,14 +46,15 @@ nav,header,main,footer,body {
     background-position: center;
  }
 
+
  section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    gap: 4rem;
-    padding: 7rem;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
  }
 
  a {
@@ -86,15 +87,24 @@ nav,header,main,footer,body {
     color: var(--color02);
 }
 
+p {
+  font-family: var(--fuente1);
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--color02);
+}
 
-  /*displays*/
+.centrado {
+   text-align: center;
+}
+
+/*displays*/
 
 .frowC {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    column-gap: 2rem;
-   
+    gap: 2rem;
 }
 
 .fcolSC {
@@ -102,40 +112,116 @@ nav,header,main,footer,body {
     flex-direction: column;
     align-items:flex-start;
     justify-content: center;
-    row-gap: 1rem;
+    gap: 1.5rem; 
 }
+
+@media only screen and (max-width:1000px) {
+  .fcolSC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+    
+    
+
 
 
 .fwrap {
-    flex-wrap: wrap;
-  
+    flex-wrap: wrap;  
 }
 
-  /*boton*/
+/*boton*/
   
-  .boton {
+.boton {
     padding: 1rem;
     background-color: var(--color03);
     font-family: var(--fuente1);
     color: var(--color02);
     }
 
-  /*anchos*/
+@media only screen and (max-width:1530px) {
+.boton {
+ margin-top: 1rem;
+}
+}
 
-  .W100{
-    width: 100%;
-    }
-  .w80 {
-    width: 80%;
-    }
+/*anchos*/
 
-  .doscol {
-    width: 45%;
+.w100{
+     width: 100%;
     }
-
 
  
+.w80{
+      width: 80%;
+    }
 
+
+@media only screen and (max-width:1000px) {
+
+  .w80{
+    width: 100%;
+  }
+}
+
+
+
+
+.w60 {
+      width: 60%;
+      padding-top: 1.5rem;
+      }
+ 
+/*columnas*/
+
+
+/* 2 columnas*/
+
+.doscolizq {
+      width: 48%;
+      max-width: 1000px;
+      min-width: 600px;
+    }
+
+@media only screen and (max-width:1530px){
+.doscolizq {
+    width: 108%;
+    max-width: 1530px;
+    min-width: 400px;
+    background-color: aquamarine;
+  }
+}
+ 
+.doscolder {
+      width: 48%;
+      padding-top: 1.5rem;
+    }
+
+@media only screen and (max-width:1530px) {
+  .doscolder {
+    width:80%;   
+  }
+}
+ 
+/* 3 columnas*/
+.trescol {
+      width: 30%;
+      max-width: 600px;
+      min-width: 300px;
+    }
+
+/*paddings y margenes*/
+
+.pt70 {
+padding-top: 70px;
+}
+
+.pt50 {
+  padding-top: 50px;
+}
 
 
 
