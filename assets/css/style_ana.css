@@ -32,7 +32,7 @@ section{
 }
 article{
     width: 90%;
-    margin-top: 20px;
+    margin-top: 40px;
     
 }
 
@@ -40,9 +40,9 @@ nav{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-padding: 1.5rem 1.5rem;
+padding:0.5rem 2rem;
 background-color: #b37bad;
-height: 140px;
+height: 180px;
 }
 
 
@@ -110,8 +110,6 @@ h4 {
     font-family: var(--fuente02);
     font-weight: 700;
     font-size: 2rem;
-    margin: 20px;
-
 }   
 
 p{ font-family: var(--fuente01);
@@ -235,6 +233,7 @@ p{ font-family: var(--fuente01);
 
 /* Botones */
 .boton{
+    font-size: 1.5rem;;
     font-weight: 600;
     color: var(--color01);
     width: 200px;
@@ -266,20 +265,22 @@ p{ font-family: var(--fuente01);
  }    
  
 /* Mis estilos */
-.seccion1{
+.primera{
     display: flex;
     justify-content: center;
     flex-direction:row;
     align-items: center;   
     
 }
-.seccion1 div{
+.primera div{
     text-align: left;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
     align-items: start;
     display: flex;
     flex-direction: column;
     width: 40%;
+    margin-left: 40px;
+   
 
 }
 .segunda{
@@ -288,10 +289,12 @@ p{ font-family: var(--fuente01);
     justify-content: center;
     text-wrap: wrap;
     align-items: center;
-    column-gap:1.4rem;
+    column-gap:1rem;
     width: 80%;
-
+    margin-top: 40px;
 }
+
+
 .tercera{
     width: 100%;
     text-align: center;
@@ -300,6 +303,7 @@ p{ font-family: var(--fuente01);
     align-items: center;
     justify-content: center;
 
+
 }
 .tercera div{
     display: flex;
@@ -307,6 +311,7 @@ p{ font-family: var(--fuente01);
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-top: 40px;
 
 }
 
@@ -315,6 +320,7 @@ p{ font-family: var(--fuente01);
     justify-content: center;
     flex-direction:row;
     align-items: center; 
+  
 
  }
 .cuarta div{
@@ -324,6 +330,9 @@ p{ font-family: var(--fuente01);
     display: flex;
     flex-direction: column;
     width: 40%; 
+    margin-right: 30px;
+    
+   
 }
 
 .caja4{
@@ -349,8 +358,9 @@ p{ font-family: var(--fuente01);
     align-items: center;
     column-gap:1rem;
     width: 100%;
-    
+    margin-top: 40px;;
     }
+
  @media only screen and (max-width: 800px) {
 .cajaperson{
     align-items: center;
@@ -370,14 +380,21 @@ p{ font-family: var(--fuente01);
 
 footer{
 background-color: var(--color01);
-height: 300px;
+height: 400px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+align-items: center;
 padding: 4rem 8rem;
+margin: top 60px;
 
 }
-
+footer li {
+    list-style: none;
+}
+footer li a{
+ color: var(--color02);
+}
 
 
 @media only screen and (max-width: 800px) {
