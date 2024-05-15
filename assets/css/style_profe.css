@@ -216,7 +216,7 @@ header h1{
     width: 100%;
     overflow: hidden;
 }
-@media only screen and (min-width:800px){
+@media only screen and (max-width:800px){
     .art02 .matrix >div{
         width: 30%;
         max-width: 600px;
