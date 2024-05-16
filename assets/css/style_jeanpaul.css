@@ -15,11 +15,17 @@
 
   /* declaracion fuentes */
   @font-face {
-    font-family: "Noto Sans", sans-serif;
-    src: url(../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf);
-    src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+    font-family: "fuente1";
+    src: url('../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf');
+    
   }
-  /* VARIABLES */
+  @font-face {
+    font-family: "fuente2";
+    src: url(''../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
+  }
+
+ /* variables */
+
   :root{
     --colormio00:white;
     --colormio01: rgb(44, 44, 44);
