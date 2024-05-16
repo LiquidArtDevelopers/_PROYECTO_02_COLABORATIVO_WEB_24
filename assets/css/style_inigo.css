@@ -18,12 +18,25 @@ nav,header,main,footer,body {
 
     --fuente1: Verdana;
     --fuente2: Arial;
+    --fuente3: 'Indie Flower';
 }
 
 .fondoazul {
     background-color: var(--color03);
 }
 
+.oculto {
+  display: none;
+
+/* Fuentes descargadas */
+
+@font-face {
+  font-family: 'Indie Flower';
+  src: url(../fonts/IndieFlower-Regular.ttf);
+}
+
+}
+ 
 
 /* etiquetas */
 
@@ -53,12 +66,13 @@ nav,header,main,footer,body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
  }
 
  a {
     text-decoration: none;
+    text-align: center;
  }
 
  /* estilos de texto */
@@ -72,7 +86,7 @@ nav,header,main,footer,body {
  }
 
  h2 {
-    font-family: var(--fuente1);
+    font-family: var(--fuente3);
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
@@ -87,10 +101,20 @@ nav,header,main,footer,body {
     color: var(--color02);
 }
 
+h4 {
+  font-family: var(--fuente1);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color02);
+  margin-bottom: 10px;
+}
+
+
 p {
   font-family: var(--fuente1);
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 17px;
+  line-height: 25px;
   color: var(--color02);
 }
 
@@ -100,128 +124,188 @@ p {
 
 /*displays*/
 
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .frowC {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+}
 }
 
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .fcolSC {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     justify-content: center;
-    gap: 1.5rem; 
+    row-gap: 0px;
+}
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (min-width:1024px) { /* DESKTOP */
   .fcolSC {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-  }
 }
-    
-    
-
-
+}
 
 .fwrap {
-    flex-wrap: wrap;  
+    flex-wrap:wrap;  
+}
+
+.flb {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
 }
 
 /*boton*/
-  
+
+
 .boton {
     padding: 1rem;
     background-color: var(--color03);
     font-family: var(--fuente1);
     color: var(--color02);
-    }
+  }
 
-@media only screen and (max-width:1530px) {
-.boton {
- margin-top: 1rem;
-}
-}
-
+  .boton:hover {
+    background-color: var(--color01);
+    transition: 0.5s;
+    color: var(--color02);
+    border:solid 2px var(--color02)
+  }
+  
 /*anchos*/
 
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .w100{
      width: 100%;
     }
+  }
 
  
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .w80{
       width: 80%;
     }
-
-
-@media only screen and (max-width:1000px) {
-
-  .w80{
-    width: 100%;
   }
-}
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
+    .w75 {
+            width: 75%;
+          }
+        }
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
+.w70 {
+        width: 70%;
+      }
+    }
 
 
-
-
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .w60 {
       width: 60%;
       padding-top: 1.5rem;
       }
+    }
+
+.w10 {
+  width: 10%;
+}
+
  
 /*columnas*/
 
 
 /* 2 columnas*/
 
-.doscolizq {
-      width: 48%;
-      max-width: 1000px;
-      min-width: 600px;
-    }
 
-@media only screen and (max-width:1530px){
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolizq {
-    width: 108%;
-    max-width: 1530px;
-    min-width: 400px;
-    background-color: aquamarine;
+      width: 45%;
+      max-width: 700px;
+      min-width: 200px;
+    }
   }
-}
- 
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolder {
-      width: 48%;
+      width: 43%;
       padding-top: 1.5rem;
     }
-
-@media only screen and (max-width:1530px) {
-  .doscolder {
-    width:80%;   
   }
-}
  
 /* 3 columnas*/
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .trescol {
       width: 30%;
       max-width: 600px;
       min-width: 300px;
     }
+  }
 
+/* 4 columnas*/
+@media only screen and (min-width:1024px) { /* DESKTOP */
+  .cuatrocol {
+        width: 23%;
+        max-width: 600px;
+        min-width: 200px;
+      }
+    }
+
+
+
+
+    
 /*paddings y margenes*/
 
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .pt70 {
 padding-top: 70px;
 }
+}
 
+@media only screen and (min-width:1024px) { /* DESKTOP */
 .pt50 {
   padding-top: 50px;
 }
+}
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
+  .pb50 {
+    padding-bottom: 50px;
+  }
+  }
+
+.pb30 {
+  padding-bottom: 30px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pt20 {
+  padding-top: 10px;
+}
 
 
+/*imágens y fotos*/
+.redondeado {
+  border-radius: 100px;
+}
 
