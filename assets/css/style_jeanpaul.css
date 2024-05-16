@@ -13,15 +13,17 @@
       list-style: none;
   }
 
-  /* declaracion fuentes */
+  /* DECLARACION FUENTES */
+
   @font-face {
     font-family: "fuente1";
     src: url('../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf');
     
   }
+ 
   @font-face {
     font-family: "fuente2";
-    src: url(''../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
+    src: url('../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
   }
 
  /* variables */
