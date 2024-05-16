@@ -208,6 +208,18 @@ header {
     width: 100%;
 }
 
+@media only screen and (min-width:600px){ /* TABLET */
+    .articulo1 .cajatxt {
+        width: 90%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 20px;
+    }
+}
+
 @media only screen and (min-width:1024px){ /* DESKTOP */
     .articulo1 {
         width: 80%;
