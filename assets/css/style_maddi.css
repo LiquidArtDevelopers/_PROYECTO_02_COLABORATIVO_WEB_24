@@ -12,6 +12,11 @@
     ::-webkit-scrollbar {display:initial!important;}
 }
 
+/* Fuentes descargadas */
+@font-face {
+    font-family: 'Indie Flower';
+    src: url(../fonts/IndieFlower-Regular.ttf);
+}
 
 /* Estilos TAG */
 nav, header, main, footer {
@@ -41,7 +46,7 @@ section {
 /* Variables */
 :root {
     --font1: "Montserrat", sans-serif;
-    --font2: ;
+    --font2: 'Indie Flower';
     --color1: white;
     --color2: black;
     --color3: rgb(84, 121, 23);
@@ -60,25 +65,24 @@ p {
     font-size: 1rem;
     font-weight: 300;
     font-style: normal;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+    line-height: 1.5;
     color: var(--color2);
 }
 
 h1 {
-    font-family: var(--font1);
-    font-size: 3rem;
-    font-weight: 800;
+    font-family: var(--font2);
+    font-size: 4rem;
+    font-weight: 600;
     font-style: normal;
 }
 @media only screen and (min-width:600px){ /* TABLET */
-    h1 {font-size: 6rem;}
+    h1 {font-size: 8rem;}
 }
 
 h2 {
-    font-family: var(--font1);
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-family: var(--font2);
+    font-size: 3rem;
+    font-weight: 600;
     font-style: normal;
     margin-bottom: 2rem;
 }
@@ -87,8 +91,7 @@ h3 {
     font-family: var(--font1);
     font-size: 2rem;
     font-weight: 600;
-    font-style: normal;  
-    margin-bottom: 1rem;
+    font-style: normal;
 }
 
 h4 {
@@ -103,11 +106,38 @@ h4 {
 a, a:visited { /* Enlaces */
     text-decoration: none;
     font-family: var(--font1);
-    color: inherit;
+}
+
+.cita {
+    font-family: var(--font1);
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--color2);
 }
 
 /* Componentes */
+.boton {
+    padding: 10px 30px;
+    background-color: var(--color3);
+    border: solid 2px var(--color3);
+    border-radius: 5px;
 
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5rem;
+    color: var(--color1);
+
+    transition: ease-in-out 0.4s;
+}
+.boton:hover {
+    background-color: var(--color1);
+    color: var(--color3);
+}
+
+.block {display: block;}
 
 /* Anchuras */
 .w100 {width: 100%;}
@@ -115,50 +145,12 @@ a, a:visited { /* Enlaces */
 
 
 /* Margenes */
+.mb50 {margin-bottom: 50px;}
+.mb20 {margin-bottom: 20px;}
+.mb1rem {margin-bottom: 1rem;}
 
+.mt50 {margin-top: 50px;}
 
-/* Flex */
-.flrowBC {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flrowCC {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.flrowSS {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.flcolCC {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.flcolCS {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.flcolSS {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
 
 /* HERO */
 nav {
@@ -190,19 +182,26 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    row-gap: 40px;
 }
 
-.cajaimg1  {
+.articulo1 .cajaimg  {
     width: 100%;
 }
 
-.cajaimg1 img {
+.articulo1 .cajaimg img {
     width: 100%;
     height: 100%;
 }
 
-.cajatxt1 {
+.articulo1 .cajatxt {
     width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
 }
 
 @media only screen and (min-width:1024px){ /* DESKTOP */
@@ -216,8 +215,360 @@ header {
         flex-wrap: wrap;
     }
 
-    .cajaimg1  {width: 48%;}
+    .articulo1 .cajaimg  {width: 48%;}
 
-    .cajatxt1 {width: 48%;}
+    .articulo1 .cajatxt {width: 48%;}
 }
 
+/* Articulo tipo 2 */
+.articulo2 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.articulo2 .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo2 .cuadricula {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.articulo2 .cuadricula >div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.articulo2 .cuadricula >div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+@media only screen and (min-width:600px) { /* TABLET */
+    .articulo2 .cuadricula {
+        width: 90%;
+    }
+    .articulo2 .cuadricula >div {
+        width: 30%;
+        overflow: hidden;
+        min-width: 300px;
+    }
+}
+
+
+/* Articulo tipo 3 */
+.articulo3 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.articulo3 .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo3 .cuadricula {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.articulo3 .cuadricula >div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.articulo3 .cuadricula >div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+@media only screen and (min-width:600px) { /* TABLET */
+    .articulo3 .cuadricula {
+        width: 90%;
+    }
+    .articulo3 .cuadricula >div {
+        width: 24%;
+        overflow: hidden;
+        min-width: 300px;
+    }
+}
+
+/* Articulo tipo 4 */
+.articulo4 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.articulo4 >:nth-child(1) {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 40px;
+}
+
+.articulo4 .cajaimg  {
+    width: 100%;
+}
+
+.articulo4 .cajaimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.articulo4 .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo4 >:nth-child(2) {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 40px;
+}
+
+.articulo4 .cuadricula {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.articulo4 .cuadricula img {
+    width: 10%;
+    height: 10%;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+}
+
+.articulo4 .cuadricula p {width: 100%;}
+
+@media only screen and (min-width:600px){ /* TABLET */
+    .articulo4 .cuadricula {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .articulo4 .cuadricula p {width: 80%;}
+}
+
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    .articulo4 {width: 80%;}
+    
+    .articulo4 >:nth-child(1) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        row-gap: 20px;
+    }
+
+    .articulo4 .cajaimg  {
+        width: 48%;
+    }
+    
+    .articulo4 .cajatxt {
+        width: 48%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 20px;
+    }
+
+    .articulo4 >:nth-child(2) {
+        width: 100%;
+    }
+
+    .articulo4 .cuadricula p {width: 70%;}
+}
+
+/* Articulo tipo 5 */
+
+.articulo5 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.articulo5 >:nth-child(1) {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo5 .cuadricula {
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.articulo5 .cuadricula >div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+@media only screen and (min-width:600px){ /* TABLET */
+    .articulo5 >:nth-child(1) {
+        width: 80%;
+    }
+
+    .articulo5 .cuadricula >div {
+        width: 20%;
+        min-width: 300px;
+    }
+}
+
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    .articulo5 >:nth-child(1) {
+        width: 50%;
+    }
+}
+
+
+/* Articulo tipo 6 */
+
+.articulo6 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.articulo6 >:nth-child(2), .articulo6 >:nth-child(3), .articulo6 >:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo6 .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo6 .cajaimg  {
+    width: 100%;
+}
+
+.articulo6 .cajaimg img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    .articulo6 >:nth-child(2), .articulo6 >:nth-child(5) {
+        width: 80%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .articulo6 >:nth-child(3) {
+        width: 80%;
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .articulo6 .cajatxt {
+        width: 48%;
+    }
+    
+    .articulo6 .cajaimg  {
+        width: 48%;
+    }
+}
