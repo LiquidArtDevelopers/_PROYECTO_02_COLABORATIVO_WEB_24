@@ -6,5 +6,41 @@
     box-sizing: border-box;
 }
 
+/* DAR TEXTOS DE ALTA */
+
+@font-face {
+    font-family: 'NOTO SANS';
+    src: url('../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'NOTO SANS 2';
+    src: url('../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
+}
+
 /* VARIABLES */
 
+:root {
+    --colormio00: white;
+    --colormio01:rgb(44, 44, 44);
+    --colormio02:rgb(216, 216, 255);
+
+    --fuentemia00:"Noto Sans", sans-serif;
+
+}
+
+/* SECCIONES DE LA WEB */
+
+nav{
+   height: 50px;
+   background-color: var(--colormio02)
+}
+
+header {
+    height: 100vh;
+    background-image: url('https://dummyimage.com/1400x600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}

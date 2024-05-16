@@ -36,7 +36,7 @@ article{
     margin-top: 40px;  
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
 nav,main,header,footer{
     width: 100VW;
@@ -45,11 +45,11 @@ nav,main,header,footer{
 }
 section{
     width: 100%;
-    padding-bottom: 20px;
+    margin-bottom: 0rem;
 }
 article{
     width: 90%;
-    margin-top: 20px;  
+    margin-top: 0.5rem;  
 }
 
 
@@ -65,15 +65,14 @@ height: 180px;
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
 nav,main,header,footer,section,article {
-    width: 100vw; 
+    width: 100%; 
 }
 
 nav {
 padding: 1.5rem 1.5rem;
-width: 100vw;
 height: 140px;
 
 }
@@ -93,23 +92,15 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom:60px ;
+color: var(--color01);
 }
 
-header div{
-display: block;
-flex-direction: column;
-text-align: center;
-row-gap: 1rem;
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
 header{
   width: 100vw; 
   height: 400px;
+  background-image: url("https://dummyimage.com/500x400");
 }
 header div{
 row-gap: 0rem;
@@ -138,26 +129,25 @@ h4 {
     font-size: 2rem;
 }   
 
-p{ 
+p,a{ 
     font-family: var(--fuente01);
     font-weight: 100;
     font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
 h1,h2{
     font-size: 2rem;
     line-height: 40px;
-    letter-spacing: 0.5px;
-    margin-bottom: 1.5rem;
+   
 }
-    
+
 h3,h4{
  font-size: 1.5rem;
 }
 
-p { 
+p, a{ 
  font-size: 1rem;
 }
 
@@ -187,9 +177,9 @@ p {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 .w100,.w90,.w80,.w60,.w40{
-    width: 90%;
+    width: 100%;
 }
 }
 
@@ -254,7 +244,7 @@ p {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
     
 .flexrowc,.flexsend,.flexstart,.flexsend{
     display: flex;
@@ -262,7 +252,7 @@ p {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    row-gap: 1.5rem;
+    row-gap: 1rem;
     
     }
 .textoizq{
@@ -308,7 +298,7 @@ p {
      color: var(--color02); 
  }
  
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 500px) {
  
  .boton{
      font-weight: 400;
@@ -323,23 +313,25 @@ p {
 /* Mis estilos */
 .primera{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction:row;
-    align-items: center;   
-    
+    align-items: center; 
+    width: 90%;  
+    flex-wrap: wrap;  
 }
 .primera div{
     text-align: left;
-    row-gap: 0.5rem;
-    align-items: start;
+    align-items: left;
+    justify-content: left;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin-left: 40px; 
+    width: 50%;
+    margin-left: 50px; 
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
+
 .primera{
     gap: 0rem;
     width:100%;
@@ -347,14 +339,19 @@ p {
     align-items: center;
     display: flex;
     justify-content: center;
-    
 }  
+
 .primera img{
     width: 100vw; 
     height: 400px;
 }
 .primera div{
-    width: 100%;
+    text-align: center;
+    flex-direction:column; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 }
 
@@ -362,21 +359,30 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-   align-items: wrap;
     align-items: center;
+    text-align: center;
     column-gap:1rem;
     width: 80%;
     margin-top: 40px;
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 
-.segunda,.cuarta,.quinta{
+.segunda{
     gap: 0rem;
     width: 100%;
-    flex-direction:column;  
+    flex-direction:column; 
+    justify-content: center;
+     
+   
 }  
+.segunda img,.tercera img {
+    width: 100vw;
+    height:400px ;
+    object-fit: cover;
+    object-position: center;
+}
 }
 
 
@@ -387,25 +393,26 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
+
 .tercera div{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 40px;
+    text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
 .tercera div{
-        gap: 0rem;
         width: 100%;
         flex-direction:column;  
         justify-content: center;
         align-items: center;
+        text-align: center;
+        row-gap: 2rem;
 }  
 }
 
@@ -413,7 +420,8 @@ p {
     display: flex;
     justify-content: center;
     flex-direction:row;
-    align-items: center; 
+    align-items: center;
+    width: 100%; 
 }
 
 .cuarta div{
@@ -422,8 +430,8 @@ p {
     align-items: start;
     display: flex;
     flex-direction: column;
-    width: 40%; 
-    margin-right: 30px;
+    width: 50%; 
+    margin-right: 50px;
 }
 
 .caja4{
@@ -441,6 +449,52 @@ p {
     border-radius: 80px;
 }
 
+
+@media only screen and (max-width: 500px) {
+.cuarta{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;  
+}
+.cuarta div{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+.cuarta img{
+    width: 100vw;
+    height:400px ;
+    object-fit: cover;
+    object-position: center;
+} 
+}
+
+
+
+ @media only screen and (max-width: 500px) {
+
+.caja4{
+    align-items: center;
+    margin-top: 0.5rem;
+    min-width: 300px;
+    max-width: 650px;
+   width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;  
+}
+.caja4 img{
+    width: 100px;  
+    height: 100px;
+}
+}
+
+
 .quinta{
     display: flex;
     flex-direction: row;
@@ -452,27 +506,57 @@ p {
     margin-top: 40px;;
 }
 
- @media only screen and (max-width: 800px) {
 
-.caja4{
+@media only screen and (max-width: 500px) {
+
+.quinta {
+    width: 100%;
+    flex-direction:column;  
+    justify-content: center;
     align-items: center;
-    margin-top: 0.5rem;
-    min-width: 300px;
-    max-width: 650px;
+    text-align: center;
+    row-gap: 2rem;
+}  
+.quintaimg{
+    width: 100vw;
+    height:400px ;
+    object-fit: cover;
+    object-position: center;
    width: 100%;
+}
+}
+
+.sexta{
+    height:10vh ;
+    width: 100%;
+    border-left:solid 4px  var(--color01);
+    display: flex;
+    align-items: end;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sextaizq{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center;
+    width: 100%; 
+}
+
+.sextaizq div{
+    text-align: left;
+    column-gap: 4rem;
+    align-items: start;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-bottom: 2rem;
-    
+    width: 50%; 
+    margin-left: 50px;
 }
-
-.caja4 img{
-    width: 100px;  
-    height: 100px;
+.grande{
+    font-size: 10rem;
+    color: var(--color01);
 }
-}
-
 /* Footer */
 
 footer{
