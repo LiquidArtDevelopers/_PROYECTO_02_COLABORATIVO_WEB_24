@@ -49,7 +49,7 @@ section {
     --font2: 'Indie Flower';
     --color1: white;
     --color2: black;
-    --color3: rgb(84, 121, 23);
+    --color3: rgb(180, 103, 135);
 }
 
 
@@ -204,6 +204,10 @@ header {
     row-gap: 20px;
 }
 
+.articulo1 .cajatxt p {
+    width: 100%;
+}
+
 @media only screen and (min-width:1024px){ /* DESKTOP */
     .articulo1 {
         width: 80%;
@@ -219,6 +223,7 @@ header {
 
     .articulo1 .cajatxt {width: 48%;}
 }
+
 
 /* Articulo tipo 2 */
 .articulo2 {
@@ -326,6 +331,7 @@ header {
         min-width: 300px;
     }
 }
+
 
 /* Articulo tipo 4 */
 .articulo4 {
@@ -443,6 +449,7 @@ header {
     .articulo4 .cuadricula p {width: 70%;}
 }
 
+
 /* Articulo tipo 5 */
 
 .articulo5 {
@@ -484,6 +491,16 @@ header {
     align-items: center;
     justify-content: flex-start;
     row-gap: 20px;
+}
+
+.articulo5 .cuadricula img {
+    width: 10%;
+    height: 10%;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
 }
 
 @media only screen and (min-width:600px){ /* TABLET */
