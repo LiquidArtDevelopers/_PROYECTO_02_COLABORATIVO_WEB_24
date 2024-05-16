@@ -528,11 +528,12 @@ p, a{
 
 .sexta{
     height:10vh ;
-    width: 90%;
+    width: 100%;
     border-left:solid 4px  var(--color01);
     display: flex;
     align-items: end;
-    margin: 2rem 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .sextaizq{
