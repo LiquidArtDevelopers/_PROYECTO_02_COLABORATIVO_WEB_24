@@ -9,12 +9,13 @@
 font-family:"IndieFlower-Regular" ;
 src: url(../fonts/IndieFlower-Regular.ttf);
 }
+
 /* Variables */
 :root {
     --color01: #b37bad;
     --color02: rgba(9, 9, 9, 1);
     --fuente01: "Lobster Two", sans-serif;
-    --fuente02: "IndieFlower-Regular" ;
+    --fuente02: 'IndieFlower-Regular';
 }
 
 body{
@@ -195,7 +196,7 @@ p {
 
 /*  posiciones de caja*/
 
-.flexrowc{
+.frowc{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -223,6 +224,14 @@ p {
     justify-content: flex-end;
     align-items: center;
 }
+.fcolSC{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        text-align: center;        
+}
+
 .textcentr{
     text-align: center;
     flex-direction: column;

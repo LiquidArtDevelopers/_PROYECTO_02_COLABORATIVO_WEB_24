@@ -18,7 +18,7 @@ nav,header,main,footer,body {
 
     --fuente1: Verdana;
     --fuente2: Arial;
-    --fuente3: 'Indie Flower';
+    --fuente3:'IndieFlower-Regular';
 }
 
 .fondoazul {
@@ -27,15 +27,15 @@ nav,header,main,footer,body {
 
 .oculto {
   display: none;
-
+}
 /* Fuentes descargadas */
 
-@font-face {
-  font-family: 'Indie Flower';
+@font-face{
+  font-family:"IndieFlower-Regular" ;
   src: url(../fonts/IndieFlower-Regular.ttf);
-}
+  }
 
-}
+
  
 
 /* etiquetas */
@@ -66,8 +66,8 @@ nav,header,main,footer,body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
  }
 
  a {
@@ -87,7 +87,7 @@ nav,header,main,footer,body {
 
  h2 {
     font-family: var(--fuente3);
-    font-size: 2rem;
+    font-size: 48px;
     font-weight: 700;
     text-align: center;
     color: var(--color02);
@@ -105,7 +105,7 @@ h4 {
   font-family: var(--fuente1);
   font-size: 1.5rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color02);
   margin-bottom: 10px;
 }
@@ -129,7 +129,8 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap:20px;
     text-align: center;
 }
 }
@@ -137,20 +138,12 @@ p {
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .fcolSC {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: center;
-    row-gap: 0px;
-}
-}
-
-@media only screen and (min-width:1024px) { /* DESKTOP */
-  .fcolSC {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 }
 
@@ -239,15 +232,19 @@ p {
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolder {
-      width: 43%;
-      padding-top: 1.5rem;
+      width: 40%;
+      flex: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
   }
  
 /* 3 columnas*/
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .trescol {
-      width: 30%;
+      width: 31%;
       max-width: 600px;
       min-width: 300px;
     }
