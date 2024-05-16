@@ -12,6 +12,13 @@
   ul, ol{
       list-style: none;
   }
+
+  /* declaracion fuentes */
+  @font-face {
+    font-family: "Noto Sans", sans-serif;
+    src: url(../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf);
+    src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+  }
   /* VARIABLES */
   :root{
     --colormio00:white;
