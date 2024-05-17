@@ -49,7 +49,7 @@ section {
     --font2: 'Indie Flower';
     --color1: white;
     --color2: black;
-    --color3: rgb(84, 121, 23);
+    --color3: rgb(180, 103, 135);
 }
 
 
@@ -102,6 +102,7 @@ h4 {
 }
 
 .txtC {text-align: center;}
+.txtJ {text-align: justify;}
 
 a, a:visited { /* Enlaces */
     text-decoration: none;
@@ -115,6 +116,16 @@ a, a:visited { /* Enlaces */
     font-style: italic;
     line-height: 1.5;
     color: var(--color2);
+}
+
+.comillas {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 0.1rem;
+    vertical-align: -25px;
+    color: var(--color3);
 }
 
 /* Componentes */
@@ -204,6 +215,22 @@ header {
     row-gap: 20px;
 }
 
+.articulo1 .cajatxt p {
+    width: 100%;
+}
+
+@media only screen and (min-width:600px){ /* TABLET */
+    .articulo1 .cajatxt {
+        width: 90%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 20px;
+    }
+}
+
 @media only screen and (min-width:1024px){ /* DESKTOP */
     .articulo1 {
         width: 80%;
@@ -219,6 +246,7 @@ header {
 
     .articulo1 .cajatxt {width: 48%;}
 }
+
 
 /* Articulo tipo 2 */
 .articulo2 {
@@ -326,6 +354,7 @@ header {
         min-width: 300px;
     }
 }
+
 
 /* Articulo tipo 4 */
 .articulo4 {
@@ -443,6 +472,7 @@ header {
     .articulo4 .cuadricula p {width: 70%;}
 }
 
+
 /* Articulo tipo 5 */
 
 .articulo5 {
@@ -484,6 +514,16 @@ header {
     align-items: center;
     justify-content: flex-start;
     row-gap: 20px;
+}
+
+.articulo5 .cuadricula img {
+    width: 10%;
+    height: 10%;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
 }
 
 @media only screen and (min-width:600px){ /* TABLET */
@@ -534,6 +574,12 @@ header {
     row-gap: 20px;
 }
 
+.articulo6 .cita {
+    width: 80%;
+    padding: 20px 0px 0px 30px;
+    border-left: solid 3px var(--color3);
+}
+
 .articulo6 .cajaimg  {
     width: 100%;
 }
@@ -558,10 +604,14 @@ header {
         width: 80%;
 
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* Muy bien Maddi!! */
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+    }
+
+    .articulo6 .cita {
+        width: 50%;
     }
 
     .articulo6 .cajatxt {
