@@ -18,6 +18,66 @@
     src: url('../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
 }
 
+/* TAGS PRINCIPALES */
+
+body, section {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+nav, header, main, footer{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* media desktop */
+
+@media only screen and (min-width:1350px) {
+    nav, header, main, footer{
+        max-width: 2560px;
+    }
+
+}
+
+section {
+    padding: 2rem 0rem;
+    row-gap: 2rem;
+}
+
+/* media TABLET */
+
+@media only screen and (min-width:800px) {
+    section {
+        padding: 2.5rem 0rem;
+        
+    }
+}
+
+/* media DESKTOP */
+
+@media only screen and (min-width:1350px) {
+    section {
+        padding: 3rem 0rem;
+        row-gap: 3rem;
+    }
+    
+}
+
+main >:nth-child(odd) {
+    background-color: var(--colormio00);
+}
+
+main >:nth-child(even) {
+    background-color: var(--colormio02);
+}
+
+
 /* VARIABLES */
 
 :root {
@@ -26,21 +86,65 @@
     --colormio02:rgb(216, 216, 255);
 
     --fuentemia00:"Noto Sans", sans-serif;
+    --fuentemia01:"Freeman", sans-serif;
 
 }
+
+/* ENCABEZADOS, ETC */
+
+h1, h2, h3, h4 {
+    font-family: var(--fuentemia01);
+}
+h1 {
+    
+    font-size: 4rem;
+    letter-spacing: normal;
+    color: var(--colormio01);
+    padding: 0.5rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 0 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
 
 /* SECCIONES DE LA WEB */
 
 nav{
    height: 50px;
-   background-color: var(--colormio02)
+   background-color: var(--colormio02);
+   position: fixed;
+   top:0;
+   z-index: 100;
+  
 }
 
 header {
     height: 100vh;
-    background-image: url('https://dummyimage.com/1400x600');
+    background-image: url('https://dummyimage.com/300x600');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: relative;
+    position: relative;   
+}
+article {
+    width: 100%;
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 1 */
+
+.art01 {
+    width: 90%;
 }
