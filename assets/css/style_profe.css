@@ -28,7 +28,7 @@ body, section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 nav, header, main, footer{
     width: 100%;
@@ -41,8 +41,21 @@ nav, header, main, footer{
     }
 }
 section{
-    padding: 4rem 0;
-    row-gap: 4rem;
+    padding: 2rem 0;
+    row-gap: 2rem;
+}
+/* TABLET */
+@media only screen and (min-width:800px){
+    section{
+        padding: 3rem 0;
+    }
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+    section{
+        padding: 4rem 0;
+        row-gap: 4rem;
+    }
 }
 main >:nth-child(odd){
     background-color: var(--color00);
@@ -52,7 +65,7 @@ main >:nth-child(even){
 }
 
 /* ENCABEZADOS, ETC */
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: var(--fuente01);
 }
 p, a{
@@ -61,7 +74,7 @@ p, a{
 h1{
     font-size: 3rem;
     letter-spacing: 4px;
-    color: var(--color02);
+    color: var(--color01);
     padding: 0 2rem;    
     text-align: center;
 }
@@ -115,13 +128,14 @@ header{
     background-size: cover;
     background-position: center center;
     position: relative;
-
 }
+/* TABLET */
 @media only screen and (min-width:800px){
     header{
         background-image: url('https://dummyimage.com/800x600');
     }
 }
+/* DESKTOP */
 @media only screen and (min-width:1350px){
     header{
         background-image: url('https://dummyimage.com/1400x600');
@@ -155,11 +169,10 @@ header h1{
     width: 100%;
     overflow: hidden;
 }
-/* tablet */
-@media only screen and (min-width:800px) {
+/* DESKTOP */
+@media only screen and (min-width:1350px) {
     .art01 >:nth-child(1){
         width: 50%;
-        overflow: hidden;
     }      
 }
 .art01 >:nth-child(1) img{
@@ -178,15 +191,26 @@ header h1{
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     row-gap: 1.5rem;
 }
-/* tablet */
-@media only screen and (min-width:800px) {
+/* DESKTOP */
+@media only screen and (min-width:1350px) {
     .art01 >:nth-child(2){
         width: 40%;
-    }      
+    }
+}
+.art01 >:nth-child(2) h3, .art01 >:nth-child(2) a{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media only screen and (min-width:800px){
+    .art01 >:nth-child(2) h3, .art01 >:nth-child(2) a{
+        position: initial;
+        transform: translateX(0%);
+    }
 }
 
 
