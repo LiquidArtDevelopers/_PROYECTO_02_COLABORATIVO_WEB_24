@@ -74,9 +74,10 @@ p, a{
 h1{
     font-size: 3rem;
     letter-spacing: 4px;
-    color: var(--color01);
+    color: var(--color00);
     padding: 0 2rem;    
     text-align: center;
+    text-shadow: 5px 5px 10px var(--color01);
 }
 h2{
     font-size: 2rem;
@@ -88,6 +89,12 @@ h3{
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--color01);
+}
+h4{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--color00);
+    text-shadow: 5px 5px 10px var(--color01);
 }
 p{
     font-size: 1.1rem;
@@ -159,17 +166,20 @@ header h1{
     flex-wrap: wrap;
     gap:1rem;
 }
-/* tablet */
 @media only screen and (min-width:800px) {
     .art01{
-        width: 90%;
+        width: 80%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art01{
+        justify-content: space-between;
     }
 }
 .art01 >:nth-child(1){
     width: 100%;
     overflow: hidden;
 }
-/* DESKTOP */
 @media only screen and (min-width:1350px) {
     .art01 >:nth-child(1){
         width: 50%;
@@ -195,7 +205,6 @@ header h1{
     justify-content: flex-start;
     row-gap: 1.5rem;
 }
-/* DESKTOP */
 @media only screen and (min-width:1350px) {
     .art01 >:nth-child(2){
         width: 40%;
@@ -214,6 +223,7 @@ header h1{
 }
 
 
+
 /* ARTÍCULO TIPO 2 */
 .art02{
     width: 100%;
@@ -226,7 +236,7 @@ header h1{
 /* tablet */
 @media only screen and (min-width:800px) {
     .art02{
-        width: 90%;
+        width: 80%;
     }
 }
 .art02 h3, .art02 >p{
@@ -244,7 +254,12 @@ header h1{
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1rem;
+    row-gap: 1rem;
+}
+@media only screen and (min-width:800px){
+    .art02 .matrix3{
+        justify-content: space-between;
+    }
 }
 .art02 .matrix3 >div{
     width: 100%;
@@ -252,7 +267,7 @@ header h1{
 }
 @media only screen and (min-width:800px){
     .art02 .matrix3 >div{
-        width: 30%;
+        width: 33%;
         max-width: 600px;
     }
 }
@@ -285,7 +300,42 @@ header h1{
     justify-content: flex-start;
     row-gap: 1.5rem;
 }
-.art03 .matrix4{
-    
+@media only screen and (min-width:800px){
+    .art03 >:nth-child(1){
+        width: 80%;
+    }
 }
-
+.art03 .matrix4{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.art03 .matrix4 >div{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+@media only screen and (min-width:800px){
+    .art03 .matrix4 >div{
+        width: 50%;
+    }
+}
+@media only screen and (min-width:1350px){
+    .art03 .matrix4 >div{
+        width: 25%;
+    }
+}
+.art03 .matrix4 >div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.art03 .matrix4 h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

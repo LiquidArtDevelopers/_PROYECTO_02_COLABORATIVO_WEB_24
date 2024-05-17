@@ -13,22 +13,22 @@
 <body>
 
    <nav>
-         <img src="https://dummyimage.com/200x150" width="200" height="150" alt="" title="">
-         <h2>HEADER</h2>
-         <img src="https://dummyimage.com/200x150" width="200" height="150" alt="" title="">
+         <img src="https://dummyimage.com/180x120" width="180" height="120" alt="" title="">
+         <h2>nav</h2>
+         <img src="https://dummyimage.com/180x120" width="180" height="120" alt="" title="">
    </nav>
    <main>
 <!-- Portada -->
       <header>
-         <h1>Bienvenido a mi Web</h1>
+         <h1>HEADER</h1>
       </header>
 
 <!-- seccion primera -->
       <section class="flexstart">
             <h2>SECCION PRIMERA</h2>
             <article class="primera">
-               <img src="https://dummyimage.com/800x680" width="800" height="680" alt="" title="">
-               <div >
+               <img id="primeraimg" class="colum1" src="https://dummyimage.com/800x680" width="800" height="680" alt="" title="">
+               <div id="primeradiv" class="colum2 fondo" >
                   <h3 class>Primera</h3>
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.
@@ -47,8 +47,9 @@
               <h3>Segunda</h3>
               <p class="textcentr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reprehenderit possimus. Ipsum, recusandae quia laborum qui exercitationem velit enim neque repellat labore explicabo sit voluptatibus sint sequi consequuntur, quos iusto!</p>
               <div class="segunda">
-              <img
-              src="https://dummyimage.com/600x500" width="600" height="500" alt="" title="">
+              <img 
+              src="https://dummyimage.com/600x500" width="600" height="500" alt="" title="" 
+              srcset="" sizes="">
               <img
               src="https://dummyimage.com/600x500" width="600" height="500" alt="" title="">
               <img
@@ -79,17 +80,21 @@
 <!-- seccion cuarta -->
       <section class="flexstart">
             <h2>SECCION CUARTA</h2>
-            <article class="cuarta">
-               <div class="colum2">
-                  <h3>Cuarta</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.</p>
-                  <a class="boton"href="">BOTON</a>
-               </div>
-               <img class="colum1"
-               src="https://dummyimage.com/800x680" width="800" height="680" alt="" title="">
-            </article> 
-
             <article>
+               <div class="cuarta">
+                  <div class="colum2">
+                    <h3>Cuarta</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.</p>
+                    <a class="boton"href="">BOTON</a>
+                  </div>
+                  <img class="colum1"
+                  src="https://dummyimage.com/800x680" width="800" height="680" alt=""
+                  srcset=" https://dummyimage.com/800x680 800w,
+                  https://dummyimage.com/600x480 600w,
+                  https://dummyimage.com/400x380 300w,"
+                  sizes="(min-width: 500px) 600px,(min-width: 1400px) 800px">
+               </div> 
+
                <h4 class="textcentr">titulo</h4>
                <div class="caja4">
                   <img
@@ -97,6 +102,7 @@
                   <p class="w60" >Lorem ipsum dolor sit amet, consectetur adipisicing elit,emporibus, eos id iure fuga, cupiditate Lorem ipsum dolor sit amet consectetur, incidunt expedita nostrum, excepturi eum asperiores sint distinctio commodi sapiente dolore quo dicta architecto explicabo?.</p> 
                   <a href="#" class="boton">BOTON</a>  
                </div>
+
                <h4 class="textcentr">titulo</h4>
                <div class="caja4">
                   <img
@@ -104,6 +110,8 @@
                   <p class="w60" >Lorem ipsum dolor sit amet, consectetur adipisicing elit,emporibus, eos id iure fuga, cupiditate Lorem ipsum dolor sit amet consectetur, incidunt expedita nostrum, excepturi eum asperiores sint distinctio commodi sapiente dolore quo dicta architecto explicabo?.</p> 
                   <a href="#" class="boton">BOTON</a>  
                </div>
+
+               <div>
                <h4 class="textcentr">titulo</h4>
                <div class="caja4">
                   <img
@@ -111,8 +119,7 @@
                   <p class="w60 " >Lorem ipsum dolor sit amet, consectetur adipisicing elit,emporibus, eos id iure fuga, cupiditate Lorem ipsum dolor sit amet consectetur, incidunt expedita nostrum, excepturi eum asperiores sint distinctio commodi sapiente dolore quo dicta architecto explicabo?.</p> 
                   <a href="#" class="boton">BOTON</a>  
                </div>
-            </article>         
-               
+            </article>               
       </section>
 
 <!-- Seccion quinta-->
@@ -148,9 +155,9 @@
             src="https://dummyimage.com/800x680" width="800" height="680" alt="" title="">
             </div> 
             <div class="sextaizq">
-              <img
+              <img class="colum1"
               src="https://dummyimage.com/800x680" width="800" height="680" alt="" title="">
-              <div>
+              <div class="colum2">
               <h3>Sexta2</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.</p>
               </div>
@@ -174,6 +181,38 @@
       </section>
       </main>
    
+<!-- Seccion septima -->
+      <section>
+         <h2>Seccion Septima</h2>
+         <article class="fondo flexrowc">
+            <div class="flexcolc">
+             <img id="imgseptima" src="https://dummyimage.com/400x400" width="400" height="400">
+             <div class="w90 textcentr flexcolc"> 
+                <h3>Septima 1</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illo quasi. Aspernatur iusto aliquid inventore nisi impedit itaque magni quod veniam quam dolor, facilis aperiam qui dolore, velit repellat! Cupiditate?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum repellat alias expedita rem facere facilis.</p>
+                <a class="boton" href="#">Boton</a>
+              </div>
+            </div>
+
+            <div class="flexcolc">
+               <img id="imgseptima" src="https://dummyimage.com/400x400" width="400" height="400">
+               <div class="w90 textcentr flexcolc"> 
+                  <h3>septima 2</h3>
+                  <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illo quasi. Aspernatur iusto aliquid inventore nisi impedit itaque magni quod veniam quam dolor, facilis aperiam qui dolore, velit repellat! Cupiditate?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum repellat alias expedita rem facere facilis.</p>
+                  <a class="boton"href="#">BOTON</a>
+               </div>
+            </div>
+
+            <div class="flexcolc">
+               <img id="imgseptima" src="https://dummyimage.com/400x400" width="400" height="400">>
+               <div class="w90 textcentr flexcolc"> 
+                  <h3>Septima 3</h3>
+                  <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illo quasi. Aspernatur iusto aliquid inventore nisi impedit itaque magni quod veniam quam dolor, facilis aperiam qui dolore, velit repellat! Cupiditate?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum repellat alias expedita rem facere facilis.</p>
+                  <a class="boton"href="#">BOTON</a>
+               </div>
+            </div>
+         </article>
+      </section> 
 <!-- footer -->
    <footer>
          <div>
