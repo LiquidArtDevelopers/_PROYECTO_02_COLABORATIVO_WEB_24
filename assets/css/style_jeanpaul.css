@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES */
+
+:root {
+    --colormio00: white;
+    --colormio01:rgb(44, 44, 44);
+    --colormio02:rgb(216, 216, 255);
+
+    --fuentemia00:"Noto Sans", sans-serif;
+    --fuentemia01:"Freeman", sans-serif;
+    --padTexto: 1.5rem;
+
+}
+
 /* DAR TEXTOS DE ALTA */
 
 @font-face {
@@ -78,17 +91,7 @@ main >:nth-child(even) {
 }
 
 
-/* VARIABLES */
 
-:root {
-    --colormio00: white;
-    --colormio01:rgb(44, 44, 44);
-    --colormio02:rgb(216, 216, 255);
-
-    --fuentemia00:"Noto Sans", sans-serif;
-    --fuentemia01:"Freeman", sans-serif;
-
-}
 
 /* ENCABEZADOS, ETC */
 
@@ -146,5 +149,20 @@ article {
 /* ARTÍCULO TIPO 1 */
 
 .art01 {
-    width: 90%;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;    
 }
+
+.art01 >:nth-child(1) {
+    width: 100%;
+}
+
+.art01 >:nth-child(2) {
+    width: 100%;
+}
+
