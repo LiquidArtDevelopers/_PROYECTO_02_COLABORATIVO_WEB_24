@@ -247,8 +247,15 @@ article {
     row-gap: 1rem;
 }
 
+@media only screen and (min-width:800px) {
+    .art02 {
+        width: 80%;
+    }
+}
+
 .art02 >:nth-child(1), .art02 >:nth-child(2) {
     padding: var(--padTexto);
+    
 }
 
 
@@ -263,12 +270,44 @@ article {
     gap: 1rem;
 }
 
-.art02 .red1 div {
+@media only screen and (min-width:1350px) {
+    .red1 {
+        justify-content: space-between;
+    }
+}
+
+.art02 .red1 >div {
     width: 100%;
-    height: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .art02 .red1 div img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:800px) {
+    .art02 .red1 div{
+        width: 40%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art02 .red1 div{
+        width: 30%;
+    }
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 3 */
+
+.art03 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    row-gap: 1.5rem;
 }
