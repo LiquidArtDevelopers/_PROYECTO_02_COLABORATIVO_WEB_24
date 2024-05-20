@@ -5,6 +5,23 @@
     outline:0;
     box-sizing: border-box;
 }
+a, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* VARIABLES */
+
+:root {
+    --colormio00: white;
+    --colormio01:rgb(44, 44, 44);
+    --colormio02:rgb(216, 216, 255);
+
+    --fuentemia00:"Noto Sans", sans-serif;
+    --fuentemia01:"Freeman", sans-serif;
+    --padTexto: 1.5rem;
+
+}
 
 /* DAR TEXTOS DE ALTA */
 
@@ -18,29 +35,240 @@
     src: url('../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf');
 }
 
-/* VARIABLES */
+/* TAGS PRINCIPALES */
 
-:root {
-    --colormio00: white;
-    --colormio01:rgb(44, 44, 44);
-    --colormio02:rgb(216, 216, 255);
+body, section {
+    width: 100%;
+    max-width: 100%;
 
-    --fuentemia00:"Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
 
+nav, header, main, footer{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* media desktop */
+
+@media only screen and (min-width:1350px) {
+    nav, header, main, footer{
+        max-width: 2560px;
+    }
+
+}
+
+section {
+    padding: 2rem 0rem;
+    row-gap: 2rem;
+}
+
+/* media TABLET */
+
+@media only screen and (min-width:800px) {
+    section {
+        padding: 2.5rem 0rem;
+        
+    }
+}
+
+/* media DESKTOP */
+
+@media only screen and (min-width:1350px) {
+    section {
+        padding: 3rem 0rem;
+        row-gap: 3rem;
+    }
+    
+}
+
+main >:nth-child(odd) {
+    background-color: var(--colormio00);
+}
+
+main >:nth-child(even) {
+    background-color: var(--colormio02);
+}
+
+
+/* ENCABEZADOS, ETC */
+
+h1, h2, h3, h4 {
+    font-family: var(--fuentemia01);
+}
+
+p, a {
+    font-family: var(--fuentemia01);
+}
+h1 {
+    
+    font-size: 4rem;
+    letter-spacing: normal;
+    color: var(--colormio01);
+    padding: 0.5rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 0 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* CLASES GLOBALES */
+.boton1 {
+    font-size: 1.3rem;
+    letter-spacing: 2px; 
+    padding: 0.3rem 2rem;
+    color: var(--colormio01);
+    background-color: var(--colormio02);
+    border-radius: 5px;
+}
+
+.boton1:hover {
+    color: var(--colormio00);
+    background-color: var(--colormio01);
 }
 
 /* SECCIONES DE LA WEB */
 
 nav{
    height: 50px;
-   background-color: var(--colormio02)
+   background-color: var(--colormio02);
+   position: fixed;
+   top:0;
+   z-index: 100;
+  
 }
 
 header {
     height: 100vh;
-    background-image: url('https://dummyimage.com/1400x600');
+    background-image: url('https://dummyimage.com/300x600');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;   
+}
+article {
+    width: 100%;
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 1 */
+
+.art01 {
+    width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;    
+}
+
+@media only screen and (min-width:800px) {
+    .art01 {
+        width: 80%;
+        justify-content: space-between;
+    }
+}
+
+.art01 >:nth-child(1) {
+    width: 100%;
+    
+}
+
+@media only screen and (min-width:1350px) {
+    .art01 >:nth-child(1) {
+        width: 50%;
+        
+    }   
+}
+
+.art01 >:nth-child(2) {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+@media only screen and (min-width:1350px) {
+    .art01 >:nth-child(2) {
+        width: 40%;
+        
+    }
+}
+
+.art01 >:nth-child(2) h3, .art01 >:nth-child(2) a {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (min-width:800px) {
+    .art01 >:nth-child(2) h3, .art01 >:nth-child(2) a {
+        position: left;
+        left: 0%;
+        transform: translateX(0%);
+    }
+}
+.art01 >:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 2 */
+
+.art02 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.art02 >:nth-child(1), .art02 >:nth-child(2) {
+    padding: var(--padTexto);
+}
+
+
+.red1 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.art02 .red1 div {
+    width: 100%;
+    height: 100%;
+}
+
+.art02 .red1 div img {
+    width: 100%;
+    height: 100%;
 }

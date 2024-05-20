@@ -19,6 +19,7 @@ ul, ol{
     --color02:rgb(216, 216, 255);
     --fuente01: Verdana, Geneva, Tahoma, sans-serif;
     --fuente02: Arial, Helvetica, sans-serif;
+    --padTexto: 1.5rem;
 }
 /* TAGS PRINCIPALES */
 body, section{
@@ -198,7 +199,7 @@ header h1{
 }
 .art01 >:nth-child(2){
     width: 100%;
-    padding: 1rem;
+    padding: var(--padTexto);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -240,7 +241,7 @@ header h1{
     }
 }
 .art02 h3, .art02 >p{
-    padding: 0 1rem;
+    padding: 0 var(--padTexto);
 }
 @media only screen and (min-width:800px) {
     .art02 >p{
@@ -293,7 +294,7 @@ header h1{
 }
 .art03 >:nth-child(1){
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 var(--padTexto);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,4 +339,90 @@ header h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* artículo 4 */
+.art04{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:1350px){
+    .art04{
+        width: 80%;
+    }
+}
+.art04 .mod01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art04 .mod01 >:nth-child(1){
+    width: 100%;
+    padding: 0 var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+.art04 .mod01 >:nth-child(2){
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px){
+    .art04 .mod01{
+        justify-content: space-between;
+    }
+    .art04 .mod01 >:nth-child(1){
+        width: 40%;
+        align-items: flex-start;
+    }
+    .art04 .mod01 >:nth-child(1) h3{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .art04 .mod01 >:nth-child(2){
+        width: 50%;
+    }
+}
+.art04 .mod02{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+.art04 .mod02 >:nth-child(2){
+    width: 100%;
+    padding: var(--padTexto);
+    background-color: var(--color00);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.art04 .mod02 >:nth-child(2) p{
+    width: 100%;
+}
+@media only screen and (min-width:800px){
+    .art04 .mod02 >:nth-child(2) p{
+        width: 80%;
+    }
+}
+.art04 .mod02 >:nth-child(2) img{
+    border-radius: 50%;
 }

@@ -56,23 +56,25 @@ a, a:visited{
 nav, header, main {
   width: 100%;
   max-width: 1920px;
-}
-body {
+} 
+body, section{
   width: 100%;
   max-width: 100%;
-}  
-section {
-  width: 100%;
-  max-width: 100%;
-  padding: 2 0rem;
-  
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
-  row-gap: 4rem;
-} 
+  justify-content: flex-start;
+}
+
 /* NAV */
+nav{
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color3);
+}
 
 /* HEADER */
 header{
@@ -100,32 +102,60 @@ header h1{
   transform: translate(-50%, -50%);
   color: var(--color3);
 }
+
 /* TIPO1 */ 
 .tipo1{
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 /* TABLET */
 @media only screen and (min-width:800px){ 
-  .tipo1 img{
-    width: 90%;
+  .tipo1{
+    width: 80%;
   }
 }
 /* DESKTOP */
-@media only screen and (min-width:800px){ 
-  .tipo1 img{
-    width: 50%;
+@media only screen and (min-width:1350px){ 
+  .tipo1{
+    justify-content: space-between;
   }
+  .tipo1 >:nth-child(1){
+      width: 50%;
+  } 
+  
 }
 .tipo1 >:nth-child(2){
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   row-gap: 1.5rem;
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px) {
+  .tipo1 >:nth-child(2){
+      width: 40%;
+  }
+}
+
+/* TIPO2 */ 
+.tipo2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tipo2 >:nth-child(3){
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

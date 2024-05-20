@@ -27,6 +27,7 @@ body, section{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background-color: #b37bad33;
 }
                                           
 nav,main,header,footer{
@@ -36,7 +37,7 @@ max-width: 2500px;
 
 section{
     width: 100%;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 article{
@@ -47,17 +48,20 @@ article{
 @media only screen and (max-width: 500px) {
 
 nav,main,header,footer{
-    width: 100VW;
+    width: 100%;
     max-width: 400px;
         
 }
 section{
     width: 100%;
-    margin-bottom: 0rem;
 }
 article{
-    width: 90%;
-    margin-top: 0.5rem;  
+    margin-top: 0.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; 
 }
 }  
 
@@ -67,15 +71,12 @@ flex-direction: row;
 justify-content: space-between;
 padding:0.5rem 2rem;
 background-color: #b37bad;
-height: 180px;
+height: 150px;
+position: fixed;
 }
 
 
 @media only screen and (max-width: 500px) {
-
-nav,main,header,footer,section,article {
-    width: 100%; 
-}
 
 nav {
 padding: 1.5rem 1.5rem;
@@ -84,7 +85,6 @@ height: 140px;
 }
 nav img{
     height: 2.5rem;
-
 }
 }
 
@@ -101,12 +101,14 @@ margin-bottom:60px ;
 color: var(--color01);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
 
 header{
-  width: 100vw; 
+  width: 100%; 
   height: 400px;
-  background-image: url("https://dummyimage.com/500x400");
+  background-image: url("https://dummyimage.com/550x400");
+  background-repeat: no-repeat;
+  margin-bottom:40px ;
 }
 header div{
 row-gap: 0rem;
@@ -156,11 +158,8 @@ h3,h4{
 p, a{ 
  font-size: 1rem;
 }
-
-
-
-
 }
+
 
 /*Tamaños y flex*/
 
@@ -192,7 +191,7 @@ p, a{
 
 /*  posiciones de caja*/
 
-.frowc{
+.flexrowc{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -258,8 +257,7 @@ p, a{
     flex-direction: column;
     text-align: center;
     align-items: center;
-    row-gap: 1rem;
-    
+    row-gap: 0.5rem;
     }
 .textoizq{
         text-align: center;
@@ -323,8 +321,8 @@ p, a{
     flex-direction:row;
     align-items: center; 
     width: 90%;  
-    flex-wrap: wrap;  
 }
+
 .primera div{
     text-align: left;
     align-items: left;
@@ -338,26 +336,27 @@ p, a{
 
 @media only screen and (max-width: 500px) {
 
-.primera{
-    gap: 0rem;
-    width:100%;
-    flex-direction:column; 
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}  
-
-.primera img{
-    width: 100vw; 
-    height: 400px;
+    .primera{
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+        width:100%
+    }
+#primera img{
+    width: 90%;
+    height:400px ;
+    object-fit: cover;
+    object-position: center;
 }
-.primera div{
-    text-align: center;
-    flex-direction:column; 
-    align-items: center;
+
+#primeradiv{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    width:90%;
 }
 }
 
@@ -375,16 +374,15 @@ p, a{
 
 @media only screen and (max-width: 500px) {
 
-.segunda{
+.segunda {
     gap: 0rem;
     width: 100%;
     flex-direction:column; 
-    justify-content: center;
-     
-   
+    justify-content: center;  
 }  
+
 .segunda img,.tercera img {
-    width: 100vw;
+    width: 100%;
     height:400px ;
     object-fit: cover;
     object-position: center;
@@ -442,9 +440,9 @@ p, a{
 
 .caja4{
 
-   width: 100%;
+    width: 100%;
     text-align: left;
-   column-gap: 2rem;
+    column-gap: 2rem;
     display: flex;
     flex-direction:row;
     justify-content: start;
@@ -466,13 +464,15 @@ p, a{
 .cuarta div{
     display: flex;
     justify-content: center;
-    flex-direction:column;
-    align-items: center; 
+    flex-direction: column;
     text-align: center;
-    width: 100%;
+    align-items: center;
+    row-gap: 0.5rem;
+    width:90%
+    }
 }
 .cuarta img{
-    width: 100vw;
+    width: 100%;
     height:400px ;
     object-fit: cover;
     object-position: center;
@@ -488,7 +488,7 @@ p, a{
     margin-top: 0.5rem;
     min-width: 300px;
     max-width: 650px;
-   width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -522,7 +522,7 @@ p, a{
     row-gap: 2rem;
 }  
 .quintaimg{
-    width: 100vw;
+    width: 100%;
     height:400px ;
     object-fit: cover;
     object-position: center;
@@ -577,7 +577,10 @@ p, a{
     align-items: center;
     width: 100%; 
     }
-    
+.sextaizq img{
+    width: 100%;
+    height: 400px;
+}
 .sextaizq div{
     text-align: center;
     column-gap: 2rem;
@@ -590,7 +593,13 @@ p, a{
     font-size: 3rem;
     color: var(--color01);  
 }
+#imgseptima{
+    width: 100%;
+    object-fit: cover;
+    
 }
+}
+
 
 /* Footer */
 

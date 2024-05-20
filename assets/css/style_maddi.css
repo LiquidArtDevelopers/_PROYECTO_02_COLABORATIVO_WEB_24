@@ -301,6 +301,23 @@ header {
     }
 }
 
+@media only screen and (min-width:1024px){ /* DESKTOP */
+    .articulo2 .cajatxt {
+        width: 80%;
+    }
+
+    .articulo2 .cuadricula {
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .articulo2 .cuadricula >div {
+        width: 32%;
+        overflow: hidden;
+        min-width: 250px;
+    }
+}
+
 
 /* Articulo tipo 3 */
 .articulo3 {
@@ -324,12 +341,13 @@ header {
 }
 
 .articulo3 .cuadricula {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0px;
 }
 
 .articulo3 .cuadricula >div {
@@ -345,13 +363,20 @@ header {
 }
 
 @media only screen and (min-width:600px) { /* TABLET */
-    .articulo3 .cuadricula {
-        width: 90%;
-    }
     .articulo3 .cuadricula >div {
-        width: 24%;
-        overflow: hidden;
+        width: 50%;
         min-width: 300px;
+    }
+}
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
+    .articulo3 .cajatxt {
+        width: 80%;
+    }
+
+    .articulo3 .cuadricula >div {
+        width: 25%;
+        min-width: 250px;
     }
 }
 
@@ -371,9 +396,10 @@ header {
     width: 100%;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     row-gap: 40px;
 }
 
@@ -429,12 +455,7 @@ header {
 
 @media only screen and (min-width:600px){ /* TABLET */
     .articulo4 .cuadricula {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
     }
 
     .articulo4 .cuadricula p {width: 80%;}
@@ -444,10 +465,7 @@ header {
     .articulo4 {width: 80%;}
     
     .articulo4 >:nth-child(1) {
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-        
         row-gap: 20px;
     }
 
@@ -467,6 +485,10 @@ header {
 
     .articulo4 >:nth-child(2) {
         width: 100%;
+    }
+
+    .articulo4 .cuadricula {
+        justify-content: space-between;
     }
 
     .articulo4 .cuadricula p {width: 70%;}
@@ -531,15 +553,24 @@ header {
         width: 80%;
     }
 
+    .articulo5 .cuadricula {
+        width: 80%;
+    }
+
     .articulo5 .cuadricula >div {
-        width: 20%;
-        min-width: 300px;
+        width: 40%;
+        min-width: 250px;
     }
 }
 
 @media only screen and (min-width:1024px){ /* DESKTOP */
     .articulo5 >:nth-child(1) {
         width: 50%;
+    }
+
+    .articulo5 .cuadricula >div {
+        width: 22%;
+        min-width: 250px;
     }
 }
 
@@ -621,4 +652,45 @@ header {
     .articulo6 .cajaimg  {
         width: 48%;
     }
+}
+
+
+/* Articulo tipo 7 */
+.articulo7 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.articulo7 >p {
+    width: 90%;
+}
+
+.articulo7 :nth-child(3) {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.articulo7 .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+@media only screen and (min-width:600px){ /* TABLET */
+}
+
+@media only screen and (min-width:1024px){ /* DESKTOP */
 }
