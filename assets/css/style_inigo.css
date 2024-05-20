@@ -111,7 +111,6 @@ h4 {
   text-align: center;
   font-weight: 700;
   color: var(--color02);
-  margin-bottom: 10px;
 }
 
 
@@ -124,20 +123,19 @@ p {
 
 .comillas {
   font-family: var(--fuente2);
-  font-size: 40px;
+  font-size: 100px;
   font-weight: 900;
+  line-height: 0.2rem;
+  vertical-align: -40px;
+  color: var(--color03);
+  padding-right: 10px;
 }
 
 .centrado {
    text-align: center;
 }
 
-.parrafocomillas {
- float: left;
- width: 50%;
- text-align: start;
- padding-left: 20px;
-}
+
 
 /*displays*/
 
@@ -145,9 +143,9 @@ p {
 .frowC {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap:20px;
+    gap:10px;
     text-align: center;
 }
 }
@@ -159,9 +157,21 @@ p {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 }
+
+@media only screen and (min-width:1024px) { /* DESKTOP */
+  .fcolSB {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  }
+
 
 .fwrap {
     flex-wrap:wrap;  
@@ -174,6 +184,7 @@ p {
     align-items:center;
     margin: auto;
   }
+
 
 /*boton*/
 
@@ -248,11 +259,20 @@ p {
       }
     }
 
+.w50 {
+      width: 60%;
+      padding-top: 2.5rem;
+    
+    }
+
 .w10 {
   width: 10%;
 }
 
-
+/*imagenes*/
+.objectfit {
+  object-fit: cover;
+}
 
 
  
@@ -272,8 +292,8 @@ p {
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolder {
-      width: 40%;
-      flex: auto;
+      width: 50%;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -300,9 +320,6 @@ p {
     }
 
 
-
-
-    
 /*paddings y margenes*/
 
 
@@ -347,6 +364,46 @@ padding-top: 70px;
 
 /*imágens y fotos*/
 .redondeado {
-  border-radius: 100px;
+  border-radius: 50%;
+}
+
+
+/*cita*/
+.cita {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: solid 3px var(--color03);
+  margin-top: 70px;
+  padding: 20px;
+}
+
+/*seccion8*/
+
+.articulo8 {
+
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4rem;
+
+  font-family: var(--fuente1);
+  font-size: 18px;
+  line-height: normal;
+
+  margin-top: 100px;
+}
+
+  
+  .articulo8 p {
+    width: 80%;
+  }
+
 }
 
