@@ -258,5 +258,20 @@ header h1{
 
 /* TIPO 4 */
 .tipo4{
-  
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+}
+.mod01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
