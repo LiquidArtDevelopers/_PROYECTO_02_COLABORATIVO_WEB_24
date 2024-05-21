@@ -328,6 +328,7 @@ article {
 
 .art03 .red2 >div {
     width: 100%;
+    height: 400px;
     position: relative;
 }
 
@@ -341,19 +342,21 @@ article {
 @media only screen and (min-width:800px) {
     .art03 .red2 >div {
         width: 48%;
-        background-color: aqua;
+       
     }
 }
 
 @media only screen and (min-width:1350px) {
     .art03 .red2 >div {
         width: 24%;
-        background-color: aquamarine;
+       
     }
 }
 
 .art03 .red2 >div img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center center;
 
 } 
