@@ -12,7 +12,8 @@
     --fuente02: "Barlow Condensed", sans-serif;
     --color1: white;
     --color2: black;
-    --color3: rgb(97, 47, 97);
+    --color3: rgb(185, 155, 185);
+    --color4: rgb(156, 143, 143); 
 }
 
 /* FUENTES*/
@@ -43,7 +44,7 @@ h3{
   color: var(--color2);
   letter-spacing: 0.5rem;
 }
-p{
+p, a{
   font-family: var(--fuente02);
   font-size: 1rem;
   line-height: 1.2rem;
@@ -71,6 +72,44 @@ section{
   padding: 2rem 0;
   row-gap: 2rem;
 }
+/* TABLET */
+@media only screen and (min-width:800px){
+  section{
+      padding: 3rem 0;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+  section{
+      padding: 4rem 0;
+      row-gap: 4rem;
+  }
+}
+main >:nth-child(odd){
+  background-color: var(--color1);
+}
+main >:nth-child(even){
+  background-color: var(--color3);
+}
+
+/* CLASES GLOBALES */
+.boton{
+  font-size: 1.3rem;
+  letter-spacing: 2px;    
+  padding: 0.3rem 2rem;
+  border-radius: 5px;
+  color: var(--color1);
+  background-color: var(--color3);
+  transition: 0.2s ease-in-out;
+}
+.boton:hover{
+  color: var(--color4);
+  background-color: var(--color1);
+}
+.boton:active{
+  transform: scale(.95);
+}
+
 /* NAV */
 nav{
   height: 50px;
@@ -137,8 +176,21 @@ header h1{
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
   row-gap: 1.5rem;
+}
+.tipo1 >:nth-child(2) h3, .tipo1 >:nth-child(2) a{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* TABLET */
+@media only screen and (min-width:800px){
+  .tipo1 >:nth-child(2) h3, .tipo1 >:nth-child(2) a{
+      position: initial;
+      transform: translateX(0%);
+  }
 }
 /* DESKTOP */
 @media only screen and (min-width:1350px) {
@@ -266,7 +318,12 @@ header h1{
     flex-wrap: wrap;
     row-gap: 1.5rem;
 }
-.mod01{
+@media only screen and (min-width:1350px){
+  .tipo4{
+      width: 80%;
+  }
+}
+.tipo4 .mod01{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -274,4 +331,68 @@ header h1{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1.5rem;
+}
+@media only screen and (min-width:1350px){
+  .tipo4 .mod01{
+      justify-content: space-between;
+  }
+} 
+.tipo4 .mod01 >:nth-child(1){
+  width: 100%;
+  padding: 0 var(--padTexto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+}
+@media only screen and (min-width:1350px){
+  .tipo4 .mod01 >:nth-child(1){
+      width: 45%;
+      align-items: flex-start;
+  }
+  .tipo4 .mod01 >:nth-child(1) h3{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+} 
+.tipo4 .mod01 >:nth-child(2){
+  width: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width:1350px){
+  .tipo4 .mod01 >:nth-child(2){
+      width: 50%;
+  }
+}
+.tipo4 .mod02{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1.5rem;
+  background-color: var(--color1);
+}
+.tipo4 .mod02 >:nth-child(2){
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.tipo .mod02 >:nth-child(2) p{
+  width: 100%;
+}
+@media only screen and (min-width:1350px){
+  .tipo .mod02>:nth-child(2) p{
+    width: 80%;
+  }
+}
+.tipo4 .mod02 >:nth-child(2) img{
+  border-radius: 50%;
 }
