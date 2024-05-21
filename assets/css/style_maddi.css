@@ -49,7 +49,7 @@ section {
     --font2: 'Indie Flower';
     --color1: white;
     --color2: black;
-    --color3: rgb(180, 103, 135);
+    --color3: rgb(196, 69, 122);
 }
 
 
@@ -155,7 +155,7 @@ a, a:visited { /* Enlaces */
 .w50 {width: 50%;}
 
 
-/* Margenes */
+/* Margenes y paddings */
 .mb50 {margin-bottom: 50px;}
 .mb20 {margin-bottom: 20px;}
 .mb1rem {margin-bottom: 1rem;}
@@ -353,6 +353,7 @@ header {
 .articulo3 .cuadricula >div {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .articulo3 .cuadricula >div img {
@@ -360,6 +361,22 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+}
+
+.articulo3 .cuadricula >div h4 {
+    color: var(--color1);
+    font-weight: 900;
+    text-shadow: 0px 0px 10px var(--color3);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 1s;
+}
+.articulo3 .cuadricula >div:hover h4 {
+    transform: scale(1.2) translate(-45%, -45%);
 }
 
 @media only screen and (min-width:600px) { /* TABLET */
@@ -446,8 +463,8 @@ header {
     height: 10%;
     min-width: 80px;
     min-height: 80px;
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 50%;
 }
 
@@ -556,6 +573,12 @@ header {
 .articulo5 .cuadricula >div p {
     width: 100%;
 }
+.articulo5 .cuadricula >div >:nth-child(3){
+    height: 145px;
+}
+.articulo5 .cuadricula >div >:nth-child(4){
+    height: 50px;
+}
 
 @media only screen and (min-width:600px){ /* TABLET */
     .articulo5 >:nth-child(1) {
@@ -609,18 +632,18 @@ header {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     row-gap: 20px;
 }
 
 .articulo6 .cita {
-    width: 80%;
+    width: 90%;
     padding: 20px 0px 0px 30px;
     border-left: solid 3px var(--color3);
 }
 
-.articulo6 .cajaimg  {
+.articulo6 .cajaimg {
     width: 100%;
 }
 
@@ -655,11 +678,11 @@ header {
     }
 
     .articulo6 .cajatxt {
-        width: 48%;
+        width: 45%;
     }
     
     .articulo6 .cajaimg  {
-        width: 48%;
+        width: 50%;
     }
 }
 
@@ -710,7 +733,7 @@ header {
     gap: 10px;
 }
 
-.cajaimg >div {
+.articulo7 .cajaimg >div {
     width: 100%;
 
     display: flex;
@@ -719,7 +742,7 @@ header {
     gap: 10px;
 }
 
-.cajaimg img {
+.articulo7 .cajaimg img {
     width: 100%;
     height: 100%;
 
@@ -741,28 +764,26 @@ header {
         width: 98%;
     }
 
-    .articulo7 .caja1 .cajaimg {
+    .articulo7 .cajaimg {
         width: 100%;
     }
 
     .articulo7 .caja2 .cajaimg {
-        width: 100%;
         flex-direction: row-reverse;
     }
 
-    .cajaimg >div {
+    .articulo7 .cajaimg >div {
         width: 32.6%;
-        align-content: space-between;
     }
 
-    .cajaimg >img {
+    .articulo7 .cajaimg >img {
         width: 64.9%;
         height: 64.9%;
     }
 }
 
 @media only screen and (min-width:1300px){ /* DESKTOP */
-    .articulo7 {gap: 10px;}
+    .articulo7 {row-gap: 10px;}
 
     .articulo7 .caja1 {
         justify-content: space-between;
@@ -787,20 +808,169 @@ header {
         align-items: flex-start;
     }
 
-    .articulo7 .caja1 .cajaimg {
+    .articulo7 .cajaimg {
         width: 60%;
     }
 
-    .articulo7 .caja2 .cajaimg {
-        width: 60%;
-    }
-
-     .cajaimg >div {
+    .articulo7 .cajaimg >div {
         width: 33%;
     }
 
-    .cajaimg >img {
+    .articulo7 .cajaimg >img {
         width: 65.4%;
         height: 65.4%;
+    }
+}
+
+
+/* Articulo tipo 7B */
+.articulo7B {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 40px;
+}
+
+.articulo7B >p {
+    width: 90%;
+}
+
+.articulo7B .caja1, .articulo7B .caja2 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.articulo7B .cajatxt {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.articulo7B .cajatxt p {
+    border-left: solid 2px var(--color3);
+    padding-left: 15px;
+    margin-left: 9px;
+}
+
+.articulo7B .cajaimg {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.articulo7B .cajaimg >div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.articulo7B .cajaimg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+@media only screen and (min-width:600px){ /* TABLET */
+    .articulo7B >p {
+        width: 50%;
+    }
+
+    .articulo7B .caja1, .articulo7B .caja2 {
+        width: 80%;
+    }
+
+    .articulo7B .cajatxt {
+        width: 100%;
+    }
+
+    .articulo7B .caja2 .cajaimg {
+        flex-direction: row-reverse;
+    }
+
+    .articulo7B .cajaimg >div {
+        width: 33.3%;
+        row-gap: 1.2vw;
+    }
+
+    .articulo7B .cajaimg >img {
+        width: 66.7%;
+    }
+
+    .articulo7B .caja1 .cajaimg >img {
+        padding-left: 1.2vw;
+    }
+
+    .articulo7B .caja2 .cajaimg >img {
+        padding-right: 1.2vw;
+    }
+}
+
+@media only screen and (min-width:1300px){ /* DESKTOP */
+    .articulo7B {row-gap: 0.8vw;}
+
+    .articulo7B .caja1 {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .articulo7B .caja2 {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .articulo7B .caja1 .cajatxt {
+        width: 40%;
+        padding-right: 100px;
+        align-items: flex-start;
+    }
+
+    .articulo7B .caja2 .cajatxt {
+        width: 40%;
+        padding-left: 100px;
+        align-items: flex-start;
+    }
+
+    .articulo7B .cajaimg {
+        width: 60%;
+    }
+
+    .articulo7B .cajaimg >div {
+        width: 33.3%;
+        row-gap: 0.8vw;
+    }
+
+    .articulo7B .cajaimg >img {
+        width: 66.7%;
+    }
+
+    .articulo7B .caja1 .cajaimg >img {
+        padding-left: 0.8vw;
+    }
+
+    .articulo7B .caja2 .cajaimg >img {
+        padding-right: 0.8vw;
     }
 }
