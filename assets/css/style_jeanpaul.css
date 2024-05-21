@@ -126,6 +126,12 @@ h3 {
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--color01);
+}
+
 
 /* CLASES GLOBALES */
 .boton1 {
@@ -161,6 +167,18 @@ header {
     background-position: center center;
     position: relative;   
 }
+
+@media only screen and (min-width:800px) {
+    header {
+        background-image: url('https://dummyimage.com/800x600');  
+    }   
+}
+@media only screen and (min-width:1350px) {
+    header {
+        background-image: url('https://dummyimage.com/1400x600');
+    }
+}
+
 article {
     width: 100%;
 }
@@ -312,8 +330,19 @@ article {
     row-gap: 1.5rem;
 }
 
-.art03 >:nth-child(1) h3, .art03 >:nth-child(1) p {
+.art03 >:nth-child(1) {
+    width: 80%;
     padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+@media only screen and (min-width:800px) {
+.art03 >:nth-child(1) p {
+    width: 60%;
+}
 }
 .art03 .red2 {
     width: 100%;
@@ -328,6 +357,7 @@ article {
 
 .art03 .red2 >div {
     width: 100%;
+    height: 400px;
     position: relative;
 }
 
@@ -340,20 +370,85 @@ article {
 
 @media only screen and (min-width:800px) {
     .art03 .red2 >div {
-        width: 48%;
-        background-color: aqua;
+        width: 48%;       
     }
 }
-
 @media only screen and (min-width:1350px) {
     .art03 .red2 >div {
-        width: 24%;
-        background-color: aquamarine;
+        width: 24%;      
     }
 }
-
 .art03 .red2 >div img {
     width: 100%;
     height: 100%;
-
+    object-fit: cover;
+    object-position: center center;
 } 
+.art03 .red2 >div h4 {
+    font-size: 1.5rem;
+    color: var(--colormio00);
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 4 */
+
+.art04 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;   
+}
+@media only screen and (min-width:1350px) {
+    .art04 {
+        width: 80%;
+    }
+}
+.art04 .mod01 {
+    gap:1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 {
+        justify-content: space-between;
+    }
+}
+.art04 >div {
+    width: 100%;
+    background-color: aqua;
+    
+}
+.art04 .mod01 >:nth-child(1) {
+    width: 100%;
+    padding: 0 var(--padTexto);
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 >:nth-child(1) {
+        width: 45%;
+    }
+}
+.art04 .mod01 >:nth-child(2) {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 >:nth-child(2) {
+        width: 50%;
+    }
+}
+
+
+
