@@ -17,8 +17,11 @@ ul, ol{
     --color00: white;
     --color01: rgb(44, 44, 44);
     --color02:rgb(216, 216, 255);
+    --color03: #959595;
     --fuente01: Verdana, Geneva, Tahoma, sans-serif;
     --fuente02: Arial, Helvetica, sans-serif;
+    --padTexto: 1.5rem;
+    --anchoTexto: 60%;
 }
 /* TAGS PRINCIPALES */
 body, section{
@@ -91,10 +94,9 @@ h3{
     color: var(--color01);
 }
 h4{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
-    color: var(--color00);
-    text-shadow: 5px 5px 10px var(--color01);
+    color: var(--color01);
 }
 p{
     font-size: 1.1rem;
@@ -198,7 +200,7 @@ header h1{
 }
 .art01 >:nth-child(2){
     width: 100%;
-    padding: 1rem;
+    padding: var(--padTexto);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -240,11 +242,11 @@ header h1{
     }
 }
 .art02 h3, .art02 >p{
-    padding: 0 1rem;
+    padding: 0 var(--padTexto);
 }
 @media only screen and (min-width:800px) {
     .art02 >p{
-        width: 80%;
+        width: var(--anchoTexto);
     }
 }
 .art02 .matrix3{
@@ -268,7 +270,7 @@ header h1{
 @media only screen and (min-width:800px){
     .art02 .matrix3 >div{
         width: 33%;
-        max-width: 600px;
+        max-width: 800px;
     }
 }
 .art02 .matrix3 >div img{
@@ -293,7 +295,7 @@ header h1{
 }
 .art03 >:nth-child(1){
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 var(--padTexto);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,6 +305,9 @@ header h1{
 @media only screen and (min-width:800px){
     .art03 >:nth-child(1){
         width: 80%;
+    }
+    .art03 >:nth-child(1) p{
+        width: var(--anchoTexto);
     }
 }
 .art03 .matrix4{
@@ -333,9 +338,176 @@ header h1{
     height: 100%;
     object-fit: cover;
 }
-.art03 .matrix4 h4{
+.art03 .matrix4 >div h4{
+    font-size: 1.5rem;
+    color: var(--color00);
+    text-shadow: 5px 5px 10px var(--color01);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+/* artículo 4 */
+.art04{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:1350px){
+    .art04{
+        width: 80%;
+    }
+}
+.art04 .mod01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art04 .mod01 >:nth-child(1){
+    width: 100%;
+    padding: 0 var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+.art04 .mod01 >:nth-child(2){
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px){
+    .art04 .mod01{
+        justify-content: space-between;
+    }
+    .art04 .mod01 >:nth-child(1){
+        width: 40%;
+        align-items: flex-start;
+    }
+    .art04 .mod01 >:nth-child(1) h3{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .art04 .mod01 >:nth-child(2){
+        width: 50%;
+    }
+}
+.art04 .mod02{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+.art04 .mod02 >:nth-child(2){
+    width: 100%;
+    padding: var(--padTexto);
+    background-color: var(--color00);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.art04 .mod02 >:nth-child(2) p{
+    width: 100%;
+}
+@media only screen and (min-width:800px){
+    .art04 .mod02 >:nth-child(2) p{
+        width: 80%;
+    }
+}
+.art04 .mod02 >:nth-child(2) img{
+    border-radius: 50%;
+}
+
+
+
+/* ESTILOS DEL ARTÍCULO 5 */
+.art05{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:800px){
+    .art05{
+        width: 80%;
+    }
+}
+.art05 >:nth-child(1){
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+    text-align: center; /* ESTE ESTILO SE PROPAGA A SUS HIJOS */
+}
+.art05 >:nth-child(2){
+    width: 100%;
+    padding: 0 var(--padTexto);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+@media only screen and (min-width:800px){
+    .art05 >:nth-child(1) p{
+        width: var(--anchoTexto);
+    }
+    .art05 >:nth-child(2){
+        padding: initial;
+    }
+}
+.art05 .ficha{
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+}
+@media only screen and (min-width:800px){
+    .art05 .ficha{
+        width: 48%;
+    }
+}
+@media only screen and (min-width:1350px){
+    .art05 .ficha{
+        width: 23%;
+        max-width: 500px;
+    }
+}
+.art05 .ficha p{
+    width: 100%;
+}
+.art05 .ficha img{
+    border-radius: 50%;    
+}
+.art05 .firma{
+    font-style: italic;
+    color: var(--color03);
+}
+
+
+
