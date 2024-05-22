@@ -53,6 +53,20 @@ a, a:visited{
   color: inherit;
   text-decoration: none;
 }
+cite{
+  padding: 1.5rem;
+  font-size: 2rem;
+  display: flex;
+  color: var(--color2);
+  border-left: 5px solid var(--color2);
+}
+cite span{
+  color: var(--color2);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 7rem;
+  padding-right: 2rem;
+  line-height: 3rem;
+}
 /* TAGS */
 nav, header, main {
   width: 100%;
@@ -67,7 +81,6 @@ body, section{
   align-items: center;
   justify-content: flex-start;
 }
-
 section{
   padding: 2rem 0;
   row-gap: 2rem;
@@ -126,10 +139,8 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
   position: relative; 
 }
-
 /* TABLET */
 @media only screen and (min-width:800px){ 
   header {background-image: url('https://dummyimage.com/1024x1350');}
@@ -146,7 +157,7 @@ header h1{
   color: var(--color3);
 }
 
-/* TIPO1 */ 
+/*ESTILOS TIPO1 */ 
 .tipo1{
   width: 100%;
   display: flex;
@@ -168,8 +179,7 @@ header h1{
   }
   .tipo1 >:nth-child(1){
       width: 50%;
-  } 
-  
+  }  
 }
 .tipo1 >:nth-child(2){
   width: 100%;
@@ -199,7 +209,7 @@ header h1{
   }
 }
 
-/* TIPO2 */ 
+/*ESTILOS TIPO2 */ 
 .tipo2{
   width: 100%;
   display: flex;
@@ -215,7 +225,7 @@ header h1{
   }
   .tipo2 >p{
     width: 70%;
-}
+  }
 }
 .tipo2 h3, .tipo2 p{
   text-align: center;
@@ -232,11 +242,10 @@ header h1{
 }
 /* TABLET */
 @media only screen and (min-width:800px){
- 
   .tipo2 .tipox3 >div{
     width: 33%;
     max-width: 400px;
-}
+  }
 }
 .tipo2 .tipox3 >div img{
   width: 100%;
@@ -295,7 +304,6 @@ header h1{
       width: 25%;
   }
 }
-
 .tipox4 >div h4{
   position: absolute;
   top: 50%;
@@ -308,7 +316,7 @@ header h1{
   object-fit: cover;
 }
 
-/* TIPO 4 */
+/*ESTILOS TIPO 4 */
 .tipo4{
     width: 100%;
     display: flex;
@@ -332,6 +340,7 @@ header h1{
     flex-wrap: wrap;
     gap: 1.5rem;
 }
+/* DESKTOP */
 @media only screen and (min-width:1350px){
   .tipo4 .mod01{
       justify-content: space-between;
@@ -339,7 +348,7 @@ header h1{
 } 
 .tipo4 .mod01 >:nth-child(1){
   width: 100%;
-  padding: 0 var(--padTexto);
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,7 +357,7 @@ header h1{
 }
 @media only screen and (min-width:1350px){
   .tipo4 .mod01 >:nth-child(1){
-      width: 45%;
+      width: 40%;
       align-items: flex-start;
   }
   .tipo4 .mod01 >:nth-child(1) h3{
@@ -396,3 +405,123 @@ header h1{
 .tipo4 .mod02 >:nth-child(2) img{
   border-radius: 50%;
 }
+
+/*ESTILOS TIPO 5 */
+.tipo5{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+/* TABLET */
+@media only screen and (min-width:800px){
+  .tipo5{
+    width: 80%;
+  }
+}
+.tipo5 >:nth-child(1){
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  row-gap: 1rem;
+}
+/* TABLET */
+@media only screen and (min-width:800px){
+  .tipo5 >:nth-child(1) p{
+    width: 60%;
+  }
+}
+.tipo5 >:nth-child(2){
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tipo5 .ficha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1rem;
+  padding: 1.5rem;
+}
+/* TABLET */
+@media only screen and (min-width:800px){
+  .tipo5 .ficha{
+    width: 40%;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+  .tipo5 .ficha{
+    width: 20%;
+    max-width: 500px;
+  }
+}
+.tipo5 .ficha img{
+  border-radius: 50%;
+}
+.tipo5 .ficha p{
+  width: 100%;
+}
+.tipo5 .firma{
+  font-style: italic;
+}
+
+/*ESTILOS TIPO 6 */
+.tipo6{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 2rem;
+}
+.tipo6 .modulo01{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+  .tipo6 .modulo01{
+    justify-content: space-between;
+    width: 80%;
+  } 
+}
+.tipo6 .modulo01 >:nth-child(1){
+  padding: 0 1.5rem;
+}
+.tipo6 .modulo01 >img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+  .tipo6 .modulo01 >img{
+    width: 50%;
+  }
+  .tipo6 >:nth-child(3){
+    flex-direction: row-reverse;
+  }
+  .tipo6 .modulo01 >:nth-child(1){
+    width: 45%;
+  }
+}
+
+/* TIPO 7 */
+
