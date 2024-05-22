@@ -561,6 +561,13 @@ header {
     align-items: center;
     row-gap: 1.5rem;
 }
+@media only screen and (min-width:1350px) {
+    .art06 {
+        width: 80%;
+        row-gap: 3rem;
+    }
+}
+
 
 
 
