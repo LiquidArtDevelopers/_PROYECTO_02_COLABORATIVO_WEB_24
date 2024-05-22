@@ -422,21 +422,25 @@ article {
 }
 .art04 >div {
     width: 100%;
-    background-color: aqua;
     
 }
 .art04 .mod01 >:nth-child(1) {
     width: 100%;
-    padding: 0 var(--padTexto);
+    padding: var(--padTexto);
     row-gap: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
+
 @media only screen and (min-width:1350px) {
     .art04 .mod01 >:nth-child(1) {
         width: 45%;
+    }
+    .art04 .mod01 >:nth-child(1) a {
+    position: relative;
+    left: -47.5%;
     }
 }
 .art04 .mod01 >:nth-child(2) {
@@ -449,6 +453,40 @@ article {
         width: 50%;
     }
 }
-
+.art04 .mod02 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art04 .mod02 >div {
+    width: 100%;
+    padding: var(--padTexto);
+    background-color: var(--colormio00);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art04 .mod02 >div img {
+    border-radius: 50%;
+}
+.art04 .mod02 >div >p {
+    width: 100%;
+}
+@media only screen and (min-width:800px) {
+    .art04 .mod02 >div >p {
+        width: 83%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod02 >div >p {
+        width: 60%;
+    }
+}
 
 
