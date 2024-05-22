@@ -16,6 +16,7 @@ a, a:visited{
     --colormio00: white;
     --colormio01:rgb(44, 44, 44);
     --colormio02:rgb(216, 216, 255);
+    --colormio03: rgb(169, 169, 169);
 
     --fuentemia00:"Noto Sans", sans-serif;
     --fuentemia01:"Freeman", sans-serif;
@@ -179,10 +180,6 @@ header {
     }
 }
 
-article {
-    width: 100%;
-}
-
 /* RECURSOS------- */
 /* ARTÍCULO TIPO 1 */
 
@@ -193,7 +190,7 @@ article {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    flex-wr∑ap: wrap;
+    flex-wrap: wrap;
     gap: 1rem;    
 }
 
@@ -275,8 +272,6 @@ article {
     padding: var(--padTexto);
     
 }
-
-
 .red1 {
     width: 100%;
 
@@ -488,5 +483,84 @@ article {
         width: 60%;
     }
 }
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 5 */
+
+.art05 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:800px) {
+    .art05 {
+        width:80%;
+    }
+}
+
+.art05 >:nth-child(1) {
+    padding: var(--padTexto);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art05 >:nth-child(2) {
+    width: 100%;
+    padding: var(--padTexto);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+@media only screen and (min-width:800px) {
+    .art05 >:nth-child(2) .ficha {
+        width: 48%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art05 >:nth-child(2) .ficha {
+        width: 23%;
+    }
+}
+.art05 .ficha {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.art05 .ficha img {
+    border-radius: 50%;
+}
+.art05 .ficha >p {
+    width: 100%;
+}
+
+.art05 .ficha .firma {
+    font-style: italic;
+    color: var(--colormio03);
+}
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 6 */
+.art06 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
 
 
