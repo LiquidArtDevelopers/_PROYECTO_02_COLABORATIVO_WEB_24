@@ -358,6 +358,7 @@ header h1{
     font-size: 1.5rem;
     color: var(--color00);
     text-shadow: 5px 5px 10px var(--color01);
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -552,9 +553,6 @@ header h1{
     gap: 1rem;
 }
 @media only screen and (min-width:1350px){
-    .art06 >div{
-        width: 80%;
-    }
     .art06 .mod01{
         justify-content: space-between;
     }
@@ -588,3 +586,167 @@ header h1{
 }
 
 
+/* ESTILOS PARA EL ARTÍCULO 07 */
+.art07{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 3rem;
+}
+.art07 >:nth-child(1){
+    width: 100%;
+    padding: 3rem 5vw;
+    background-image: url('https://dummyimage.com/300x600');
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media only screen and (min-width:800px){
+    .art07 >:nth-child(1){
+        background-image: url('https://dummyimage.com/900x1000');
+    }
+}
+@media only screen and (min-width:1350px){
+    .art07 >:nth-child(1){
+        padding: 10rem 5vw;
+        background-image: url('https://dummyimage.com/1500x1800');
+    }
+}
+@media only screen and (min-width:2560px){
+    .art07 >:nth-child(1){
+        background-image: url('https://dummyimage.com/2560x3100');
+    }
+}
+.art07 h3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+}
+.art07 h3 >:nth-child(2){
+    font-size: 9vw;
+}
+@media only screen and (min-width:1350px){
+    .art07 h3 >:nth-child(2){
+        font-size: 8rem;
+    }
+}
+.art07 >:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 3rem;
+}
+.art07 >:nth-child(2) p{
+    width: 100%;
+    padding: var(--padTexto);
+}
+@media only screen and (min-width:1350px){
+    .art07 >:nth-child(2){
+        width: 80%;
+    }
+    .art07 >:nth-child(2) p{
+        width: var(--anchoTexto);
+        padding: 0;
+    }
+}
+.art07 .matrix6{
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 2rem;
+    background-color: #959595;
+}
+@media only screen and (min-width:800px){
+    .art07 .matrix6{
+        justify-content: space-between;
+    }
+}
+.art07 .matrix6 >div{
+    width: 100%;
+    height: 350px;
+    background-color: aqua;
+}
+
+@media only screen and (min-width:800px){
+    .art07 .matrix6 >div{
+        width: 32%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MÓDULOS COMO RECURSOS GLOBALES */
+/* modulo 1 tipo matriz 4 elementos a sangre */
+.modulo01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.modulo01 >div{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+@media only screen and (min-width:800px){
+    .modulo01 >div{
+        width: 50%;
+    }
+}
+@media only screen and (min-width:1350px){
+    .modulo01 >div{
+        width: 25%;
+    }
+}
+.modulo01 >div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modulo01 >div h4{
+    font-size: 1.5rem;
+    color: var(--color00);
+    text-shadow: 5px 5px 10px var(--color01);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
