@@ -710,6 +710,8 @@ header h1{
 
 
 
+
+
 /* MÓDULOS COMO RECURSOS GLOBALES */
 /* modulo 1 tipo matriz 4 elementos a sangre */
 .modulo01{
@@ -749,4 +751,63 @@ header h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* módulo 2 de tipo grid para imágenes  */
+.modulo02{    
+    width: 100%;
+    display: grid;
+    gap: 0.2rem;
+    grid-template-rows:
+        4rem 6rem auto 6rem 6rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'area01'
+        'area02'
+        'area03'
+        'area04'
+        'area05'
+        'area06'
+    ;
+    height: 90vh;
+}
+.modulo02 >:nth-child(1){
+    grid-area: area01;
+    background-color: rgb(218, 178, 255);
+}
+.modulo02 >:nth-child(2){
+    grid-area: area02;
+    background-color: rgb(178, 255, 249);
+}
+.modulo02 >:nth-child(3){
+    grid-area: area03;
+    background-color: rgb(178, 196, 255);
+}
+.modulo02 >:nth-child(4){
+    grid-area: area04;
+    background-color: rgb(255, 178, 238);
+}
+.modulo02 >:nth-child(5){
+    grid-area: area05;
+    background-color: rgb(255, 178, 191);
+}
+.modulo02 >:nth-child(6){
+    grid-area: area06;
+    background-color: rgb(255, 254, 178); 
+}
+@media only screen and (min-width:800px){
+    .modulo02{
+        display: grid;
+        grid-template-rows:
+            30vh auto 20vh 20vh;
+        grid-template-columns: 
+            auto auto auto;
+        grid-template-areas:
+            'area01 area01 area01'
+            'area02 area02 area03'
+            'area04 area05 area03'
+            'area06 area06 area06'
+        ;
+    }
 }
