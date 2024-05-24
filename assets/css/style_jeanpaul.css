@@ -21,6 +21,7 @@ a, a:visited{
     --fuentemia00:"Noto Sans", sans-serif;
     --fuentemia01:"Freeman", sans-serif;
     --padTexto: 1.5rem;
+    --anchotexto: 60%;
 
 }
 
@@ -261,16 +262,17 @@ header {
     align-items: center;
     row-gap: 1rem;
 }
-
 @media only screen and (min-width:800px) {
     .art02 {
         width: 80%;
     }
 }
-
-.art02 >:nth-child(1), .art02 >:nth-child(2) {
+.art02 >:nth-child(1) {
+    padding: var(--padTexto)
+} 
+.art02 >:nth-child(2) {
     padding: var(--padTexto);
-    
+    width: 60%;  
 }
 .red1 {
     width: 100%;
@@ -331,7 +333,7 @@ header {
 }
 
 .art03 >:nth-child(1) {
-    width: 80%;
+    width: 100%;
     padding: var(--padTexto);
     display: flex;
     flex-direction: column;
@@ -370,12 +372,12 @@ header {
 
 @media only screen and (min-width:800px) {
     .art03 .red2 >div {
-        width: 48%;       
+        width: 50%;       
     }
 }
 @media only screen and (min-width:1350px) {
     .art03 .red2 >div {
-        width: 24%;      
+        width: 25%;      
     }
 }
 .art03 .red2 >div img {
