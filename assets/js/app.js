@@ -1,7 +1,6 @@
 import "./_toggle.js";
 import "./_scroll.js";
 
-const d=document;
-d.addEventListener('DOMContentLoaded',()=>{
-    
+const midocumentoHTML = document;
+midocumentoHTML.addEventListener('DOMContentLoaded',()=>{ 
 });
