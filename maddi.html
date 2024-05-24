@@ -22,7 +22,7 @@
     <main>
         <!-- Tipo 1 -->
         <section>
-            <h2>Tipo 1</h2>
+            <h2>Artículo tipo 1</h2>
             <article class="articulo1">
                 <div class="cajaimg">
                     <img
@@ -30,20 +30,49 @@
                     srcset="
                     https://dummyimage.com/350x400 350w,
                     https://dummyimage.com/800x400 800w,
-                    https://dummyimage.com/700x1000 700w"
-                    sizes="(min-width: 550px) 900px, (min-width: 900px) 600px, 350px">
+                    https://dummyimage.com/700x800 700w"
+                    sizes="(max-width: 550px) 350px, (max-width: 1024px) 800px, 700px">
                 </div>
                 <div class="cajatxt">
                     <h3>Título del artículo</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
-                    <a class="boton" href="">Botón</a>
+                    <a class="boton01" href="">Botón</a>
                 </div>
+                <div class="w90mt100d">
+                    <div class="comp01">
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</p>
+                        <p class="cita">- Lorem ipsum dolor.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p class="cita">- Facilis dolore earum.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem luptate.</p>
+                        <p class="cita">- Incidunt natus doloribus.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p class="cita">- Harum at placeat excepturi laudantium.</p>
+                    </div>
+                </div>
+                </div>
+                
             </article>
         </section>
 
         <!-- Tipo 2 -->
         <section>
-            <h2>Tipo 2</h2>
+            <h2>Artículo tipo 2</h2>
             <article class="articulo2">
                 <div class="cajatxt txtC">
                     <h3>Título del artículo</h3>
@@ -65,7 +94,7 @@
 
         <!-- Tipo 3 -->
         <section>
-            <h2>Tipo 3</h2>
+            <h2>Artículo tipo 3</h2>
             <article class="articulo3">
                 <div class="cajatxt txtC">
                     <h3>Título del artículo</h3>
@@ -73,15 +102,19 @@
                 </div>
                 <div class="cuadricula">
                     <div>
+                        <h4 >Subtítulo</h4>
                         <img src="https://dummyimage.com/400x400" width="400" height="400" alt="">
                     </div>
                     <div>
+                        <h4>Subtítulo</h4>
                         <img src="https://dummyimage.com/400x400" width="400" height="400" alt="">
                     </div>
                     <div>
+                        <h4>Subtítulo</h4>
                         <img src="https://dummyimage.com/400x400" width="400" height="400" alt="">
                     </div>
                     <div>
+                        <h4>Subtítulo</h4>
                         <img src="https://dummyimage.com/400x400" width="400" height="400" alt="">
                     </div>
                 </div>
@@ -90,21 +123,21 @@
 
         <!-- Tipo 4 -->
         <section>
-            <h2>Tipo 4</h2>
+            <h2>Artículo tipo 4</h2>
             <article class="articulo4">
                 <!-- Esto podria hacerse quitando los dos div hijos del articulo, haciendo que los seis elementos sean los hijos directos y que el article sea un flex row wrap, con los dos primeros (txt img) a p.ej 45% y space-between en desktop -->
                 <div>
                     <div class="cajatxt">
                         <h3>Título del artículo</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
-                        <a class="boton" href="">Botón</a>
+                        <a class="boton01" href="">Botón</a>
                     </div>
                     <div class="cajaimg">
                         <img src="https://dummyimage.com/400x300" width="400" height="300" alt=""
                         srcset="
                         https://dummyimage.com/400x300 400w,
                         https://dummyimage.com/800x600 800w"
-                        sizes="(min-width: 550px) 900px, 400px">
+                        sizes="(max-width: 550px) 400px, 800px">
                     </div>
                 </div>
                 <div>
@@ -113,7 +146,7 @@
                         <div class="cuadricula">
                             <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa iure dignissimos quaerat maxime? Voluptate temporibus nesciunt earum assumenda, quidem vero necessitatibus est ducimus inventore repellat nobis! Itaque odio molestias minima nostrum, ex impedit?</p>
-                            <a class="boton" href="">Botón</a>
+                            <a class="boton01" href="">Botón</a>
                         </div>
                     </div>
                     <div>
@@ -121,7 +154,7 @@
                         <div class="cuadricula">
                             <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa iure dignissimos quaerat maxime? Voluptate temporibus nesciunt earum assumenda, quidem vero necessitatibus est ducimus inventore repellat nobis! Itaque odio molestias minima nostrum, ex impedit?</p>
-                            <a class="boton" href="">Botón</a>
+                            <a class="boton01" href="">Botón</a>
                         </div>
                     </div>
                     <div>
@@ -129,7 +162,7 @@
                         <div class="cuadricula">
                             <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa iure dignissimos quaerat maxime? Voluptate temporibus nesciunt earum assumenda, quidem vero necessitatibus est ducimus inventore repellat nobis! Itaque odio molestias minima nostrum, ex impedit?</p>
-                            <a class="boton" href="">Botón</a>
+                            <a class="boton01" href="">Botón</a>
                         </div>
                     </div>
                     <div>
@@ -137,7 +170,7 @@
                         <div class="cuadricula">
                             <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore culpa iure dignissimos quaerat maxime? Voluptate temporibus nesciunt earum assumenda, quidem vero necessitatibus est ducimus inventore repellat nobis! Itaque odio molestias minima nostrum, ex impedit?</p>
-                            <a class="boton" href="">Botón</a>
+                            <a class="boton01" href="">Botón</a>
                         </div>
                     </div>
                 </div>
@@ -146,17 +179,17 @@
 
         <!-- Tipo 5 -->
         <section>
-            <h2>Tipo 5</h2>
+            <h2>Artículo tipo 5</h2>
             <article class="articulo5">
                 <div>
                     <h3>Título del artículo</h3>
-                    <p class="txtC">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
+                    <p class="txtC">Para que todas las citas se mantengan a la misma altura, a los párrafos dentro de las tarjetas se les ha dado una altura un poco (un par de px) mayor que el párrafo más largo. Lo mismo con las citas, para que todas las tajetas cojan la misma altura. En caso de que no haga falta mantener las posiciones iguales, se le pueden dar altura a las tarjetas en base a la más extensa.</p>
                 </div>
                 <div class="cuadricula">
                     <div>
                         <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                         <h4 class="txtC">Subtítulo del artículo</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</p>
                         <p class="cita">- Lorem ipsum dolor.</p>
                     </div>
                     <div>
@@ -168,14 +201,14 @@
                     <div>
                         <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                         <h4 class="txtC">Subtítulo del artículo</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem luptate.</p>
                         <p class="cita">- Incidunt natus doloribus.</p>
                     </div>
                     <div>
                         <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
                         <h4 class="txtC">Subtítulo del artículo</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
-                        <p class="cita">- Harum at placeat excepturi.</p>
+                        <p class="cita">- Harum at placeat excepturi laudantium.</p>
                     </div>
                 </div>
             </article>
@@ -183,46 +216,60 @@
 
         <!-- Tipo 6 -->
         <section>
-            <h2>Tipo 6</h2>
+            <h2>Artículo tipo 6</h2>
             <article class="articulo6">
                 <h3>Título del artículo</h3>
                 <div>
                     <div class="cajatxt">
+                        <h4>Subtítulo</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
                     </div>
                     <div class="cajaimg">
-                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt="">
+                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt=""
+                        srcset="
+                        https://dummyimage.com/400x300 400w,
+                        https://dummyimage.com/800x600 800w"
+                        sizes="(max-width: 550px) 400px, 800px">
                     </div>
                 </div>
                 <div class="mb20">
                     <div class="cajatxt">
+                        <h4>Subtítulo</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
                     </div>
                     <div class="cajaimg">
-                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt="">
+                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt=""
+                        srcset="
+                        https://dummyimage.com/400x300 400w,
+                        https://dummyimage.com/800x600 800w"
+                        sizes="(max-width: 550px) 400px, 800px">
                     </div>
                 </div>
-                <p class="cita txtJ mb20">
-                    <span class="comillas">❝</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellatmaiores mollitia labore illo vero eius reprehenderit. Necessitatibus veritatis ipsum non perspiciatis velit eaque doloremque delectus sint praesentium vel in. Deserunt nobis ad delectus itaque ipsam ipsa?
+                <p class="cita txtJ mb20"><span class="comillas color3">❝</span> Las comillas van en un span class mediante el que se le ha dado color, una fuente que admita este carácter especial (Source Sans 3), un tamaño de 5rem, y para alinearlo con el resto del texto, se ha reducido el line-height a 0.1rem y se ha bajado su vertical align a -25px.
                 </p>
                 <div>
                     <div class="cajatxt">
+                        <h4>Subtítulo</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque repudiandae itaque, corrupti, consectetur totam rem dicta labore mollitia, voluptate cum? Perspiciatis fugiat corporis consequuntur quod necessitatibus placeat excepturi molestias?</p>
-                        <a class="boton" href="">Botón</a>
+                        <a class="boton01" href="">Botón</a>
                     </div>
                     <div class="cajaimg">
-                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt="">
+                        <img src="https://dummyimage.com/400x300" width="400" height="300" alt=""
+                        srcset="
+                        https://dummyimage.com/400x300 400w,
+                        https://dummyimage.com/800x600 800w"
+                        sizes="(max-width: 550px) 400px, 800px">
                     </div>
                 </div>
             </article>
         </section>
 
-        <!-- Tipo 7 -->
+        <!-- Tipo 7A -->
         <section>
-            <h2>Tipo 7</h2>
+            <h2>Artículo tipo 7A</h2>
             <article class="articulo7">
                 <h3 class="txtC">Título del artículo</h3>
-                <p class="txtC mb20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita repudiandae cupiditate delectus aperiam possimus, in nihil eaque minus voluptate libero, facilis aliquam id repellat. Quisquam doloribus velit consequuntur accusantium quos.</p>
+                <p class="txtC mb20">Con gap de 10px en la caja de las imágenes, tanto en column como en row. Anchos de las imágenes ajustadas con porcentajes para tablet (32.6% y 64.9%) y desktop (33% y 65.4%), dejando un porcentaje libre para el gap. Alineación horizontal del contenedor de las imágenes centrada.</p>
 
                 <div class="caja1">
                     <div class="cajatxt">
@@ -238,7 +285,7 @@
                         srcset="
                         https://dummyimage.com/400x400 400w,
                         https://dummyimage.com/600x616 600w"
-                        sizes="(min-width: 550px) 600px, 400px">
+                        sizes="(max-width: 550px) 400px, 600px">
                     </div>
                 </div>
                 <div class="caja2">
@@ -255,7 +302,7 @@
                         srcset="
                         https://dummyimage.com/400x400 400w,
                         https://dummyimage.com/600x616 600w"
-                        sizes="(min-width: 550px) 700px, 400px">
+                        sizes="(max-width: 550px) 400px, 600px">
                     </div>
                 </div>
                 <div class="caja1">
@@ -272,7 +319,7 @@
                         srcset="
                         https://dummyimage.com/400x400 400w,
                         https://dummyimage.com/600x616 600w"
-                        sizes="(min-width: 550px) 600px, 400px">
+                        sizes="(max-width: 550px) 400px, 600px">
                     </div>
                 </div>
                 <div class="caja2">
@@ -289,9 +336,180 @@
                         srcset="
                         https://dummyimage.com/400x400 400w,
                         https://dummyimage.com/600x616 600w"
-                        sizes="(min-width: 550px) 700px, 400px">
+                        sizes="(max-width: 550px) 400px, 600px">
                     </div>
                 </div>
+            </article>
+        </section>
+
+        <!-- Tipo 7B -->
+        <section>
+            <h2>Artículo tipo 7B</h2>
+            <article class="articulo7B">
+                <h3 class="txtC">Título del artículo</h3>
+                <p class="txtC mb20">Ajustando el gap y el padding entre las imágenes. En móvil un row-gap: 10px entre las imágenes. En tablet un row-gap de 1.2vw y de 0.8vw en desktop. La imagen grande lleva un padding (left o right segun el lado en el que necesite el espacio) del mismo valor que el row-gap entre las imágenes pequeñas. Los anchos de las imágenes van en porcentajes, un tercio (33.3%) para la columna de las imágenes pequeñas y dos tercios (66.7%) para la imágen grande. Alineación horizontal del contenedor de las imágenes con space-between.</p>
+
+                <div class="caja1">
+                    <div class="cajatxt">
+                        <h4 class="mb20"><span class="color3">✦</span> Subtítulo</h4>
+                        <p>La estrellita es un carácter especial puesto en el h4, dentro de un span class para darle color. La línea es un border-left de la caja del p, que lleva también un padding-left para que el texto no vaya pegado al borde. Para que la línea quede alineada con el texto, el párrafo también lleva un margin-left, de 9px en este caso.
+                        </p>
+                    </div>
+                    <div class="cajaimg">
+                        <div>
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                        </div>
+                        <img src="https://dummyimage.com/400x400" width="400" height="400" alt=""
+                        srcset="
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/596x626 596w"
+                        sizes="(max-width: 550px) 400px, 600px">
+                    </div>
+                </div>
+                <div class="caja2">
+                    <div class="cajatxt">
+                        <h4 class="mb20"><span class="color3">✦</span> Subtítulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur ex tempore dolor doloribus expedita, nesciunt delectus facere nemo consectetur, dicta enim incidunt! Corporis, vero eaque? Quo id adipisci culpa sequi suscipit nostrum ex nemo numquam enim! Laudantium, dolorum debitis.</p>
+                    </div>
+                    <div class="cajaimg">
+                        <div>
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                        </div>
+                        <img src="https://dummyimage.com/400x400" width="400" height="400" alt=""
+                        srcset="
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/596x626 596w"
+                        sizes="(max-width: 550px) 400px, 600px">
+                    </div>
+                </div>
+                <div class="caja1">
+                    <div class="cajatxt">
+                        <h4 class="mb20"><span class="color3">✦</span> Subtítulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur ex tempore dolor doloribus expedita, nesciunt delectus facere nemo consectetur, dicta enim incidunt! Corporis, vero eaque? Quo id adipisci culpa sequi suscipit nostrum ex nemo numquam enim! Laudantium, dolorum debitis.</p>
+                    </div>
+                    <div class="cajaimg">
+                        <div>
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                        </div>
+                        <img src="https://dummyimage.com/400x400" width="400" height="400" alt=""
+                        srcset="
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/596x626 596w"
+                        sizes="(max-width: 550px) 400px, 600px">
+                    </div>
+                </div>
+                <div class="caja2">
+                    <div class="cajatxt">
+                        <h4 class="mb20"><span class="color3">✦</span> Subtítulo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur ex tempore dolor doloribus expedita, nesciunt delectus facere nemo consectetur, dicta enim incidunt! Corporis, vero eaque? Quo id adipisci culpa sequi suscipit nostrum ex nemo numquam enim! Laudantium, dolorum debitis.</p>
+                    </div>
+                    <div class="cajaimg">
+                        <div>
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                            <img src="https://dummyimage.com/308x308" width="308" height="308" alt="">
+                        </div>
+                        <img src="https://dummyimage.com/400x400" width="400" height="400" alt=""
+                        srcset="
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/596x626 596w"
+                        sizes="(max-width: 550px) 400px, 600px">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Tipo 8 -->
+        <section>
+            <h2>Artículo tipo 7B</h2>
+            <article class="articulo8">
+                <div>
+                    <h3><span>Palabras txikis <br></span><span>PALABRAS GRANDES</span></h3>
+                </div>
+                <div class="mb80">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eligendi vel recusandae corporis impedit magnam deserunt, nisi cupiditate earum perferendis, pariatur temporibus quisquam. Est doloribus eum, sunt quis inventore eos.</p>
+                    <h4>PRODUCTOS</h4>
+                    <div class="cuadricula">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="custom-shape-divider-bottom-1716460679">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="cita txtJ mb50"><span class="comillas">❝</span> Las comillas van en un span class mediante el que se le ha dado color, una fuente que admita este carácter especial (Source Sans 3), un tamaño de 5rem, y para alinearlo con el resto del texto, se ha reducido el line-height a 0.1rem y se ha bajado su vertical align a -25px.</p>
+                        <a class="boton02" href="">Botón</a>
+                    </div>
+                    <div class="custom-shape-divider-top-1716460759">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                </div>
+            </article>
+        </section>
+    
+        <!-- Componentes globales -->
+        <section>
+            <h2>COMPONENTES GLOBALES</h2>
+            <article class="flcolCS w80 mb80">
+                <h3 class="mb20">Componente 01</h3>
+                <div class="comp01">
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</p>
+                        <p class="cita">- Lorem ipsum dolor.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p class="cita">- Facilis dolore earum.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem luptate.</p>
+                        <p class="cita">- Incidunt natus doloribus.</p>
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/80x80" width="80" height="80" alt="">
+                        <h4 class="txtC">Subtítulo del artículo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem laudantium minus neque quos quis placeat vel ipsa quidem voluptate.</p>
+                        <p class="cita">- Harum at placeat excepturi laudantium.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flcolCS w100 mb80">
+                <h3 class="mb20">Botones</h3>
+                <a class="boton01" href="">Botón</a>
+            </article>
+            <article class="flcolCS w100">
+                <h3 class="mb20">Grid</h3>
+                <div class="grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                
             </article>
         </section>
     </main>
