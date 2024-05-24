@@ -283,7 +283,11 @@ a, a:visited { /* Enlaces */
 
 .grid >:nth-child(1) {
     grid-area: area01;
-    background-color: rgb(213, 238, 123);
+    background-image: url(https://dummyimage.com/500x900);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .grid >:nth-child(2) {
     grid-area: area02;
@@ -299,11 +303,57 @@ a, a:visited { /* Enlaces */
 }
 .grid >:nth-child(5) {
     grid-area: area05;
-    background-color: rgb(252, 143, 225);
+    background-image: url(https://dummyimage.com/500x900);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .grid >:nth-child(6) {
     grid-area: area06;
     background-color: rgb(207, 171, 240);
+}
+
+.grid >div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid p {
+    font-family: var(--font1);
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: normal
+}
+
+.grid >:nth-child(1) p, .grid >:nth-child(5) p {color: var(--color1);}
+.grid >:nth-child(3) p, .grid >:nth-child(4) p {color: var(--color3);}
+
+@media only screen and (min-width:600px){ /* TABLET */
+    .grid {
+        width: 80%;
+        height: 95vh;
+        gap: 0.5rem;
+        grid-template-rows: 20% auto auto 20%;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        'area01 area01 area01'
+        'area02 area02 area03'
+        'area04 area05 area03'
+        'area04 area06 area06';
+    }
+
+    .grid >:nth-child(1), .grid >:nth-child(5) {
+        background-image: url(https://dummyimage.com/1000x1000);
+    }
+}
+
+@media only screen and (min-width:1300px){ /* DESKTOP */
+    .grid >:nth-child(1), .grid >:nth-child(5) {
+        background-image: url(https://dummyimage.com/2000x1200);
+    }
 }
 
 
@@ -1188,7 +1238,7 @@ header {
 }
 
 .articulo8 >:nth-child(2) h4 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     letter-spacing: -10px;
 
