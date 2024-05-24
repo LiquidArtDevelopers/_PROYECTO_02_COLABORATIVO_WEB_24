@@ -16,7 +16,7 @@
     </nav>
     
     <header>
-        <h1>Encabezado principal H1</h1>
+        <h1 id="idparah1">Encabezado principal H1</h1>
     </header>
 
     <main>
@@ -385,7 +385,40 @@
 
 <script src="./assets/js/jeanpaul.js"></script>
 <script>
+/* declaracion de variables de ambito global para este script */
+var a
+var b
+var total
+/* declaracion de variables de ambito local (en el nivel en el que estén anidadas) */
+let nombre, apellido, persona
+/* operaciones con números */
+a=10
+b=5
+total=a+b
+console.log(total)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
 
+/* trabajar con texto */
+/* variables string son de texto  */
 
-    
+nombre='Manolo'
+apellido='Garcia'
+/* concatenear en javascript textos */
+
+persona=nombre+' '+apellido
+console.log(persona)
+
+/* escribir en el html */
+
+/* recpger un elemento html y modificarle algun atributo */
+var idparah1
+idparah1=document.getElementById('idparah1')
+console.log(idparah1)
+var miid
+miid=document.getElementById('idparah1')
+miid.innerText="Cambia el título por esto"
+miid.style.color="red"
+miid.classList.add('miclasedesdejavascript')
 </script>
