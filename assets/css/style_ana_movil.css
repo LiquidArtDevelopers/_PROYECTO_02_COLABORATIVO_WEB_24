@@ -113,19 +113,20 @@ header{
     height:100vh;
     background-image: url("https://dummyimage.com/800x800");
 }}
+
+
 /* Textos */
+
 h1{
     font-family: var(--fuente02);
     font-weight: 700;
     font-size: 2.2rem;
     line-height: 40px;
 }
-
 h2{ font-family: var(--fuente02);
     font-weight: 700;
     font-size: 1.8rem;
 }
-
 h3,h4{
     font-family: var(--fuente02);
     font-weight: 700;
@@ -142,12 +143,10 @@ p{
     font-size: 1rem;
     padding: 0.5rem 2rem;
 }
-
 a{
     font-family: var(--fuente01);
     font-weight: 100;
     font-size: 1rem;
-
 }
 
 /* DESKTOP */
@@ -158,21 +157,16 @@ h1{
 }
 h2{
     font-size:3.5rem;;
-}
-    
+}    
 h3{ 
     font-size: 2.6rem;
-}
-    
+}   
 h4 { 
     font-size: 2rem;
-}   
-    
+}      
 p,a{ 
     font-size: 1.5rem;
 }
-    
-
 }
 
 
@@ -221,10 +215,6 @@ p,a{
 
 /*  posiciones de caja*/
 
-.wrap{
-    flex-wrap: wrap;
-  
-}
   
 .colum1{
     order:  2;
@@ -278,30 +268,8 @@ p,a{
     border-radius: 50%;
 }
 
-/* Seccion primera */
-
-@media only screen and (min-width:800px){
-
-.modulo1{  
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-}
-
-/* seccion segunda */
-
-
-
-@media only screen and (min-width:800px){
-.modulo2{  
-    width: 80%;
-    column-gap: 2rem;
-    flex-direction: row;    
-}
-}
-
-/* Seccion cuarta */
-.modulo1{
+/* Seccion primera, segunda, tercera y cuarta*/
+.modulo{
     margin-top: 2.5rem;
     row-gap: 1rem;
     display: flex;
@@ -311,14 +279,17 @@ p,a{
     align-items: center;
 }
 
+@media only screen and (min-width:800px){
 
-@media only screen and (min-width:1px){
-    .modulo2{  
-        width: 80%;
-        column-gap: 2rem;
-        flex-direction: row;    
-    }
-    }
+.modulo{  
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem; 
+}
+}
+
+
 
 /* Seccion sexta */
 

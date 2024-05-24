@@ -27,13 +27,13 @@
 <!-- seccion primera -->
       <section>
             <h2>SECCION PRIMERA</h2>
-            <article class="modulo1">
-               <img 
+            <article class="modulo">
+               <!-- <img 
                src="https://dummyimage.com/400x400" width="400" height="400" alt="" title="" 
-               srcset="https://dummyimage.com/400x400 400w,
+              srcset="https://dummyimage.com/400x400 400w,
                https://dummyimage.com/600x600 600w"
                sizes= "(min-width: 550px) 600px, 
-               300px">
+               300px"> -->
                   <div>
                      <h3 class>Primera</h3>
                      <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.
@@ -52,7 +52,7 @@
            <article>
               <h3>Segunda</h3>
               <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reprehenderit possimus. Ipsum, recusandae quia laborum qui exercitationem velit enim neque repellat labore explicabo sit voluptatibus sint sequi consequuntur, quos iusto!</p>
-              <div class="modulo1">
+              <div class="modulo">
               <img 
               src="https://dummyimage.com/400x400" width="" height="" alt="" title="" 
               srcset="" sizes="">
@@ -72,7 +72,7 @@
          <article>
             <h3>Tercera</h3>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, reprehenderit possimus. Ipsum, recusandae quia laborum qui exercitationem velit enim neque repellat labore explicabo sit voluptatibus sint sequi consequuntur, quos iusto!</p>
-            <div class="modulo2">
+            <div class="modulo">
                   <img 
                   src="https://dummyimage.com/400x400" width="500" height="500" alt="" title="" 
                   srcset="" sizes="">
@@ -100,7 +100,7 @@
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ea aliquid magni maxime sit nemo eaque, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate, dolores officiis doloremque molestiae odit amet debitis consectetur temporibus repellat fugiat expedita harum voluptate.</p>
                   <a class="boton"href="">BOTON</a>            
                </div> 
-               <div class="modulo1">
+               <div class="modulo">
                   <h4 class="textcentr">titulo</h4>
                   <img class="redondo"
                   src="https://dummyimage.com/140x140" width="140" height="140" alt="" title="">
@@ -258,47 +258,3 @@
 
 
 
-<!-- scrip aqui directamente -->
-<script>
-/* variables de ambito global para este script */
-var a
-var b
-var total
-
-/* variables ambito local (donde esten anidadas) */
-let nombre, apellido, persona
-
-/* operaciones con numeros */
-a=10
-b=5
-total= a+b
-
-/* para ver que mi scrip funciona, me lo dice en la consola */
-console.log(total)
-console.log(a-b)
-console.log(a*b)
-console.log(a/b)
-/* Trabajar texto */
-
-/* string , el + concatena y para hacer espacios poner entre''*/
-nombre= 'Manolo'
-apellido= 'Garcia'
-
-persona= nombre +' '+ apellido + ' Perez'
-//Tambien se puede esta sintaxis(mas moderno)
-persona= `${nombre} ${apellido} Perez`
-
-console.log(persona)
-
-/* Modificar un Html y modificarle algo */
-var portada
-portada= document.getElementById('portadaH1')
-portada.innerText="Cambio el nombre de h1"
-portada.style.color="red"
-
-
-
-console.log(portada)
-
-
-</script>
