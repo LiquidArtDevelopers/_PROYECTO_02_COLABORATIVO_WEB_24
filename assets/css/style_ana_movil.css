@@ -37,7 +37,7 @@ nav,main,header,footer{
         
 }
 section{
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@ nav, header, main, footer{
                                              
 section{
     padding: 3rem 0;
-    row-gap: 3rem;
+    row-gap: 1.5rem;
 }  
 }
 
@@ -245,16 +245,16 @@ p,a{
     text-decoration: none;
     border-radius: 5%;
     text-align: center; 
- }
+}
  
 :hover.boton{
     background-color: var(--color01);
     color: var(--color02); 
- }
+}
  
- /* DESKTOP */
+/* DESKTOP */
 
- @media only screen and (min-width:800px){
+@media only screen and (min-width:800px){
 .boton{  
     font-size: 1.5rem;
     font-weight: 600;
@@ -268,9 +268,9 @@ p,a{
     border-radius: 50%;
 }
 
-/* Seccion primera, segunda, tercera y cuarta*/
+/* Seccion primera, segunda, tercera*/
 .modulo{
-    margin-top: 2.5rem;
+    width: 100%;
     row-gap: 1rem;
     display: flex;
     justify-content: center;
@@ -289,7 +289,18 @@ p,a{
 }
 }
 
+/* Seccion cuarta */
+.modulo2{
+   width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    row-gap: 1.5rem;
 
+}
 
 /* Seccion sexta */
 
@@ -311,7 +322,7 @@ cite{
 }
 
 
-/* septima seccion */
+/*seccion septima*/
 
 .septima{
     width: 100%;
@@ -320,8 +331,6 @@ cite{
     align-items: center;
     justify-content: flex-start;
     row-gap: 2rem;
-  
-   
 }
 .septima >:nth-child(1){
     width: 100%;
@@ -338,14 +347,12 @@ cite{
     justify-content: flex-start;
 }
 .septima h3 >:nth-child(1){
-    font-size: 3vw;
+    font-size: 8vw;
+    font-weight: 600;
 }  
 .septima h3 >:nth-child(2){
     font-size: 2vw;
 } 
-
-
-
 
 /* TABLET */
 @media only screen and (min-width: 800px) {
