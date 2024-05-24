@@ -11,22 +11,14 @@ function scrollFunction() {
         for(const item of document.getElementsByTagName("a")){
             item.style.color="pink";            
             item.style.transition="1s";
-        }
-        
+        }        
 
     } else {
-        document.getElementById("navegador").style.backgroundColor = "rgba(0, 0, 0, 0)";
+        document.getElementById("navegador").style.backgroundColor = "rgb(216, 216, 255)";
 
-        for(const item of document.getElementsByTagName("a")){
+        /* for(const item of document.getElementsByTagName("a")){
             item.style.color="white";
             item.style.transition="1s";
-        }
+        } */
     }
-
-
-    
-    
-
-
-
 }
