@@ -48,9 +48,10 @@ nav, header, main, footer{
 }
 /* desktop */
 @media only screen and (min-width:1350px) {
-    nav, header, main, footer{
-        max-width: 2560px;
-    }
+
+nav, header, main, footer{
+    max-width: 2560px;
+}
 }
 section{
     padding: 2rem 0;
