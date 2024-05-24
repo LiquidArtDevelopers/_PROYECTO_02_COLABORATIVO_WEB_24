@@ -16,7 +16,7 @@
 <body>
     <nav></nav>
     <header>
-        <h1 class="txtC">MADDI</h1>
+        <h1 id="mih1" class="txtC">MADDI</h1>
     </header>
 
     <main>
@@ -423,7 +423,7 @@
 
         <!-- Tipo 8 -->
         <section>
-            <h2>Artículo tipo 7B</h2>
+            <h2>Artículo tipo 8</h2>
             <article class="articulo8">
                 <div>
                     <h3><span>Palabras txikis <br></span><span>PALABRAS GRANDES</span></h3>
@@ -465,7 +465,7 @@
     
         <!-- Componentes globales -->
         <section>
-            <h2>COMPONENTES GLOBALES</h2>
+            <h2 class="txtC">COMPONENTES GLOBALES</h2>
             <article class="flcolCS w80 mb80">
                 <h3 class="mb20">Componente 01</h3>
                 <div class="comp01">
@@ -502,12 +502,24 @@
             <article class="flcolCS w100">
                 <h3 class="mb20">Grid</h3>
                 <div class="grid">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
+                    <div>
+                        <p>HOLA</p>
+                    </div>
                 </div>
                 
             </article>
@@ -517,3 +529,50 @@
     <footer></footer>
 </body>
 </html>
+
+<!-- Llamada a un archivo de js -->
+<script src="./assets/js/maddi.js"></script>
+
+
+<!-- script directamente en el html -->
+<script>
+
+    /* Declaración de variables globales para este script
+    Es lo mismo poner:
+        1)  var a
+            var b
+        2)  var a;
+            var b;
+        3)  var a, b
+        4)  var a; var b;   */
+    var a, b, total
+
+    // declaración de variables de ámbito local, en el nivel donde estén anidadas
+    let nombre, apellido, persona
+
+    // operaciones con números
+    a=10
+    b=5
+    total=a+b
+
+    console.log(total)
+    console.log(a*b)
+    console.log(a-b)
+
+    // Trabajar con texto (string)
+    nombre='Maddi'
+    apellido='Tolosa'
+    persona=nombre+' '+apellido
+
+    console.log(persona)
+
+    // Recoger un elemento HTML y cambiarlo mediante js
+    var miId
+    miId=document.getElementById('mih1')
+    console.log(miId)
+
+    miId.innerText='Título nuevo'
+    miId.style.color="indianred"
+    miId.classList.add('otraClase')
+
+</script>
