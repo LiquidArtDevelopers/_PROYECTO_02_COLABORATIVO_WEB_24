@@ -38,13 +38,12 @@ nav,header,main,footer,body {
 
 /* ETIQUETAS */
 section{
-    width: 100%;
     padding: 2rem 0;
     row-gap: 2rem;
 }
 /* TABLET */
 @media only screen and (min-width:800px){
-
+    section{
     width: 100%;
     padding: 3rem 0;
   }
@@ -93,14 +92,13 @@ h2{
 
 h2{
     font-size: 2.5rem;
-    padding-left: 40px;
+    padding-left: 6vh;
     padding-bottom: 30px;
-    
     }
 }
 
 
-@media only screen and (min-width:1350px) {
+@media only screen and (min-width:1024px) {
     h2{
         text-align: center;
     }
@@ -181,7 +179,10 @@ header {
   gap: 1rem;
 }
 
-@media only screen and (min-width:1350px) {
+
+
+
+@media only screen and (min-width:1024px) {
     .art01{ 
     justify-content:space-between;
     width: 90%;
