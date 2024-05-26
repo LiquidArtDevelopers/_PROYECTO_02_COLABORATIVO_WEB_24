@@ -79,25 +79,24 @@ header{
   background-image: url("https://dummyimage.com/550x400");
   background-repeat: no-repeat;
   color: var(--color01);
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
 
 /* DESKTOP */
-@media only screen and (min-width:2560px){
+@media only screen and (min-width: 2560px){
 
 nav{
-
     padding: 4rem 0rem;
 }
 
 header{
-    width: 1920px;
-    height:1080px;
+    width: 100vw; 
+    height: 1080px;
     background-image: url("https://dummyimage.com/1920x1080");
+    
 }}
 
 /* TABLET */
@@ -191,12 +190,6 @@ p,a{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-}
-.flexsend{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -309,18 +302,23 @@ cite{
     color: var(--color01);
     display: flex;
     justify-content: center;
-     margin-left: 30px;
+    margin-left: 30px;
     align-items:center;
     text-align: left;
+    margin-top: 20px;
 }
 .comilla{
     font-size: 4rem;
     font-weight: 600;
-    margin-top: -100px;
+    margin-top: -120px;
     margin-right: -40px;
 
 }
-
+@media only screen and (min-width:800px){
+.comilla{
+    margin-top: -100px;
+}
+}
 
 /*seccion septima*/
 
@@ -330,7 +328,7 @@ cite{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
 }
 .septima >:nth-child(1){
     width: 100%;
@@ -347,12 +345,40 @@ cite{
     justify-content: flex-start;
 }
 .septima h3 >:nth-child(1){
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: 600;
 }  
 .septima h3 >:nth-child(2){
-    font-size: 2vw;
+    font-size: 3vw;
 } 
+.caja{
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+.modulo3{
+    border: #4d0946 solid 1.5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #b37bad;
+    padding: 1.5rem 0;
+}
+.modulo3 p{
+    width: 80%;
+}
+
+@media only screen and (min-width:800px){
+
+.modulo3{  
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem; 
+}
+}
 
 /* TABLET */
 @media only screen and (min-width: 800px) {
@@ -372,17 +398,13 @@ cite{
 .septima h3 >:nth-child(1){
     font-size: 5vw;
 }  
-.septima h3 >:nth-child(2){
-    font-size: 3vw;
-} 
+
 .relative{
   position: relative;
+
 }
-.modulo3{
-    width: 80%;
-    gap: 2rem;
-} 
-.lateral{
+
+.textvertical{
     font-size: 7vw;
     left: 40px ;
     top: 0;
@@ -492,8 +514,5 @@ footer{
 }
 
 .fondo{
-    background-color: blueviolet;
-}
-.fondo2{
-    background-color: rgb(92, 29, 10);
+    background-color:blueviolet;
 }
