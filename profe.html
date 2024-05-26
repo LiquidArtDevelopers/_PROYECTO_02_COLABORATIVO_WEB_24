@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplos de estructuras reutilizables en HTML y CSS</title>
     <link rel="stylesheet" href="./assets/css/style_profe.css">
+    <script type="module" src="./assets/js/app.js"></script> 
 </head>
 <body>
-    <nav>
+    <!-- Toggle para controlar lo que tenga a continuación -->
+    <input type="checkbox" name ="toggle" id="toggle">
+    <label for="toggle" class="toggleLabel">
+        <span ></span>
+        <span></span>
+        <span></span>
+    </label>
+    <!--  -->
+    <nav id="navegador">       
 
     </nav>
-
+  
     <header>
-        <h1>Encabezado principal h1</h1>
+        <h1 id="idEncabezadoH1">Encabezado principal</h1>
     </header>
+    
 
     <main>
         
@@ -38,69 +48,7 @@
                     <a class="boton" href="#">CTA</a>
                 </div>                
             </article>
-            <!-- modulo 1 de tipo matriz 4 elementos -->
-            <div class="modulo01">
-                <div>
-                    <h4>Encabezado 4</h4>
-                    <img
-                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
-                    srcset="
-                    https://dummyimage.com/300x300 300w,
-                    https://dummyimage.com/400x400 400w,
-                    https://dummyimage.com/600x400 600w"
-                    sizes="
-                    (min-width: 800px) 400px,
-                    (min-width: 1350px) 600px,
-                    300px
-                    "
-                    >
-                </div>
-                <div>
-                    <h4>Encabezado 4</h4>
-                    <img
-                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
-                    srcset="
-                    https://dummyimage.com/300x300 300w,
-                    https://dummyimage.com/400x400 400w,
-                    https://dummyimage.com/600x400 600w"
-                    sizes="
-                    (min-width: 800px) 400px,
-                    (min-width: 1350px) 600px,
-                    300px
-                    "
-                    >
-                </div>
-                <div>
-                    <h4>Encabezado 4</h4>
-                    <img
-                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
-                    srcset="
-                    https://dummyimage.com/300x300 300w,
-                    https://dummyimage.com/400x400 400w,
-                    https://dummyimage.com/600x400 600w"
-                    sizes="
-                    (min-width: 800px) 400px,
-                    (min-width: 1350px) 600px,
-                    300px
-                    "
-                    >
-                </div>
-                <div>
-                    <h4>Encabezado 4</h4>
-                    <img
-                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
-                    srcset="
-                    https://dummyimage.com/300x300 300w,
-                    https://dummyimage.com/400x400 400w,
-                    https://dummyimage.com/600x400 600w"
-                    sizes="
-                    (min-width: 800px) 400px,
-                    (min-width: 1350px) 600px,
-                    300px
-                    "
-                    >
-                </div>
-            </div>
+            
         </section>
 
         <!-- sección del art02 -->
@@ -227,6 +175,54 @@
                     </div>
                 </div>
             </article>
+            <article class="art02">
+                <h3>Encabezado h3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, explicabo provident quod distinctio asperiores adipisci laudantium repudiandae culpa nulla facere molestias maxime quis assumenda unde obcaecati quo impedit, voluptas dolorem. Illo ex doloremque aliquid repudiandae architecto provident, quas veniam minus a consequatur error, id, nam tempore rem necessitatibus corrupti?</p>
+                <div class="matrix3">
+                    <div>
+                        <img
+                        src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                        srcset="
+                        https://dummyimage.com/300x300 300w,
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/600x400 600w"
+                        sizes="
+                        (min-width: 800px) 400px,
+                        (min-width: 1350px) 600px,
+                        300px
+                        "
+                        >
+                    </div>
+                    <div>
+                        <img
+                        src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                        srcset="
+                        https://dummyimage.com/300x300 300w,
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/600x400 600w"
+                        sizes="
+                        (min-width: 800px) 400px,
+                        (min-width: 1350px) 600px,
+                        300px
+                        "
+                        >
+                    </div>
+                    <div>
+                        <img
+                        src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                        srcset="
+                        https://dummyimage.com/300x300 300w,
+                        https://dummyimage.com/400x400 400w,
+                        https://dummyimage.com/600x400 600w"
+                        sizes="
+                        (min-width: 800px) 400px,
+                        (min-width: 1350px) 600px,
+                        300px
+                        "
+                        >
+                    </div>
+                </div>
+            </article> 
         </section>
 
         <!-- sección del art04 -->
@@ -451,11 +447,14 @@
         <section>
             <h2>Sección para el artículo 07</h2>
             <article class="art07">
+                <!-- primer hijo -->
                 <div>
                     <h3><span>Palabras en tipografía menor</span> <span>y palabras en tipografía grande</span></h3>
                 </div>
+                <!-- segundo hijo -->
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non id asperiores voluptate placeat quis similique quas itaque magni quos error corporis iusto, exercitationem ducimus libero esse animi omnis consectetur magnam.</p>
+                    <h4>PRODUCTOS</h4>
                     <div class="matrix6">
                         <div></div>
                         <div></div>
@@ -465,18 +464,177 @@
                         <div></div>
                     </div>
                 </div>
+                <!-- tercer hijo -->
                 <div>
-
+                    <div class="custom-shape-divider-bottom-1716457141">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                        </svg>
+                    </div>                
+                    <div>
+                        <cite><span>❝</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad.</cite>
+                    </div>                   
+                    
+                    <div class="custom-shape-divider-top-1716457038">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                        </svg>
+                    </div>                   
                 </div>
             </article>
         </section>
+
+        <!-- modulo 1 de tipo matriz 4 elementos -->
+            <div class="modulo01">
+                <div>
+                    <h4>Encabezado 4</h4>
+                    <img
+                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                    srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/400x400 400w,
+                    https://dummyimage.com/600x400 600w"
+                    sizes="
+                    (min-width: 800px) 400px,
+                    (min-width: 1350px) 600px,
+                    300px
+                    "
+                    >
+                </div>
+                <div>
+                    <h4>Encabezado 4</h4>
+                    <img
+                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                    srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/400x400 400w,
+                    https://dummyimage.com/600x400 600w"
+                    sizes="
+                    (min-width: 800px) 400px,
+                    (min-width: 1350px) 600px,
+                    300px
+                    "
+                    >
+                </div>
+                <div>
+                    <h4>Encabezado 4</h4>
+                    <img
+                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                    srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/400x400 400w,
+                    https://dummyimage.com/600x400 600w"
+                    sizes="
+                    (min-width: 800px) 400px,
+                    (min-width: 1350px) 600px,
+                    300px
+                    "
+                    >
+                </div>
+                <div>
+                    <h4>Encabezado 4</h4>
+                    <img
+                    src="https://dummyimage.com/300x300" width="300" height="200" alt="" title=""
+                    srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/400x400 400w,
+                    https://dummyimage.com/600x400 600w"
+                    sizes="
+                    (min-width: 800px) 400px,
+                    (min-width: 1350px) 600px,
+                    300px
+                    "
+                    >
+                </div>
+            </div>
+            <!-- módulo 2 de tipo grid -->
+            <div class="modulo02">
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+                <div>
+                    <h4>HOLA</h4>
+                </div>
+            </div>
+
+
+
         
 
     </main>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nihil officia! Voluptate eveniet dolorem fugit numquam? Perferendis laudantium tempore corrupti odit. Omnis ut, distinctio unde placeat ad minus vitae facere libero rem quasi architecto neque quam ipsa totam, repellendus, dolores porro asperiores officia repellat. Assumenda, natus sint! Officia dolorem dolore necessitatibus atque fugiat vitae inventore commodi ea quo, porro eveniet architecto facilis mollitia. Nisi aliquam illo consequuntur harum, totam odio ab. Maxime, illo minus enim officia totam quia odit tenetur dolores obcaecati adipisci molestias odio quod culpa fuga, laboriosam cumque delectus voluptas esse expedita atque ab. Aut accusamus beatae eaque in, laudantium odit? Mollitia fuga accusamus debitis quos ut ullam voluptatibus molestiae repudiandae eos in similique harum, dolores non laborum, dicta cupiditate tenetur soluta! Modi voluptates mollitia, odit dicta, repellendus perspiciatis quisquam provident repellat rem minus laboriosam quibusdam sed in, maiores atque corporis quidem. Repellendus repellat odit culpa eligendi cupiditate totam qui, delectus inventore velit aspernatur obcaecati numquam tempore, blanditiis quae odio? Voluptates, sequi eaque et magni vel fugit. Accusamus, nobis impedit at tenetur ipsam aspernatur inventore ab delectus quisquam aperiam saepe ea repudiandae sapiente! Laborum placeat repellat, cumque commodi a suscipit! Aperiam ratione itaque totam, quas eum aliquid numquam labore voluptatem quaerat dolores, repellat accusamus. Ad quis cum facere impedit earum. Fuga ipsam voluptatibus optio eveniet saepe accusantium, beatae quidem ea deserunt nostrum, aliquid quod a ratione tempore! Optio praesentium tenetur earum tempore ipsa totam nulla facere architecto at. Nulla placeat, itaque commodi error odio soluta ex pariatur eligendi, magnam similique, nesciunt possimus aliquam molestias sed corporis. Corporis ea magnam odio facilis quia amet, impedit est ratione. Sit molestiae, non dolorem expedita, odit vero officia obcaecati error, a delectus numquam! Error doloremque, corporis hic dolorem totam quibusdam quos perferendis ea officiis sed culpa, sunt similique ipsam! In accusamus dignissimos ea, quam ad, eveniet dolorem, error perferendis placeat nisi nostrum delectus! Tenetur et eveniet nemo labore neque culpa laboriosam consequuntur, fuga eum laudantium unde distinctio, aliquid explicabo repudiandae, illum temporibus officiis ad hic quo? Adipisci ratione rerum magnam eum fugiat nemo officiis. Commodi, asperiores totam. Qui labore repudiandae laborum incidunt consequatur. Reiciendis deserunt possimus dolores voluptatem ratione reprehenderit aperiam vero provident voluptate est. Dignissimos tenetur facere illum autem pariatur quam exercitationem reiciendis voluptatem repudiandae excepturi, quasi, debitis tempora asperiores maxime veritatis modi culpa earum ut! Labore deleniti quisquam aliquid vero quaerat! Voluptas dolorem at unde quidem odit earum quaerat, aut, inventore sunt aspernatur fugiat saepe quisquam praesentium. Veniam, sed dolor, fuga nulla quos cumque inventore delectus enim esse unde repellendus quisquam. Exercitationem sunt ab quis, asperiores magni, nulla nemo numquam quo temporibus atque necessitatibus id dolorem facilis ipsam ratione. Tempora nulla architecto asperiores nisi, minima quisquam quaerat assumenda aliquid accusantium repellendus! Minus, soluta facere veritatis suscipit quis quas voluptate quasi dolorum ullam ut doloribus veniam dolores adipisci cum, cupiditate ex dignissimos, deserunt modi. Rem totam sapiente culpa temporibus pariatur soluta magni voluptatibus facilis quos corrupti ratione maxime qui ducimus aliquid et quam, vero officia voluptatem. Ad quibusdam voluptatum atque esse!</p>
-
     <footer>        
-    </footer>
+    </footer>   
+    
 </body>
 </html>
+
+<!-- script que llama a otro archivo scrip y que lo carga aquí mismo -->
+<script src="./assets/js/profe.js"></script>
+
+
+<!-- script directo en el que ya puedo escribir sintaxis de js -->
+<script>
+
+/* declaración de variables de ámbito global para este script */
+var a
+var b
+var total
+
+/* declaración de variables de ámbiot local (en el nivel donde estén anidadas) */
+let nombre, apellido, persona
+
+/* operaciones con números */
+a=10
+b=5
+total = a + b
+
+console.log(total)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
+
+/* trabajar con texto */
+/* string */
+nombre = 'Manolo'
+apellido = 'García'
+
+/* concatenar en js textos */
+persona = nombre + ' ' + apellido + ' Pérez' //Manolo García Pérez
+persona = `${nombre} ${apellido} Pérez`//Manolo García Pérez
+persona = 'Igor Aranaz'
+persona = "Igor Aranaz"
+persona = `Igor Aranaz` // con las contra-comillas puedo meter variables dentro de ${}
+console.log(persona)
+
+
+/* escribir directamente en el HTML desde JS */
+document.write('Estoy escribiendo en HTML en este punto del documento HTML')
+
+
+/* recoger un elemento HTML y modificarle algún atributo o texto */
+var miId
+miId = document.getElementById('idEncabezadoH1')
+miId.innerText="Cambio de nombre de H1"
+miId.style.color="red"
+miId.classList.add('otraClase')
+
+
+
+
+
+
+
+</script>

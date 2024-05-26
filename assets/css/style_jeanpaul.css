@@ -21,6 +21,7 @@ a, a:visited{
     --fuentemia00:"Noto Sans", sans-serif;
     --fuentemia01:"Freeman", sans-serif;
     --padTexto: 1.5rem;
+    --anchotexto: 60%;
 
 }
 
@@ -139,14 +140,14 @@ h4 {
     font-size: 1.3rem;
     letter-spacing: 2px; 
     padding: 0.3rem 2rem;
-    color: var(--colormio01);
-    background-color: var(--colormio02);
+    color: var(--colormio00);
+    background-color: var(--colormio01);
     border-radius: 5px;
 }
 
 .boton1:hover {
     color: var(--colormio00);
-    background-color: var(--colormio01);
+    background-color: var(--colormio03);
 }
 
 /* SECCIONES DE LA WEB */
@@ -261,16 +262,17 @@ header {
     align-items: center;
     row-gap: 1rem;
 }
-
 @media only screen and (min-width:800px) {
     .art02 {
         width: 80%;
     }
 }
-
-.art02 >:nth-child(1), .art02 >:nth-child(2) {
+.art02 >:nth-child(1) {
+    padding: var(--padTexto)
+} 
+.art02 >:nth-child(2) {
     padding: var(--padTexto);
-    
+    width: 60%;  
 }
 .red1 {
     width: 100%;
@@ -283,6 +285,11 @@ header {
     gap: 1rem;
 }
 
+@media only screen and (min-width:800px) {
+    .red1 {
+        justify-content: center;
+    }
+}
 @media only screen and (min-width:1350px) {
     .red1 {
         justify-content: space-between;
@@ -302,7 +309,7 @@ header {
 }
 @media only screen and (min-width:800px) {
     .art02 .red1 div{
-        width: 40%;
+        width: 47%;
     }
 }
 @media only screen and (min-width:1350px) {
@@ -326,7 +333,7 @@ header {
 }
 
 .art03 >:nth-child(1) {
-    width: 80%;
+    width: 100%;
     padding: var(--padTexto);
     display: flex;
     flex-direction: column;
@@ -365,12 +372,12 @@ header {
 
 @media only screen and (min-width:800px) {
     .art03 .red2 >div {
-        width: 48%;       
+        width: 50%;       
     }
 }
 @media only screen and (min-width:1350px) {
     .art03 .red2 >div {
-        width: 24%;      
+        width: 25%;      
     }
 }
 .art03 .red2 >div img {
@@ -432,6 +439,7 @@ header {
 @media only screen and (min-width:1350px) {
     .art04 .mod01 >:nth-child(1) {
         width: 45%;
+        padding: initial;
     }
     .art04 .mod01 >:nth-child(1) a {
     position: relative;
@@ -523,7 +531,7 @@ header {
 }
 @media only screen and (min-width:800px) {
     .art05 >:nth-child(2) .ficha {
-        width: 48%;
+        width: 47%;
     }
 }
 @media only screen and (min-width:1350px) {
@@ -567,7 +575,106 @@ header {
         row-gap: 3rem;
     }
 }
+.art06 .mod03 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art06 >:nth-child(5) >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art06 .mod03 >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+}
+@media only screen and (min-width:1350px) {
+    .art06 .mod03 >:nth-child(1) {
+        width: 48%;
+        padding: initial;
+    }
+}
 
+.art06 .mod03 >:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px) {
+    .art06 .mod03 >:nth-child(2) {
+        width: 48%;
+    }
+}
+
+/* MODULO GRID */
+.modulogrid {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    gap:0.2rem;
+    grid-template-rows: 4rem 6rem auto 6rem 6rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'area01'
+    'area02'
+    'area03'
+    'area04'
+    'area05'
+    'area06'
+    ;
+}
+@media only screen and (min-width:800px) {
+    .modulogrid {
+        grid-template-rows: 30% 30% 20% 20%;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'area01 area01 area01'
+        'area02 area02 area03'
+        'area04 area05 area03'
+        'area06 area06 area06'
+        ;
+    }
+}
+.modulogrid >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+.modulogrid >:nth-child(1){
+    background-color: aqua;
+    grid-area: area01;
+}
+.modulogrid >:nth-child(2){
+    background-color: rgb(95, 149, 101);
+    grid-area: area02;
+}
+.modulogrid >:nth-child(3){
+    background-color: rgb(198, 131, 131);
+    grid-area: area03;
+}
+.modulogrid >:nth-child(4){
+    background-color: rgb(211, 245, 14);
+    grid-area: area04;
+}
+.modulogrid >:nth-child(5){
+    background-color: rgb(247, 0, 25);
+    grid-area: area05;
+}
+.modulogrid >:nth-child(6){
+    background-color: rgb(23, 61, 214);
+    grid-area: area06;
+}
 
 
 

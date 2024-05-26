@@ -16,7 +16,7 @@
     </nav>
     
     <header>
-        <h1>Encabezado principal H1</h1>
+        <h1 id="idparah1">Encabezado principal H1</h1>
     </header>
 
     <main>
@@ -51,7 +51,6 @@
             <h2>
                 Encabezado h2 sección 2
             </h2>
-
             <article class="art02">
                 <h3>
                     Encabezado h3
@@ -302,12 +301,14 @@
 
                 
             </div>
+
         </article>
         </section>
 
         <!-- sección art06 -->
         <section>
             <h2>Encabezado h2 sección 6</h2>
+
             <article class="art06">
 
                 <h3>Encabezado h3</h3>
@@ -326,17 +327,98 @@
                     1024px">
                 </div>
                 
-                <div class="mod03"></div>
+                <div class="mod03">
+                    
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa asperiores natus labore earum eius omnis sapiente id? Atque a praesentium deleniti vero mollitia quisquam ea, iure rem? Aspernatur, incidunt laboriosam.</p>
+                    
+                    <img src="https://dummyimage.com/300x300" width="300" height="300" alt="" title="" srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/600x400 600w,
+                    https://dummyimage.com/1024x600 1024w
+                    " sizes="
+                    (max-width: 600px) 300px,
+                    (max-width: 1900px) 600px,
+                    1024px">
+                </div>
                 
-                <div></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad.</p>
+                </div>
                 
-                <div class="mod03"></div>
+                <div class="mod03">
+                    
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa asperiores natus labore earum eius omnis sapiente id? Atque a praesentium deleniti vero mollitia quisquam ea, iure rem? Aspernatur, incidunt laboriosam.</p>
+                        <a class="boton1" href="#">CTA</a>
+                    </div>
+                    <img src="https://dummyimage.com/300x300" width="300" height="300" alt="" title="" srcset="
+                    https://dummyimage.com/300x300 300w,
+                    https://dummyimage.com/600x400 600w,
+                    https://dummyimage.com/1024x600 1024w
+                    " sizes="
+                    (max-width: 600px) 300px,
+                    (max-width: 1900px) 600px,
+                    1024px">
+                </div>
+
+                
+
             </article>
+
+            <div class="modulogrid">
+                <div>HOLA</div>
+                <div>HOLA</div>
+                <div>HOLA</div>
+                <div>HOLA</div>
+                <div>HOLA</div>
+                <div>HOLA</div>
+            </div>            
 
         </section>
 
-    </main>
-   
+        
+
+    </main>   
     
 </body>
 </html>
+
+<script src="./assets/js/jeanpaul.js"></script>
+<script>
+/* declaracion de variables de ambito global para este script */
+var a
+var b
+var total
+/* declaracion de variables de ambito local (en el nivel en el que estén anidadas) */
+let nombre, apellido, persona
+/* operaciones con números */
+a=10
+b=5
+total=a+b
+console.log(total)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
+
+/* trabajar con texto */
+/* variables string son de texto  */
+
+nombre='Manolo'
+apellido='Garcia'
+/* concatenear en javascript textos */
+
+persona=nombre+' '+apellido
+console.log(persona)
+
+/* escribir en el html */
+
+/* recpger un elemento html y modificarle algun atributo */
+var idparah1
+idparah1=document.getElementById('idparah1')
+console.log(idparah1)
+var miid
+miid=document.getElementById('idparah1')
+miid.innerText="Cambia el título por esto"
+miid.style.color="red"
+miid.classList.add('miclasedesdejavascript')
+</script>
