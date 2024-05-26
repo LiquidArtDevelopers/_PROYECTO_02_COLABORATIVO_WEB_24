@@ -19,6 +19,8 @@ src: url(../fonts/IndieFlower-Regular.ttf);
     --fuente02: 'IndieFlower-Regular';
     --padding: padding 1rem 10rem;
 }
+
+
 /* Principales */
 body, section{
     width: 100%;
@@ -44,6 +46,19 @@ section{
 article{
     width: 100%; 
 
+}
+
+/* TABLET */
+@media only screen and (min-width:800px){
+
+nav, header, main, footer{
+    min-width: 800px;
+}
+                                                 
+section{
+    padding: 2rem 0;
+    row-gap: 1.5rem;
+    }
 }
 
 /* DESKTOP */
@@ -83,6 +98,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem 0;
 }
 
 /* DESKTOP */
@@ -112,6 +128,7 @@ header{
     height:100vh;
     background-image: url("https://dummyimage.com/800x800");
 }}
+
 
 
 /* Textos */
@@ -168,7 +185,26 @@ p,a{
 }
 }
 
+/* TABLET */
+@media only screen and (min-width:800px){
 
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size:3rem;;
+}    
+h3{ 
+    font-size: 2.4rem;
+}   
+h4 { 
+    font-size: 1.6rem;
+}      
+p,a{ 
+    font-size: 1.2rem;
+}
+}
+    
 /*  Flex y columnas*/
 
 .flexrowc{
@@ -272,15 +308,32 @@ p,a{
     align-items: center;
 }
 
+/* TABLET */
 @media only screen and (min-width:800px){
 
-.modulo{  
-    width: 80%;
+.modulo, .mmodulo2{  
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    column-gap: 1.5rem; 
+}
+}
+/* DESKTOP*/
+@media only screen and (min-width:2500px){
+
+.modulo, .modulo2{  
     column-gap: 2rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 }
+    
+
 
 /* Seccion cuarta */
 .modulo2{
