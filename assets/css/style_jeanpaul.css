@@ -21,6 +21,7 @@ a, a:visited{
     --fuentemia00:"Noto Sans", sans-serif;
     --fuentemia01:"Freeman", sans-serif;
     --padTexto: 1.5rem;
+    --padTexto02: 1rem;
     --anchotexto: 60%;
 
 }
@@ -676,5 +677,50 @@ header {
     grid-area: area06;
 }
 
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 7 */
 
+.art07 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2rem;
+}
+.art07 >:nth-child(2) {
+    width: 100%;
+    position: relative;
+    transition: 1s;
+    /* transform: translateX(-200%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2rem;
+}
+@media only screen and (min-width:800px) {
+    .art07 {
+        row-gap: 1.7rem;
+    }
+}
+.art07 .ficha {
+    margin: 0 var(--padTexto);
+    padding: 2.5rem var(--padTexto02);
+    box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    -webkit-box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    -moz-box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    background: #ffffff;
+    background: linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
+    background: -webkit-linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
+    background: -moz-linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+.art07 .ficha img {
+    border-radius: 50%;
+}
