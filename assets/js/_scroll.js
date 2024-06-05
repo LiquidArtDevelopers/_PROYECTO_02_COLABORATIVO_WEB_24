@@ -63,7 +63,6 @@ function animaciones(){
         elem02.classList.add("desaparecerHaciaIzd")
     }
 
-
 }
 
 function estaEnlaPantalla(parametroRecibido) {
