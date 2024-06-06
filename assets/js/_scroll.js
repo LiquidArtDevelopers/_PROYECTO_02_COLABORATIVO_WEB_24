@@ -1,17 +1,15 @@
 
-//cogemos arios elementos del artículo 6
+//cogemos varios elementos del artículo 6 para el efecto de desplazamiento
 const elem01 = document.getElementById('elementoAdetectar01');
 const elem02 = document.getElementById('elementoAdetectar02')
-//navegador
+//cogemos el navegador para el efecto del nav
 const navegador = document.getElementById("navegador")
-
 
 // cuando se detecte movimiento de scroll llamamos a la función scrollFunction
 window.onscroll=function(){
     cambiarNav()
     animaciones()
 };
-
 
 //función a la que sólo entraremos cuando esta sea llamada desde el evento
 function cambiarNav() {    
@@ -62,7 +60,6 @@ function animaciones(){
         elem02.classList.remove("aparecerIzd")
         elem02.classList.add("desaparecerHaciaIzd")
     }
-
 }
 
 function estaEnlaPantalla(parametroRecibido) {
