@@ -16,12 +16,15 @@
         <span></span>
     </label>
     <!--  -->
-    <nav id="navegador">       
-
+    <nav id="navegador">
     </nav>
   
     <header>
         <h1 id="idEncabezadoH1">Encabezado principal</h1>
+        <video autoplay loop muted preload="auto">
+            <source src="./assets/video/video_web_1280w.webm" type="video/webm">
+            <source src="./assets/video/video_web_1280w.mp4" type="video/mp4">
+        </video>
     </header>
     
 
@@ -35,11 +38,16 @@
                     <img
                     src="https://dummyimage.com/400x200" width="400" height="200" alt="" title=""
                     srcset="
-                    https://dummyimage.com/400x200 400w,
-                    https://dummyimage.com/700x400 700w
+                    https://dummyimage.com/600x600 600w,
+                    https://dummyimage.com/1000x1000 1000w,
+                    https://dummyimage.com/1920x1920 1920w
                     "
-                    sizes="(min-width: 550px) 600px, 300px"
+                    sizes="
+                    (max-width: 800px) 600px,
+                    (max-width: 1350px) 1000px,
+                    1920px"
                     >
+                </div>
                 </div>
                 <div>
                     <h3>Encabezado h3</h3>
@@ -326,6 +334,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio amet dolorem omnis, tenetur in laudantium cumque voluptate soluta earum aut voluptatibus eius iusto sapiente numquam esse aspernatur voluptatum consequatur! Nesciunt officiis beatae corporis! Ut iste aut vero natus laboriosam doloremque.</p>
                     </div>
                     <img
+                    id="elementoAdetectar01"
                     src="https://dummyimage.com/300x300" width="300" height="300" alt="" title=""
                     srcset="
                     https://dummyimage.com/300x300 300w,
@@ -342,7 +351,7 @@
                     <div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio amet dolorem omnis, tenetur in laudantium cumque voluptate soluta earum aut voluptatibus eius iusto sapiente numquam esse aspernatur voluptatum consequatur! Nesciunt officiis beatae corporis! Ut iste aut vero natus laboriosam doloremque.</p>
                     </div>
-                    <img
+                    <img id="elementoAdetectar02"
                     src="https://dummyimage.com/300x300" width="300" height="300" alt="" title=""
                     srcset="
                     https://dummyimage.com/300x300 300w,
@@ -569,8 +578,6 @@
                 </div>
             </div>
 
-
-
         
 
     </main>
@@ -581,60 +588,3 @@
 </body>
 </html>
 
-<!-- script que llama a otro archivo scrip y que lo carga aquí mismo -->
-<script src="./assets/js/profe.js"></script>
-
-
-<!-- script directo en el que ya puedo escribir sintaxis de js -->
-<script>
-
-/* declaración de variables de ámbito global para este script */
-var a
-var b
-var total
-
-/* declaración de variables de ámbiot local (en el nivel donde estén anidadas) */
-let nombre, apellido, persona
-
-/* operaciones con números */
-a=10
-b=5
-total = a + b
-
-console.log(total)
-console.log(a-b)
-console.log(a*b)
-console.log(a/b)
-
-/* trabajar con texto */
-/* string */
-nombre = 'Manolo'
-apellido = 'García'
-
-/* concatenar en js textos */
-persona = nombre + ' ' + apellido + ' Pérez' //Manolo García Pérez
-persona = `${nombre} ${apellido} Pérez`//Manolo García Pérez
-persona = 'Igor Aranaz'
-persona = "Igor Aranaz"
-persona = `Igor Aranaz` // con las contra-comillas puedo meter variables dentro de ${}
-console.log(persona)
-
-
-/* escribir directamente en el HTML desde JS */
-document.write('Estoy escribiendo en HTML en este punto del documento HTML')
-
-
-/* recoger un elemento HTML y modificarle algún atributo o texto */
-var miId
-miId = document.getElementById('idEncabezadoH1')
-miId.innerText="Cambio de nombre de H1"
-miId.style.color="red"
-miId.classList.add('otraClase')
-
-
-
-
-
-
-
-</script>
