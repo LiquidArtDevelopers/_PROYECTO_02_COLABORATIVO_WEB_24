@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face{
+font-family:"IndieFlower-Regular" ;
+src: url(../fonts/IndieFlower-Regular.ttf);
+}
+
+/* Variables */
+:root {
+    --color01: #b37bad;
+    --color02: rgba(9, 9, 9, 1);
+    --fuente01: "Lobster Two", sans-serif;
+    --fuente02: 'IndieFlower-Regular';
+    --padding: padding 1rem 10rem;
+}
+
+
+/* Principales */
+body, section{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+  
+}                                        
+nav,main,header,footer{
+   width: 100vw;
+   max-width: 100vw;
+        
+}
+section{
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+article{
+    width: 100%; 
+
+}
+
+/* TABLET */
+@media only screen and (min-width:800px){
+
+nav, header, main, footer{
+    min-width: 800px;
+}
+                                                 
+section{
+    padding: 2rem 0;
+    row-gap: 1.5rem;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width:2560px){
+
+nav, header, main, footer{
+    max-width: 2560px;
+}
+                                             
+section{
+    padding: 3rem 0;
+<<<<<<< HEAD
+    row-gap: 3rem;
+   
+=======
+    row-gap: 1.5rem;
+>>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
+}  
+}
+
+
+
+/* Nav y header */
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: black;
+    position: fixed;
+    padding: 0rem 1.5rem;
+    color:var(--color01) ;
+}
+header{
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-image: url("https://dummyimage.com/550x400");
+  background-repeat: no-repeat;
+  color: var(--color01);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+<<<<<<< HEAD
+=======
+/* DESKTOP */
+@media only screen and (min-width: 2560px){
+
+nav{
+    padding: 4rem 0rem;
+}
+
+header{
+    width: 100vw; 
+    height: 1080px;
+    background-image: url("https://dummyimage.com/1920x1080");
+    
+}}
+
+>>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
+/* TABLET */
+@media only screen and (min-width:800px){
+
+nav{
+    padding: 1.5rem 0rem;
+    height: 110px;
+}
+    
+header{
+    background-image: url("https://dummyimage.com/800x800");
+}}
+    
+/* DESKTOP */
+@media only screen and (min-width:2560px){
+
+nav{
+    height: 120px;
+    padding: 4rem 0rem;
+}
+
+header{
+    width: 100VW;
+    height:100vh;
+    background-image: url("https://dummyimage.com/1920x1080");
+}}
+
+
+
+/* Textos */
+
+h1{
+    font-family: var(--fuente02);
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 40px;
+}
+h2{ font-family: var(--fuente02);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+h3,h4{
+    font-family: var(--fuente02);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+h5{
+    font-family: var(--fuente02);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+p{  
+    font-family: var(--fuente01);
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+a{
+    font-family: var(--fuente01);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+/* DESKTOP */
+@media only screen and (min-width:2560px){
+
+h1{
+    font-size: 100px;
+}
+h2{
+    font-size:3.5rem;;
+}    
+h3{ 
+    font-size: 2.6rem;
+}   
+h4 { 
+    font-size: 2rem;
+}      
+p,a{ 
+    font-size: 1.5rem;
+}
+}
+
+/* TABLET */
+@media only screen and (min-width:800px){
+
+<<<<<<< HEAD
+/*  posiciones de caja y tamaños*/
+=======
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size:3rem;;
+}    
+h3{ 
+    font-size: 2.4rem;
+}   
+h4 { 
+    font-size: 1.6rem;
+}      
+p,a{ 
+    font-size: 1.2rem;
+}
+}
+    
+/*  Flex y columnas*/
+
+.flexrowc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap:2rem;
+}
+
+.flexcolc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexstart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.textcentr{
+    text-align: center;
+    flex-direction: column;
+    display: flex;   
+}
+
+.textoizq{
+    text-align: left;
+    flex-direction: column;
+    row-gap: 2rem;
+    display: flex;
+}
+
+/*  posiciones de caja*/
+>>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
+
+  
+.colum1{
+    order:  2;
+}
+ 
+.colum2{
+    order:  1;
+}
+.fueramov{
+    display: none;
+}
+
+@media only screen and (min-width:2560px){
+ 
+.fuera{
+    display: none;
+}
+.w40{
+    width: 40%;
+}}
+
+/* Botones */
+.boton{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color01);
+    width:100px;
+    padding: 4px ;
+    background-color: var(--color02);
+    transition-duration:  0.5s;
+    text-decoration: none;
+    border-radius: 5%;
+    text-align: center; 
+}
+ 
+:hover.boton{
+    background-color: var(--color01);
+    color: var(--color02); 
+}
+ 
+/* DESKTOP */
+
+@media only screen and (min-width:800px){
+.boton{  
+    font-size: 1.5rem;
+    font-weight: 600;
+    width:120px;
+    padding: 5px;
+}      
+}    
+ 
+/* MIS ESTILOS*/
+.redondo{
+    border-radius: 50%;
+}
+
+/* Seccion primera, segunda, tercera*/
+.modulo{
+    width: 100%;
+    row-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* TABLET */
+@media only screen and (min-width:800px){
+
+.modulo, .mmodulo2{  
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 1.5rem; 
+}
+}
+/* DESKTOP*/
+@media only screen and (min-width:2500px){
+
+.modulo, .modulo2{  
+    column-gap: 2rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+}
+    
+
+
+/* Seccion cuarta */
+.modulo2{
+   width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    row-gap: 1.5rem;
+
+}
+
+/* Seccion sexta */
+
+cite{
+    border-left: solid var(--color01) 2px;
+    color: var(--color01);
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    align-items:center;
+    text-align: left;
+    margin-top: 20px;
+}
+.comilla{
+    font-size: 3rem;
+    font-weight: 600;
+<<<<<<< HEAD
+    margin-top: -80px;
+    margin-right: -30px;
+=======
+    margin-top: -120px;
+    margin-right: -40px;
+
+>>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
+}
+@media only screen and (min-width:800px){
+.comilla{
+    margin-top: -100px;
+}
+}
+
+<<<<<<< HEAD
+@media only screen and (min-width:800px){
+ .comilla{   
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: ;
+    margin-right: ;}}
+
+/* septima seccion */
+=======
+/*seccion septima*/
+>>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
+
+.septima{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+}
+.septima >:nth-child(1){
+    width: 100%;
+    padding: 3rem 5rem;
+    background-image: url("https://dummyimage.com/500x300");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.septima h3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.septima h3 >:nth-child(1){
+    font-size: 7vw;
+    font-weight: 600;
+}  
+.septima h3 >:nth-child(2){
+    font-size: 3vw;
+} 
+.caja{
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+.modulo3{
+    border: #4d0946 solid 1.5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #b37bad;
+    padding: 1.5rem 0;
+}
+.modulo3 p{
+    width: 80%;
+}
+
+@media only screen and (min-width:800px){
+
+.modulo3{  
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem; 
+}
+}
+
+/* TABLET */
+@media only screen and (min-width: 800px) {
+.septima >:nth-child(1){
+    padding: 3rem 5rem;
+    background-image: url("https://dummyimage.com/900x600");
+}
+
+}
+/* DESKTOP */
+@media only screen and (min-width: 2560px) {
+.septima >:nth-child(1){
+    padding: 3rem 5rem;
+    background-image: url("https://dummyimage.com/1920x600");
+ 
+}
+.septima h3 >:nth-child(1){
+    font-size: 5vw;
+}  
+
+.relative{
+  position: relative;
+
+}
+
+.textvertical{
+    font-size: 7vw;
+    left: 40px ;
+    top: 0;
+    position: absolute;
+    transform: translateX(-50%) rotate(-90deg);
+    letter-spacing:-1px ;
+    font-weight: bold;
+}
+}
+/* Seccion grid */
+.colage{
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    gap: 0.2rem;
+    grid-template-rows: auto ;
+    grid-template-columns:auto ;
+    grid-template-areas:
+    'primero'
+    'segundo'
+    'tercero'
+    'cuarto' 
+    'quinto'
+    'sexto';
+}
+
+.colage >:nth-child(1){
+    grid-area: primero ;
+    background-color: #b37bad;
+}
+.colage >:nth-child(2){
+    grid-area: segundo ;
+    background-color: #4d0946;
+}
+
+.colage >:nth-child(3){
+    grid-area: tercero ;
+    background-color: #f17c90;
+}
+
+.colage >:nth-child(4){
+    grid-area: cuarto ;
+    background-color: #7b9eb3;
+} 
+
+.colage >:nth-child(5){
+    grid-area: quinto;
+    background-color: #b37bad;
+} 
+
+.colage >:nth-child(6){
+    grid-area: sexto ;
+    background-color: #b3b27b;
+} 
+
+.colage div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+/* DESKTOP */
+@media only screen and (min-width: 800px) {
+.colage{
+  width: 80%;
+  grid-template-rows: 8rem 8rem 6rem auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+  'primero primero primero'
+  'segundo segundo tercero'
+  'cuarto quinto tercero'
+  'sexto sexto sexto';
+}
+}
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 1rem;
+    font-size: 12px;
+    line-height: 10px;
+    height: 200px;
+}
+footer ul li a{
+    display: none;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 2560px) {
+
+footer{
+   
+    font-size: 12px;
+    line-height: 10px;
+    height: 200px;
+}
+
+}
+
+.fondo{
+    background-color:blueviolet;
+}

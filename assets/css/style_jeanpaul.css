@@ -16,10 +16,13 @@ a, a:visited{
     --colormio00: white;
     --colormio01:rgb(44, 44, 44);
     --colormio02:rgb(216, 216, 255);
+    --colormio03: rgb(169, 169, 169);
 
     --fuentemia00:"Noto Sans", sans-serif;
     --fuentemia01:"Freeman", sans-serif;
     --padTexto: 1.5rem;
+    --padTexto02: 1rem;
+    --anchotexto: 60%;
 
 }
 
@@ -126,20 +129,26 @@ h3 {
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--color01);
+}
+
 
 /* CLASES GLOBALES */
 .boton1 {
     font-size: 1.3rem;
     letter-spacing: 2px; 
     padding: 0.3rem 2rem;
-    color: var(--colormio01);
-    background-color: var(--colormio02);
+    color: var(--colormio00);
+    background-color: var(--colormio01);
     border-radius: 5px;
 }
 
 .boton1:hover {
     color: var(--colormio00);
-    background-color: var(--colormio01);
+    background-color: var(--colormio03);
 }
 
 /* SECCIONES DE LA WEB */
@@ -161,8 +170,16 @@ header {
     background-position: center center;
     position: relative;   
 }
-article {
-    width: 100%;
+
+@media only screen and (min-width:800px) {
+    header {
+        background-image: url('https://dummyimage.com/800x600');  
+    }   
+}
+@media only screen and (min-width:1350px) {
+    header {
+        background-image: url('https://dummyimage.com/1400x600');
+    }
 }
 
 /* RECURSOS------- */
@@ -246,12 +263,18 @@ article {
     align-items: center;
     row-gap: 1rem;
 }
-
-.art02 >:nth-child(1), .art02 >:nth-child(2) {
-    padding: var(--padTexto);
+@media only screen and (min-width:800px) {
+    .art02 {
+        width: 80%;
+    }
 }
-
-
+.art02 >:nth-child(1) {
+    padding: var(--padTexto)
+} 
+.art02 >:nth-child(2) {
+    padding: var(--padTexto);
+    width: 60%;  
+}
 .red1 {
     width: 100%;
 
@@ -263,12 +286,441 @@ article {
     gap: 1rem;
 }
 
-.art02 .red1 div {
+@media only screen and (min-width:800px) {
+    .red1 {
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .red1 {
+        justify-content: space-between;
+    }
+}
+
+.art02 .red1 >div {
     width: 100%;
-    height: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .art02 .red1 div img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:800px) {
+    .art02 .red1 div{
+        width: 47%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art02 .red1 div{
+        width: 30%;
+    }
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 3 */
+
+.art03 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    row-gap: 1.5rem;
+}
+
+.art03 >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+@media only screen and (min-width:800px) {
+.art03 >:nth-child(1) p {
+    width: 60%;
+}
+}
+.art03 .red2 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.art03 .red2 >div {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.art03 .red2 >div h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media only screen and (min-width:800px) {
+    .art03 .red2 >div {
+        width: 50%;       
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art03 .red2 >div {
+        width: 25%;      
+    }
+}
+.art03 .red2 >div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+} 
+.art03 .red2 >div h4 {
+    font-size: 1.5rem;
+    color: var(--colormio00);
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 4 */
+
+.art04 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;   
+}
+@media only screen and (min-width:1350px) {
+    .art04 {
+        width: 80%;
+    }
+}
+.art04 .mod01 {
+    gap:1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 {
+        justify-content: space-between;
+    }
+}
+.art04 >div {
+    width: 100%;
+    
+}
+.art04 .mod01 >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 >:nth-child(1) {
+        width: 45%;
+        padding: initial;
+    }
+    .art04 .mod01 >:nth-child(1) a {
+    position: relative;
+    left: -47.5%;
+    }
+}
+.art04 .mod01 >:nth-child(2) {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod01 >:nth-child(2) {
+        width: 50%;
+    }
+}
+.art04 .mod02 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art04 .mod02 >div {
+    width: 100%;
+    padding: var(--padTexto);
+    background-color: var(--colormio00);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art04 .mod02 >div img {
+    border-radius: 50%;
+}
+.art04 .mod02 >div >p {
+    width: 100%;
+}
+@media only screen and (min-width:800px) {
+    .art04 .mod02 >div >p {
+        width: 83%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art04 .mod02 >div >p {
+        width: 60%;
+    }
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 5 */
+
+.art05 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:800px) {
+    .art05 {
+        width:80%;
+    }
+}
+
+.art05 >:nth-child(1) {
+    padding: var(--padTexto);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art05 >:nth-child(2) {
+    width: 100%;
+    padding: var(--padTexto);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+@media only screen and (min-width:800px) {
+    .art05 >:nth-child(2) .ficha {
+        width: 47%;
+    }
+}
+@media only screen and (min-width:1350px) {
+    .art05 >:nth-child(2) .ficha {
+        width: 23%;
+    }
+}
+.art05 .ficha {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.art05 .ficha img {
+    border-radius: 50%;
+}
+.art05 .ficha >p {
+    width: 100%;
+}
+
+.art05 .ficha .firma {
+    font-style: italic;
+    color: var(--colormio03);
+}
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 6 */
+.art06 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+@media only screen and (min-width:1350px) {
+    .art06 {
+        width: 80%;
+        row-gap: 3rem;
+    }
+}
+.art06 .mod03 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.art06 >:nth-child(5) >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.art06 .mod03 >:nth-child(1) {
+    width: 100%;
+    padding: var(--padTexto);
+}
+@media only screen and (min-width:1350px) {
+    .art06 .mod03 >:nth-child(1) {
+        width: 48%;
+        padding: initial;
+    }
+}
+
+.art06 .mod03 >:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width:1350px) {
+    .art06 .mod03 >:nth-child(2) {
+        width: 48%;
+    }
+}
+
+/* MODULO GRID */
+.modulogrid {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    gap:0.2rem;
+    grid-template-rows: 4rem 6rem auto 6rem 6rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'area01'
+    'area02'
+    'area03'
+    'area04'
+    'area05'
+    'area06'
+    ;
+}
+@media only screen and (min-width:800px) {
+    .modulogrid {
+        grid-template-rows: 30% 30% 20% 20%;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'area01 area01 area01'
+        'area02 area02 area03'
+        'area04 area05 area03'
+        'area06 area06 area06'
+        ;
+    }
+}
+.modulogrid >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+.modulogrid >:nth-child(1){
+    background-color: aqua;
+    grid-area: area01;
+}
+.modulogrid >:nth-child(2){
+    background-color: rgb(95, 149, 101);
+    grid-area: area02;
+}
+.modulogrid >:nth-child(3){
+    background-color: rgb(198, 131, 131);
+    grid-area: area03;
+}
+.modulogrid >:nth-child(4){
+    background-color: rgb(211, 245, 14);
+    grid-area: area04;
+}
+.modulogrid >:nth-child(5){
+    background-color: rgb(247, 0, 25);
+    grid-area: area05;
+}
+.modulogrid >:nth-child(6){
+    background-color: rgb(23, 61, 214);
+    grid-area: area06;
+}
+
+/* RECURSOS------- */
+/* ARTÍCULO TIPO 7 */
+
+.art07 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2rem;
+}
+.art07 >:nth-child(2) {
+    width: 100%;
+    position: relative;
+    transition: 1s;
+    /* transform: translateX(-200%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2rem;
+}
+@media only screen and (min-width:800px) {
+    .art07 {
+        row-gap: 1.7rem;
+    }
+}
+.art07 .ficha {
+    margin: 0 var(--padTexto);
+    padding: 2.5rem var(--padTexto02);
+    box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    -webkit-box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    -moz-box-shadow: 4px 8px 6px 1px rgba(169,169,169,1);
+    background: #ffffff;
+    background: linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
+    background: -webkit-linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
+    background: -moz-linear-gradient(129deg,#ffffff 60%, rgb(216,216,255) 80%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+.art07 .ficha img {
+    border-radius: 50%;
 }

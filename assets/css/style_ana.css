@@ -42,26 +42,18 @@ section{
 
 article{
     width: 90%;
-    margin-top: 40px;  
+    margin-top: 40px; 
 }
 
 @media only screen and (max-width: 500px) {
 
 nav,main,header,footer{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
         
 }
-section{
-    width: 100%;
-}
 article{
-    margin-top: 0.5rem; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%; 
+    margin-top: 0.5rem;   
 }
 }  
 
@@ -80,7 +72,7 @@ position: fixed;
 
 nav {
 padding: 1.5rem 1.5rem;
-height: 140px;
+height: 120px;
 
 }
 nav img{
@@ -163,27 +155,17 @@ p, a{
 
 /*Tamaños y flex*/
 
-.w100{
-    width: 100%;
-    margin: auto;
-}
-
 .w90{
     width:90% ;
 }
-.w50{
-    width: 50%;
-}
-.w40{
-    width: 40%;
-}
+
 .w60{
    width: 60%; 
 }
 
 
 @media only screen and (max-width: 500px) {
-.w100,.w90,.w80,.w60,.w40{
+.w90,.w60{
     width: 100%;
 }
 }
@@ -220,11 +202,11 @@ p, a{
     align-items: center;
 }
 .fcolSC{
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: flex-start;
-        text-align: center;        
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    text-align: center;        
 }
 
 .textcentr{
@@ -260,12 +242,12 @@ p, a{
     row-gap: 0.5rem;
     }
 .textoizq{
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 0.5rem;
-        align-items: center;
-        display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.5rem;
+    align-items: center;
+    display: flex;
 }
 
 .colum1{
@@ -294,8 +276,6 @@ p, a{
     border-radius: 5%;
     text-align: center;  
  }
-
- 
  
  :hover.boton{
      background-color: var(--color01);
@@ -314,60 +294,52 @@ p, a{
       
  }    
  
-/* Mis estilos */
-.primera{
+/* MIS ESTILOS*/
+/* seccion primera */
+.modulo1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  
+    column-gap: 2rem;
+}
+.modulo1 >div{
+    width:40%;
     display: flex;
     justify-content: flex-start;
-    flex-direction:row;
-    align-items: center; 
-    width: 90%;  
-}
-
-.primera div{
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: 50px; 
-
+    align-items: left;
+    row-gap: 1rem;
 }
 
 @media only screen and (max-width: 500px) {
 
-    .primera{
-        justify-content: center;
-        flex-direction:column;
-        text-align: center;
-        width:100%
-    }
-#primera img{
-    width: 90%;
-    height:400px ;
-    object-fit: cover;
-    object-position: center;
-}
-
-#primeradiv{
+.modulo1 >div{
+    width:100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    text-align: center;
     align-items: center;
-    row-gap: 0.5rem;
-    width:90%;
+    column-gap: 1rem;
+}
+
+.modulo1 >div >p >:nth-child(1){
+    width: 100%;
+    padding: 20px;
 }
 }
 
+/* seccion segunda */
 .segunda{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    column-gap:1rem;
-    width: 80%;
+   
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
@@ -381,14 +353,14 @@ p, a{
     justify-content: center;  
 }  
 
-.segunda img,.tercera img {
-    width: 100%;
+.segunda img {
+    width: 90%;
     height:400px ;
     object-fit: cover;
     object-position: center;
 }
 }
-
+/* seccion tercera */
 
 .tercera{
     width: 100%;
@@ -416,28 +388,53 @@ p, a{
         justify-content: center;
         align-items: center;
         text-align: center;
-        row-gap: 2rem;
-}  
+        row-gap: 0rem;
+} 
+.tercera img{
+    width: 90%;
+    height:400px ;
+    object-fit: cover;
+    object-position: center;
 }
+} 
 
-.cuarta{
+/* Seccion cuarta */
+.modulo1{
+    width:100%;
     display: flex;
-    justify-content: center;
-    flex-direction:row;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    width: 100%; 
+    flex-wrap: wrap;
+    column-gap: 2rem;
 }
-
-.cuarta div{
-    text-align: left;
-    column-gap: 4rem;
-    align-items: start;
+.modulo1 >div{
+    width:40%;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    width: 50%; 
-    margin-right: 50px;
+    align-items: left;
+    row-gap: 1rem;
 }
 
+
+@media only screen and (max-width: 500px) {
+
+.modulo1 >div{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.modulo1 >div >p >:nth-child(1){
+    width: 100%;
+    padding: 20px;
+}
+}
+  
 .caja4{
 
     width: 100%;
@@ -453,31 +450,6 @@ p, a{
     border-radius: 80px;
 }
 
-
-@media only screen and (max-width: 500px) {
-.cuarta{
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-    align-items: center;  
-}
-.cuarta div{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    width:90%
-    }
-}
-.cuarta img{
-    width: 100%;
-    height:400px ;
-    object-fit: cover;
-    object-position: center;
-} 
-}
 
 
 
@@ -500,7 +472,7 @@ p, a{
 }
 }
 
-
+/* seccion quinta */
 .quinta{
     display: flex;
     flex-direction: row;
@@ -530,15 +502,7 @@ p, a{
 }
 }
 
-.sexta{
-    height:10vh ;
-    width: 100%;
-    border-left:solid 4px  var(--color01);
-    display: flex;
-    align-items: end;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
+/* seccion sexta */
 
 .sextaizq{
     display: flex;
@@ -547,6 +511,7 @@ p, a{
     align-items: center;
     width: 100%; 
     margin-top: 30px;
+
 }
 
 .sextaizq div{
@@ -558,25 +523,42 @@ p, a{
     width: 50%; 
     margin-left: 50px;
 }
+
+cite{
+    width: 100%;
+    border-left:solid 4px  var(--color01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 .grande{
-    font-size: 10rem;
+    font-size: 8rem;
     color: var(--color01);
+    margin-top:-50px; 
+    margin-right: 2rem;
 }
 @media only screen and (max-width: 500px) {
-.sexta{
-    height:20vh ;
-    border-left:solid 2px  var(--color01);
-    align-items: center;
+cite{
+    border-left:solid 3px  var(--color01);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    }
-    
+    text-align: left;
+ }
+
+.grande{
+    font-size: 5rem;
+    color: var(--color01);
+    margin-top:-120px; 
+    margin-right: 1rem; 
+}   
 .sextaizq{
     justify-content: center;
     flex-direction:column;
     align-items: center;
     width: 100%; 
-    }
+}
 .sextaizq img{
     width: 100%;
     height: 400px;
@@ -589,10 +571,7 @@ p, a{
     width:90%; 
     margin-left: 20px;
     }
-.grande{
-    font-size: 3rem;
-    color: var(--color01);  
-}
+
 #imgseptima{
     width: 100%;
     object-fit: cover;
