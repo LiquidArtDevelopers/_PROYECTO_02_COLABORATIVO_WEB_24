@@ -11,6 +11,12 @@ window.onscroll=function() {
     for(const item of izquierdas) {
         animar(item,"izd")
     }
+    for (const item of derechas) {
+        animar(item,"der")   
+    }
+    for (const item of centros) {
+        animar(item,"cent")
+    }
 }
 
 function animar(parametro01,parametro02){
@@ -25,8 +31,23 @@ function animar(parametro01,parametro02){
             }
             break;
         case "der":
-
+            if (estaenpantalla(parametro01)==true) {
+                parametro01.classList.remove("desaparecerporladerecha")
+                parametro01.classList.add("aparecerdesdederecha")
+               
+            } else {
+                parametro01.classList.remove("aparecerdesdederecha")
+                parametro01.classList.add("desaparecerporladerecha")
+            }
             break;
+        case ("cent"):
+            if (estaenpantalla(parametro01)==true) {
+                parametro01.classList.remove("desaparecer")
+                parametro01.classList.add("aparecer")    
+            } else {
+                parametro01.classList.remove("aparecer")
+                parametro01.classList.add("desaparecer")
+            }
         default:
 
             break;
