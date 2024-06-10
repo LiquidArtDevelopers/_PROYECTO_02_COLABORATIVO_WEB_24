@@ -5,6 +5,7 @@ const elem02 = document.getElementById('elementoAdetectar02')
 //cogemos el navegador para el efecto del nav
 const navegador = document.getElementById("navegador")
 
+
 // cuando se detecte movimiento de scroll llamamos a la función scrollFunction
 window.onscroll=function(){
     cambiarNav()
@@ -41,7 +42,6 @@ function animaciones(){
     //vemos si el elemento 01 está o no dentro del viewport
     if (estaEnlaPantalla(elem01)==true) {
         // está en el viewport
-        console.log("Aparece");
         elem01.classList.remove("desaparecerHaciaDer")
         elem01.classList.add("aparecerDer")        
     }else{
@@ -52,7 +52,6 @@ function animaciones(){
 
     if (estaEnlaPantalla(elem02)==true) {
         // está en el viewport
-        console.log("Aparece");
         elem02.classList.remove("desaparecerHaciaIzd")
         elem02.classList.add("aparecerIzd")        
     }else{

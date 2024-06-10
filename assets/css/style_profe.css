@@ -1013,7 +1013,11 @@ header h1{
 
 
 
-
+.desaparecer{    
+    animation: desaparecer;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
 .desaparecerHaciaIzd{    
     animation: desaparecerIzd;
     animation-duration: 2s;
@@ -1021,6 +1025,11 @@ header h1{
 }
 .desaparecerHaciaDer{    
     animation: desaparecerDer;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+.aparecer{
+    animation: aparecer;
     animation-duration: 2s;
     animation-iteration-count:1;
 }
@@ -1035,6 +1044,14 @@ header h1{
     animation-iteration-count:1;
 }
 
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes aparecerDer {
     0%{
         opacity: 0;
@@ -1053,6 +1070,14 @@ header h1{
     100%{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes desaparecer {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 @keyframes desaparecerDer {
