@@ -724,3 +724,91 @@ header {
 .art07 .ficha img {
     border-radius: 50%;
 }
+
+.aparecer {
+    animation: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.desaparecer {
+    animation: desaparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.aparecerdesdederecha {
+    animation: aparecerdesdederecha;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecerdesdederecha {
+    0% {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.desaparecerporladerecha {
+    animation: desaparecerporladerecha;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecerporladerecha {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+}
+
+.aparecerdesdeizquierda {
+    animation: aparecerdesdeizquierda;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecerdesdeizquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.desaparecerporlaizquierda {
+    animation: desaparecerporlaizquierda;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecerporlaizquierda {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+}
