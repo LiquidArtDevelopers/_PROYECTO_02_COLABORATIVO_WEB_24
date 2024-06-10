@@ -1379,3 +1379,65 @@ header {
         width: 50%;
     }
 }
+
+
+/* ANIMACIONES */
+.aparecer {
+    animation: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.desaparecer {
+    animation: desaparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecer {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.aparecerdch {
+    animation: aparecerdch;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecerdch {
+    0% {opacity: 0; transform: translateX(10vw);}
+    100% {opacity: 1; transform: translateX(0vw);}
+}
+
+.desaparecerdch {
+    animation: desaparecerdch;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecerdch {
+    0% {opacity: 1; transform: translateX(0vw);}
+    100% {opacity: 0; transform: translateX(10vw);}
+}
+
+.aparecerizq {
+    animation: aparecerizq;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes aparecerizq {
+    0% {opacity: 0; transform: translateX(-10vw);}
+    100% {opacity: 1; transform: translateX(0vw);}
+}
+
+.desaparecerizq {
+    animation: desaparecerizq;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes desaparecerizq {
+    0% {opacity: 1; transform: translateX(0vw);}
+    100% {opacity: 0; transform: translateX(-10vw);}
+}
