@@ -48,13 +48,13 @@ function animar(parametro01,parametro02){
                 parametro01.classList.remove("aparecer")
                 parametro01.classList.add("desaparecer")
             }
+            break;
         default:
 
             break;
     }
 
 }
-
 
 function estaenpantalla(parametro01) {
     var distance = parametro01.getBoundingClientRect();
