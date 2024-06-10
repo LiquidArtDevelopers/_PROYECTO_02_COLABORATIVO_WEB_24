@@ -38,7 +38,7 @@ nav,header,main,footer,body {
 
  
 
-/* etiquetas */
+/* ETIQUETAS */
 
  nav {
     height: 60px;
@@ -48,19 +48,36 @@ nav,header,main,footer,body {
     z-index: 999;  
  }
 
+/*-----HEADER------*/
+
+/*MOBILE IPHONE12 PRO*/
  header {
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url('https://dummyimage.com/1920x1080');
+    background-image: url('https://dummyimage.com/390x844');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
  }
 
+ /*TABLET IPAD AIR*/
+ @media only screen and (min-width:800px) { 
 
+ header {
+    background-image: url('https://dummyimage.com/ 800x1100');
+}
+}
+
+/*DESKTOP */
+@media only screen and (min-width:1024px) {
+  header {
+    background-image: url('https://dummyimage.com/ 1200x800');
+  }
+  }
+   
 section {
     display: flex;
     flex-direction: column;
@@ -105,10 +122,18 @@ section {
     color: var(--color02);
 }
 
+.hache3alt {
+  font-family: var(--fuente1);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color02);
+
+}
+
 h4 {
   font-family: var(--fuente1);
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color02);
 }
@@ -135,9 +160,26 @@ p {
    text-align: center;
 }
 
+/*articulos y displays*/
+
+.art01 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap:1rem;
+}
 
 
-/*displays*/
+/*TABLET IPAD AIR*/
+@media only screen and (min-width:800px) { 
+
+.art01{
+  width: 80%;
+}
+}
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .frowC {
@@ -160,6 +202,16 @@ p {
   gap: 40px;
 }
 }
+
+.fcolSS {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
   .fcolSB {
@@ -187,7 +239,6 @@ p {
 
 
 /*boton*/
-
 
 .boton {
     padding: 1rem;
@@ -236,15 +287,20 @@ p {
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .w80{
       width: 80%;
+      margin: auto;
     }
   }
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
-    .w75 {
-            width: 75%;
+.w75 {
+  width: 75%;
           }
         }
 
+.w70 {
+    width: 100%;
+        }
+              
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .w70 {
         width: 70%;
@@ -256,12 +312,14 @@ p {
 .w60 {
       width: 60%;
       padding-top: 1.5rem;
+      margin: auto;
       }
     }
 
-.w50 {
-      width: 60%;
-      padding-top: 2.5rem;
+
+.w40 {
+    width: 40%;
+      
     
     }
 
@@ -285,19 +343,15 @@ p {
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolizq {
       width: 45%;
-      max-width: 700px;
-      min-width: 200px;
+      max-width: 500px;
+      min-width: 300px;
+      object-fit: cover;
     }
   }
 
 @media only screen and (min-width:1024px) { /* DESKTOP */
 .doscolder {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
     }
   }
  
@@ -361,6 +415,10 @@ padding-top: 70px;
   padding: 30px
 }
 
+.pl150 {
+  padding-left: 150px;
+}
+
 
 /*imágens y fotos*/
 .redondeado {
@@ -381,13 +439,26 @@ padding-top: 70px;
   padding: 20px;
 }
 
-/*seccion8*/
+/*articulos*/
+
+.articulo1 {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: FZZ;
+  gap:10px;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-top: 0px;
+}
+
+
 
 .articulo8 {
-
-  width: 80%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   
   justify-content: space-between;
   align-items: center;
@@ -397,13 +468,77 @@ padding-top: 70px;
   font-size: 18px;
   line-height: normal;
 
-  margin-top: 100px;
+  object-fit: cover;
+  padding: 7rem;
+  
 }
 
   
-  .articulo8 p {
-    width: 80%;
+.articulo8 p {
+  width: 80%;
   }
 
-}
+
+  .circulitoizq{
+    padding-top: 10rem;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    object-fit: cover;
+    gap: 2rem;
+   
+  }
+
+  .colcirculito1{
+    width:30%;
+    max-width: 300px;
+    min-width: 300px;
+    object-fit: cover;
+  }
+
+  .colcirculito2{
+    width:60%;  
+  }
+
+  .circulitocentro{
+    padding-top: 8rem;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    object-fit: cover;
+    gap: 2rem;
+    margin:auto;
+  }
+
+  .circulitoder {
+    padding-top: 8rem;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items:center;
+    gap: 2rem;
+    margin-right: 50%;
+  }
+
+
+  
+
+
+ 
+
+
+
+
+
+  
+
+
 
