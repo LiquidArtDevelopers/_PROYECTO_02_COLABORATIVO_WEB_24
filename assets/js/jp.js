@@ -16,14 +16,13 @@ window.onscroll=function() {
 function animar(parametro01,parametro02){
     switch (parametro02) {
         case "izd":
-        if (estaenpantalla(parametro01)==true) {
-            parametro01.classList.remove("desaparecerporlaizquierda")
-            parametro01.classList.add("aparecerdesdeizquierda")
-        } else {
-            parametro01.classList.remove("aparecerdesdeizquierda")
-            parametro01.classList.add("desaparecerporlaizquierda")
-        }
-
+            if (estaenpantalla(parametro01)==true) {
+                parametro01.classList.remove("desaparecerporlaizquierda")
+                parametro01.classList.add("aparecerdesdeizquierda")
+            } else {
+                parametro01.classList.remove("aparecerdesdeizquierda")
+                parametro01.classList.add("desaparecerporlaizquierda")
+            }
             break;
         case "der":
 

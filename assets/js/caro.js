@@ -6,10 +6,14 @@ const centros= document.getElementsByClassName("centro")
 // Ahora vamos a hacer un elemento de escucha para cuando se haga scroll en la ventana del navegador
 // Cada vez que el usuario haga scroll entrara dentro de este evento-funcion y se ejecutara lo que hay adentro.
 
-window.onscroll=function(){   
-}
-for (const item of izquierdas){
+
+window.onscroll=function(){
+    //Carol: Te he metido el FOR OF dentro de esta función, que es donde debe estar
+    //el for of se ejecuta SÓLO cuando el usuario haga scroll
+    for (const item of izquierdas){
         animar (item,"izd")
+    }
+ 
 }
 
 
