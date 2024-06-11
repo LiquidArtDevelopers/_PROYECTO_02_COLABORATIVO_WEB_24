@@ -812,3 +812,16 @@ header {
         transform: translateX(-10vw);
     }
 }
+.h2colorrojo {
+animation: severojo;
+animation-duration: 3s;
+animation-iteration-count: 1;
+}
+@keyframes severojo {
+    0% {
+        color: initial;
+    }
+    100% {
+        color: red;
+    }
+}
