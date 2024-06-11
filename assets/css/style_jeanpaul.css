@@ -812,3 +812,7 @@ header {
         transform: translateX(-10vw);
     }
 }
+.h2colorrojo {
+    cursor:pointer;
+    color: red;
+}
