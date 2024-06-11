@@ -70,15 +70,12 @@ nav, header, main, footer{
                                              
 section{
     padding: 3rem 0;
-<<<<<<< HEAD
-    row-gap: 3rem;
-   
-=======
     row-gap: 1.5rem;
->>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
 }  
 }
 
+/* TOOGLE */
+.togglelabel
 
 
 /* Nav y header */
@@ -107,8 +104,6 @@ header{
   padding: 1.5rem 0;
 }
 
-<<<<<<< HEAD
-=======
 /* DESKTOP */
 @media only screen and (min-width: 2560px){
 
@@ -123,7 +118,6 @@ header{
     
 }}
 
->>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
 /* TABLET */
 @media only screen and (min-width:800px){
 
@@ -209,12 +203,10 @@ p,a{
 /* TABLET */
 @media only screen and (min-width:800px){
 
-<<<<<<< HEAD
-/*  posiciones de caja y tamaños*/
-=======
 h1{
     font-size: 80px;
 }
+
 h2{
     font-size:3rem;;
 }    
@@ -267,7 +259,6 @@ p,a{
 }
 
 /*  posiciones de caja*/
->>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
 
   
 .colum1{
@@ -391,14 +382,9 @@ cite{
 .comilla{
     font-size: 3rem;
     font-weight: 600;
-<<<<<<< HEAD
-    margin-top: -80px;
-    margin-right: -30px;
-=======
     margin-top: -120px;
     margin-right: -40px;
 
->>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
 }
 @media only screen and (min-width:800px){
 .comilla{
@@ -406,18 +392,7 @@ cite{
 }
 }
 
-<<<<<<< HEAD
-@media only screen and (min-width:800px){
- .comilla{   
-    font-size: 4rem;
-    font-weight: 600;
-    margin-top: ;
-    margin-right: ;}}
-
-/* septima seccion */
-=======
 /*seccion septima*/
->>>>>>> 2246da517da4594dff1d0f5bf028e1f5ab23e0ed
 
 .septima{
     width: 100%;
