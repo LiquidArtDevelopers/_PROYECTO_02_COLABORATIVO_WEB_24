@@ -91,14 +91,14 @@ function daropacidad(parametro01) {
 
 //hacer que los h2 se vuelvan rojos al hacer click sobre ellos
 
-const h2mios = document.getElementsByClassName("h2")
+const h2mios = document.getElementsByTagName("h2")
 
-h2mios.addEventListener("click", function(){
-    for (const item of h2mios) {
-        h2mios.classList.add("h2colorrojo")
-    }
-    
-})
+for(const item of h2mios){
+    item.addEventListener("click", function(){
+        item.classList.add("h2colorrojo")
+    })
+}
+
 
 
 
