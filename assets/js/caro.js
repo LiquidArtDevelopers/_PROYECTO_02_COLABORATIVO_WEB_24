@@ -13,9 +13,13 @@ window.onscroll=function(){
     for (const item of izquierdas){
         animar (item,"izd")
     }
- 
+    for (const item of derechas){
+        animar (item,"der")
+    }
+    for (const item of centros){
+        animar (item,"cen")
+    }
 }
-
 
 function animar(parametro01, parametro02){
     switch(parametro02){
@@ -27,15 +31,34 @@ function animar(parametro01, parametro02){
                 parametro01.classList.remove("aparecerdesdeizquierda")
                 parametro01.classList.add("desaparecerporlaizquierda")
             }
-
             break; 
         case "der":
-
+            if(estaenpantalla(parametro01)==true){
+                parametro01.classList.remove("desaparecerporladerecha")
+                parametro01.classList.add("aparecerdesdederecha")
+            }else{
+                parametro01.classList.remove("aparecerdesdederecha")
+                parametro01.classList.add("desaparecerporladerecha")
+            }
+            break;
+        case "cen":
+            if(estaenpantalla(parametro01)==true){
+                parametro01.classList.remove("desaparecer")
+                parametro01.classList.add("aparecer")
+            }else{
+                parametro01.classList.remove("aparecer")
+                parametro01.classList.add("desaparecer")
+            }
             break;
         default:
-
+            if(estaenpantalla(parametro01)==true){
+                parametro01.classList.remove("desaparecer")
+                parametro01.classList.add("aparecer")
+            }else{
+                parametro01.classList.remove("aparecer")
+                parametro01.classList.add("desaparecer")
+            }
             break;
-
     }
 }
 
