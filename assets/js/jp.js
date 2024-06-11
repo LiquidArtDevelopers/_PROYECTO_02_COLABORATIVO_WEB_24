@@ -50,7 +50,7 @@ function animar(parametro01,parametro02){
             }
             break;
         default:
-
+                
             break;
     }
 
