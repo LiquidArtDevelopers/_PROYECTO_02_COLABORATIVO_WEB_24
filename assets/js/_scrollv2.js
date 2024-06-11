@@ -1,15 +1,38 @@
 
+/* DOCUMENTACIÓN DE ESTE JAVASCRIPT
+
+objetivos:
+
+-Animación en el nav
+-Animación de aparición derecha, izquierda o centro de elementos varios.
+
+
+Requerimientos:
+
+Requiere que en el HTML haya elementos con CLASE: izquierda, derecha o centro para que ejecute las animaciones.
+
+Este javascript requiere de unas clases y animaciones que deben estar en el CSS vinculado al documento HTML en cuestión.
+
+Este javascript también efectua una animación sobre el NAV el cual debe tener un id: navegador para que funcione
+
+Desarrollado por la magnifica clase del curso de desarrollo web
+*/
+
+
+
 //cogemos todos los elementos que tengan clase izquierda y derecha
 const izquierdas = document.getElementsByClassName("izquierda")
 const derechas = document.getElementsByClassName("derecha")
 const centros = document.getElementsByClassName("centro")
 //cogemos el navegador para el efecto del nav
 const navegador = document.getElementById("navegador")
+const boton = document.getElementById("boton")
 
-//listener de scroll para modificar el nav
+
+//listener de scroll para modificar el nav y ejecutar animaciones
 window.onscroll=function(){
     cambiarNav()
-
+    
     for(const item of izquierdas){
         animaciones(item, "izd")
     }
@@ -19,32 +42,18 @@ window.onscroll=function(){
     for(const item of centros){
         animaciones(item, "cen")
     }
-
-};
+}
 
 //función a la que sólo entraremos cuando esta sea llamada desde el evento
-function cambiarNav() {    
+function cambiarNav(){    
         
-    //si el top del scroll del body es inferior a 80 de posición, 
+    //si el top del scroll del body es superior a 80 de posición, 
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-
         navegador.style.backgroundColor = "rgba(20, 20, 20, 0.5)";
-        navegador.style.height="50px";
-        
-        /* for(const item of document.getElementsByTagName("a")){
-            item.style.color="pink";            
-            item.style.transition="1s";
-        }  */       
-
+        /* navegador.style.height="50px"; */
     }else{
-
         navegador.style.backgroundColor = "rgb(216, 216, 255)";
-        navegador.style.height="100px";
-
-        /* for(const item of document.getElementsByTagName("a")){
-            item.style.color="white";
-            item.style.transition="1s";
-        } */
+        /* navegador.style.height="100px";  */       
     }
 }
 
@@ -73,6 +82,17 @@ function animaciones(parametroRecibido01, parametroRecibido02){
                 parametroRecibido01.classList.add("desaparecerHaciaDer")
             }
             break;
+        case "cen":
+            if (estaEnlaPantalla(parametroRecibido01)==true) {
+                // está en el viewport
+                parametroRecibido01.classList.remove("desaparecer")
+                parametroRecibido01.classList.add("aparecer")        
+            }else{
+                //no está en el viewport
+                parametroRecibido01.classList.remove("aparecer")
+                parametroRecibido01.classList.add("desaparecer")
+            }
+            break;
         default:
             if (estaEnlaPantalla(parametroRecibido01)==true) {
                 // está en el viewport
@@ -84,13 +104,7 @@ function animaciones(parametroRecibido01, parametroRecibido02){
                 parametroRecibido01.classList.add("desaparecer")
             }
             break;
-    }
-
-
-    //vemos si el elemento 01 está o no dentro del viewport
-    
-
-    
+    }        
 }
 
 function estaEnlaPantalla(parametroRecibido) {
