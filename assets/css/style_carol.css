@@ -128,33 +128,32 @@ main >:nth-child(even){
 #toggle{
   display: none;
 }
-.togglelabel{
+.toggleLabel{
   position: fixed;
   top: 1rem;
   right: 1.5rem;
   z-index: 100;
-
   width: 50px;
   height: 50px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 /* Desktop */
 @media only screen and (min-width: 1350px){
-  .togglelabel{
+  .toggleLabel{
     display: none;
   }
 }
-.togglelabel span{
+.toggleLabel span{
   width: 100%;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--color2);
+  background-color: var(--color1);
   transition: all 250ms ease-out;
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;
@@ -205,8 +204,30 @@ nav{
 nav ul{
   display: none;
 }
+/* DESKTOP */
+@media only screen and (min-width:1350px){
+  nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding: 1.5rem;
+
+  }
+  /* DESKTOP */
+  nav{
+    flex-direction: row;
+    align-items: center;/* x */
+    justify-content: space-between;
+  }
+  nav ul:hover{
+    color: var(--color1);
+  }
+}
 nav a{
   font-size: 1.5rem;
+}
+nav >img{
+  height: 100%;
 }
 #toggle:checked ~ nav{
   height: 100vh!important;
@@ -214,13 +235,21 @@ nav a{
   align-items: center;/* x */
   
 }
+#toggle:checked ~ nav img{
+  height: 70px;
+}
 #toggle:checked ~ nav ul{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  list-style-type: none;
 }
+#toggle:checked ~ nav ul:hover{
+  color: var(--color1);
+}
+
 
 /* HEADER */
 header{

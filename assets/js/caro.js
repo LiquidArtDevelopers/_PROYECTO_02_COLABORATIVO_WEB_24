@@ -2,12 +2,14 @@
 const izquierdas= document.getElementsByClassName("izquierda")
 const derechas= document.getElementsByClassName("derecha")
 const centros= document.getElementsByClassName("centro")
+const hamburguesa = document.getElementById("hamburguesa")
 
 // Ahora vamos a hacer un elemento de escucha para cuando se haga scroll en la ventana del navegador
 // Cada vez que el usuario haga scroll entrara dentro de este evento-funcion y se ejecutara lo que hay adentro.
 
 
 window.onscroll=function(){
+    cambiarNav()
     //Carol: Te he metido el FOR OF dentro de esta función, que es donde debe estar
     //el for of se ejecuta SÓLO cuando el usuario haga scroll
     for (const item of izquierdas){
@@ -25,12 +27,17 @@ function cambiarNav() {
         
     //si el top del scroll del body es inferior a 80 de posición, 
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-
         navegador.style.backgroundColor = "rgb(156, 143, 143)";
-        navegador.style.height="50px";    
+        navegador.style.height="50px";
+        hamburguesa.style.width="35px"
+        hamburguesa.style.height="35px"
+        hamburguesa.style.top="0.5rem"
     }else{
         navegador.style.backgroundColor = "rgb(185, 155, 185)";
-        navegador.style.height="100px";
+        navegador.style.height="auto";
+        hamburguesa.style.width="50px"
+        hamburguesa.style.height="50px"
+        hamburguesa.style.top="1rem"
     }
 }
 
