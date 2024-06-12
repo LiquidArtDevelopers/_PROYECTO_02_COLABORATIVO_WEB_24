@@ -49,10 +49,10 @@ function cambiarNav(){
         
     //si el top del scroll del body es superior a 80 de posición, 
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        navegador.style.backgroundColor = "rgba(20, 20, 20, 0.8)";
+        navegador.style.backgroundColor = "rgba(44, 44, 44, 0.8)";
         /* navegador.style.height="50px"; */
     }else{
-        navegador.style.backgroundColor = "rgb(216, 216, 255)";
+        navegador.style.backgroundColor = "rgb(44, 44, 44)";
         /* navegador.style.height="100px";  */       
     }
 }
