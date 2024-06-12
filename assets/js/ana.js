@@ -14,6 +14,7 @@ function cambiarNav() {
         navegador.style.backgroundColor = "#b37bad29";
         navegador.style.height="50px";
         
+        
         /* for(const item of document.getElementsByTagName("a")){
             item.style.color="pink";            
             item.style.transition="1s";
@@ -33,3 +34,14 @@ function cambiarNav() {
 
 /* Evento para cuando hay seleccion de contenido en el nav(movil) para plegar el menú */
 
+const contenido = document.getElementsByClassName("contenido");
+const toggle = document.querySelector('input[name=toggle]');
+
+for(const item of contenido){
+    item.addEventListener("click", function(){
+        console.log(item)    
+        if(toggle){
+            toggle.checked=false;
+        }
+    });
+}
