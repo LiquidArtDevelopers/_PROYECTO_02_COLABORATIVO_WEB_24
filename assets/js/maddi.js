@@ -1,5 +1,6 @@
 // Recogemos en constantes el navegador y los elementos que tengan la clase izquierda, derecha y centro
 const navegador = document.getElementById("navegador")
+const logo = document.getElementById("logo")
 const izquierdas = document.getElementsByClassName("izquierda")
 const derechas = document.getElementsByClassName("derecha")
 const centros = document.getElementsByClassName("centro")
@@ -8,6 +9,7 @@ const abajos = document.getElementsByClassName("abajo")
 
 // Hacemos un elemento de escucha para cuando se haga scroll en la ventana del navegador
 // Cada vez que el usuario haga scroll, entrará dentro de este evento-función y se ejecutará lo que haya dentro
+// SOLO PUEDE HABER UN ONSCROLL, DE OTRA FORMA UNO DE LOS DOS DEJARÁ DE FUNCIONAR, no se puede hacer uno para el cambio del navegador y otro para las animaciones.
 window.onscroll = function(){
     cambiarnav()
 
@@ -27,12 +29,18 @@ window.onscroll = function(){
 
 // Creamos la función para que el navegador cambie en el valor 80 del scroll
 function cambiarnav(){
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+    if((document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)&&((window.innerWidth||document.documentElement.clientWidth)>1300)){
         navegador.style.backgroundColor="rgb(196, 69, 122)"
-        navegador.style.height="4vh"
+        navegador.style.height="5vh"
+        logo.style.width="30px"
+        logo.style.height="30px"
+        logo.setAttribute("src", "https://dummyimage.com/30x30")
     }else{
         navegador.style.backgroundColor="black"
-        navegador.style.height="6vh"
+        navegador.style.height="8vh"
+        logo.style.width="50px"
+        logo.style.height="50px"
+        logo.setAttribute("src", "https://dummyimage.com/50x50")
     }
 }
 
@@ -138,4 +146,21 @@ function reseth2(){
     for(const item of h2s){
         item.style.color="black"
     }
+}
+
+
+// ---------------------------------------------
+
+// JS para el toggle, que al hacer click en uno de los enlaces se marque como unchecked y se repliegue el menú.
+
+const contenido = document.getElementsByClassName("contenido"); //poner esta clase a los enlaces del menú
+
+const toggle = document.querySelector('input[name=toggle]');
+
+for(const item of contenido){
+    item.addEventListener("click",function(){
+        if(toggle){ // Verificar que toggle existe, para que no de error el JS
+            toggle.checked=false;
+        }
+    })
 }
