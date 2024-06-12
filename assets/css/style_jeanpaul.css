@@ -177,7 +177,7 @@ nav{
         padding: 1rem ;
     }
 }
-nav img {
+nav a, nav img {
     height: 100%;
 }
 nav ul {
