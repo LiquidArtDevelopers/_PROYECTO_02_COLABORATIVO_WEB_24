@@ -3,6 +3,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* estilos que afectan al scrollbar (pseudo elemento) */
@@ -375,13 +376,134 @@ a, a:visited { /* Enlaces */
 
 /* HERO */
 nav {
-    height: 6vh;
+    height: 8vh;
+    padding: 0 5%;
     background-color: var(--color2);
     position: fixed;
     z-index: 10;
     transition: all 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
+nav ul {
+    list-style-type: none;
+    display: none;
+}
+
+nav ul li a {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color1);
+}
+
+@media only screen and (min-width:1300px){ /* DESKTOP */
+    nav {
+        padding: 0 10%;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 40px;
+        padding-bottom: 5px;
+    }
+
+    nav ul li a:hover {
+        box-shadow: inset 0px -2px var(--color1);
+    }
+}
+
+/* Toggle */
+#toggle {display: none;}
+
+.toggleLabel {
+    position: fixed;
+    top: 1%;
+    right: 5%;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggleLabel span {
+    width: 100%;
+    height:3px;
+    background-color: var(--color1);
+
+    transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+}
+
+#toggle:checked ~ .toggleLabel span:nth-child(1) {
+    transform: rotate(45deg) translate(-1px,0px);
+    -webkit-transform: rotate(45deg) translate(-1px,0px);
+    -moz-transform: rotate(45deg) translate(-1px,0px);
+    -o-transform: rotate(45deg) translate(-1px,0px);
+}
+#toggle:checked ~ .toggleLabel span:nth-child(2) {
+    transform: rotate(0deg) scale(0.2,0.2);
+    -webkit-transform: rotate(0deg) scale(0.2,0.2);
+    -moz-transform: rotate(0deg) scale(0.2,0.2);
+    -o-transform: rotate(0deg) scale(0.2,0.2);
+    opacity: 0;
+}
+#toggle:checked ~ .toggleLabel span:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px,0px);
+    -webkit-transform: rotate(-45deg) translate(-1px,0px);
+    -moz-transform: rotate(-45deg) translate(-1px,0px);
+    -o-transform: rotate(-45deg) translate(-1px,0px);
+}
+
+#toggle:checked ~ nav {
+    height: 100vh!important;
+    padding: 1% 5%;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 50px;
+}
+
+#toggle:checked ~ nav ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+#toggle:checked ~ nav ul li {
+    text-align: center;
+}
+
+@media only screen and (min-width:1300px){ /* DESKTOP */
+    .toggleLabel {display: none;}
+}
+
+
+/* Header */
 header {
     height: 100vh;
     background-image: url(https://dummyimage.com/430x900);

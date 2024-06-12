@@ -2,12 +2,14 @@
 const izquierdas= document.getElementsByClassName("izquierda")
 const derechas= document.getElementsByClassName("derecha")
 const centros= document.getElementsByClassName("centro")
+const hamburguesa = document.getElementById("hamburguesa")
 
 // Ahora vamos a hacer un elemento de escucha para cuando se haga scroll en la ventana del navegador
 // Cada vez que el usuario haga scroll entrara dentro de este evento-funcion y se ejecutara lo que hay adentro.
 
 
 window.onscroll=function(){
+    cambiarNav()
     //Carol: Te he metido el FOR OF dentro de esta función, que es donde debe estar
     //el for of se ejecuta SÓLO cuando el usuario haga scroll
     for (const item of izquierdas){
@@ -18,6 +20,24 @@ window.onscroll=function(){
     }
     for (const item of centros){
         animar (item,"cen")
+    }
+}
+//función a la que sólo entraremos cuando esta sea llamada desde el evento
+function cambiarNav() {    
+        
+    //si el top del scroll del body es inferior a 80 de posición, 
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navegador.style.backgroundColor = "rgb(156, 143, 143)";
+        navegador.style.height="50px";
+        hamburguesa.style.width="35px"
+        hamburguesa.style.height="35px"
+        hamburguesa.style.top="0.5rem"
+    }else{
+        navegador.style.backgroundColor = "rgb(185, 155, 185)";
+        navegador.style.height="auto";
+        hamburguesa.style.width="50px"
+        hamburguesa.style.height="50px"
+        hamburguesa.style.top="1rem"
     }
 }
 
@@ -66,4 +86,17 @@ function estaenpantalla(parametro01) {
         var distance = parametro01.getBoundingClientRect();
         return (distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0);
     }
+
+    /* Evento para cuando hay selección de contenido en el nav (movil) para plegar el menú */
+const contenido = document.getElementsByClassName("contenido");
+const toggle = document.querySelector('input[name=toggle]');
+
+for(const item of contenido){
+    item.addEventListener("click", function(){
+        console.log(item)    
+        if(toggle){
+            toggle.checked=false;
+        }
+    });
+}
 
