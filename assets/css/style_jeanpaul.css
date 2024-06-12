@@ -4,6 +4,7 @@
     padding: 0;
     outline:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 a, a:visited{
     color: inherit;
@@ -155,6 +156,7 @@ h4 {
     /* NAV, HEADER */
 
 nav{
+
    height: 70px;
    background-color: var(--colormio02);
    position: fixed;
@@ -167,11 +169,89 @@ nav{
    justify-content: flex-start;
    align-items: flex-start;
 }
+@media only screen and (min-width:1350px) {
+    nav {
+        height: 90px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem ;
+    }
+}
 nav img {
     height: 100%;
 }
 nav ul {
     display: none;
+    list-style-type: none;
+}
+
+
+@media only screen and (min-width:1350px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav ul li {
+        padding: 0 0.8rem 0 0.8rem ;
+    }
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.75rem;
+    }
+}
+
+#toggle {
+    display: none;
+}
+.toggleLabel {
+    position: fixed;
+    z-index: 200;
+    top:0.5rem;
+    right: 0.5rem;
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+}
+@media only screen and (min-width:1350px) {
+    .toggleLabel {
+        display: none;
+    }
+}
+.toggleLabel span {
+    
+    height: 5px;
+    width: 100%;
+    background-color: black;
+}
+#toggle:checked ~ nav{
+    height: 100vh!important;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 3rem;
+}
+#toggle:checked ~ nav img {
+    height: 70px;
+    width: 70px;
+}
+#toggle:checked ~ nav ul {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+#toggle:checked ~ nav ul a {
+    font-size: 2rem;
 }
 
 header {
@@ -192,32 +272,6 @@ header {
     header {
         background-image: url('https://dummyimage.com/1400x600');
     }
-}
-
-#toggle {
-    display: none;
-}
-.toggleLabel {
-    position: fixed;
-    z-index: 200;
-    top:0.5rem;
-    right: 0.5rem;
-    width: 54px;
-    height: 54px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-    /* background-color: blue; */
-}
-.toggleLabel span {
-    
-    height: 3px;
-    width: 100%;
-    background-color: black;
 }
 
     /* RECURSOS------- */
