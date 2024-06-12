@@ -4,6 +4,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* VARIABLES */
 :root{
@@ -138,6 +139,7 @@ cite span{
     color: var(--color00);
     background-color: var(--color03);
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 .boton:hover{
     color: var(--color00);
@@ -147,18 +149,26 @@ cite span{
     transform: scale(.95);
 }
 
-/*  */
 
+
+
+
+
+
+
+
+/* REFCURSO DE TOGGLE HAMBURGUESA */
 #toggle {
     display: none;
 }
 .toggleLabel {
     position: fixed;
-    top: var(--padTexto);
+    top: 1rem;
     right: var(--padTexto);
     z-index: 100;
     width: 50px;
     height: 50px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -174,7 +184,8 @@ cite span{
 .toggleLabel span {
     width: 100%;
     height: 3px;
-    background-color: var(--color01);
+    border-radius: 3px;
+    background-color: var(--color00);
     transition: all 250ms ease-out;
     -webkit-transition: all 250ms ease-out;
     -moz-transition: all 250ms ease-out;
@@ -184,41 +195,69 @@ cite span{
     -moz-transform-origin: 0 0;
     -o-transform-origin: 0 0;
 }
-#toggle:checked ~ .toggleLabel span:nth-last-child(1) {
+
+/* Cuando se activa el checkbox
+Entonces cambio los estilos de algunos elementos que hay a continuación del propio input checkbox*/
+
+#toggle:checked ~ .toggleLabel span:nth-child(3) {
     transform: rotate(-45deg) translate(-1px, 0px);
     -webkit-transform: rotate(-45deg) translate(-1px, 0px);
     -moz-transform: rotate(-45deg) translate(-1px, 0px);
     -o-transform: rotate(-45deg) translate(-1px, 0px);
 }
-#toggle:checked ~ .toggleLabel span:nth-last-child(2) {
+#toggle:checked ~ .toggleLabel span:nth-child(2) {
     transform: rotate(0deg) scale(0.2, 0.2);
     -webkit-transform: rotate(0deg) scale(0.2, 0.2);
     -moz-transform: rotate(0deg) scale(0.2, 0.2);
     -o-transform: rotate(0deg) scale(0.2, 0.2);
     opacity: 0;
 }
-#toggle:checked ~ .toggleLabel span:nth-last-child(3) {
+#toggle:checked ~ .toggleLabel span:nth-child(1) {
     transform: rotate(45deg) translate(0px, -1px);
     -webkit-transform: rotate(45deg) translate(0px, -1px);
     -moz-transform: rotate(45deg) translate(0px, -1px);
     -o-transform: rotate(45deg) translate(0px, -1px);
 }
-#toggle:checked ~ nav{
-    width: 100%;
-    height: 100vh;
-}
-
-
-
-
 nav{
+    width: 100%;
     height: 100px;
+    height: auto;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     z-index: 90;
     background-color: var(--color02);
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;/* x */
+    justify-content: flex-start; /* y */
+    row-gap: 4rem;
 }
+nav ul{
+    display: none;
+}
+nav a{
+    font-size: 1.5rem;
+}
+#toggle:checked ~ nav{
+    height: 100vh!important;
+    padding: 4rem 1rem;
+    align-items: center;/* x */
+    
+}
+#toggle:checked ~ nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 1rem;
+}
+
+
+
+
+
 header{
     height: 100vh;
    /*  background-image: url('https://dummyimage.com/300x600');
@@ -781,7 +820,7 @@ header h1{
         max-width: none;
     }
 }
-/* tyercer hijo */
+/* tercer hijo */
 
 .art07 >:nth-child(3){
     position: relative;
@@ -856,31 +895,15 @@ header h1{
 .art07 .custom-shape-divider-bottom-1716457141 .shape-fill {
     fill: var(--color01);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer{
+    width: 100%;
+    padding: 5rem;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -1013,23 +1036,14 @@ header h1{
 
 
 
-.desaparecer{    
-    animation: desaparecer;
-    animation-duration: 2s;
-    animation-iteration-count:1;
-}
-.desaparecerHaciaIzd{    
-    animation: desaparecerIzd;
-    animation-duration: 2s;
-    animation-iteration-count:1;
-}
-.desaparecerHaciaDer{    
-    animation: desaparecerDer;
-    animation-duration: 2s;
-    animation-iteration-count:1;
-}
+/* ESTILOS DEL JAVASCRIPT DE ANIMACIONES AL HACER SCROLL */
 .aparecer{
     animation: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+.desaparecer{    
+    animation: desaparecer;
     animation-duration: 2s;
     animation-iteration-count:1;
 }
@@ -1038,9 +1052,19 @@ header h1{
     animation-duration: 1s;
     animation-iteration-count:1;
 }
+.desaparecerHaciaDer{    
+    animation: desaparecerDer;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
 .aparecerIzd{
     animation: aparecerIzd;
     animation-duration: 1s;
+    animation-iteration-count:1;
+}
+.desaparecerHaciaIzd{    
+    animation: desaparecerIzd;
+    animation-duration: 2s;
     animation-iteration-count:1;
 }
 
@@ -1050,6 +1074,14 @@ header h1{
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes desaparecer {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 @keyframes aparecerDer {
@@ -1062,24 +1094,6 @@ header h1{
         transform: translateX(0);
     }
 }
-@keyframes aparecerIzd {
-    0%{
-        opacity: 0;
-        transform: translateX(-10vw);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes desaparecer {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
 @keyframes desaparecerDer {
     0%{
         opacity: 1;
@@ -1088,6 +1102,16 @@ header h1{
     100%{
         opacity: 0;
         transform: translateX(10vw);
+    }
+}
+@keyframes aparecerIzd {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 @keyframes desaparecerIzd{
@@ -1100,3 +1124,4 @@ header h1{
         transform: translateX(-10vw);
     }
 }
+/******** FIN DE ESTILOS ANIMACIONES JAVASCRIPT *********/
