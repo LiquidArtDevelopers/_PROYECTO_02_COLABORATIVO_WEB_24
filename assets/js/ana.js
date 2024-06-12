@@ -30,3 +30,6 @@ function cambiarNav() {
         } */
     }
 }
+
+/* Evento para cuando hay seleccion de contenido en el nav(movil) para plegar el menú */
+
