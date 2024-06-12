@@ -56,7 +56,7 @@ nav, header, main, footer{
     max-width: 100%;
 }
 
-/* media desktop */
+    /* media desktop */
 
 @media only screen and (min-width:1350px) {
     nav, header, main, footer{
@@ -70,7 +70,7 @@ section {
     row-gap: 2rem;
 }
 
-/* media TABLET */
+    /* media TABLET */
 
 @media only screen and (min-width:800px) {
     section {
@@ -79,7 +79,7 @@ section {
     }
 }
 
-/* media DESKTOP */
+    /* media DESKTOP */
 
 @media only screen and (min-width:1350px) {
     section {
@@ -135,7 +135,6 @@ h4 {
     color: var(--color01);
 }
 
-
 /* CLASES GLOBALES */
 .boton1 {
     font-size: 1.3rem;
@@ -153,13 +152,26 @@ h4 {
 
 /* SECCIONES DE LA WEB */
 
+    /* NAV, HEADER */
+
 nav{
-   height: 50px;
+   height: 70px;
    background-color: var(--colormio02);
    position: fixed;
    top:0;
-   z-index: 100;
-  
+   z-index: 100; 
+   padding: 0.5rem;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+nav img {
+    height: 100%;
+}
+nav ul {
+    display: none;
 }
 
 header {
@@ -182,8 +194,34 @@ header {
     }
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 1 */
+#toggle {
+    display: none;
+}
+.toggleLabel {
+    position: fixed;
+    z-index: 200;
+    top:0.5rem;
+    right: 0.5rem;
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    /* background-color: blue; */
+}
+.toggleLabel span {
+    
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 1 */
 
 .art01 {
     width: 100%;
@@ -251,8 +289,8 @@ header {
     object-fit: cover;
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 2 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 2 */
 
 .art02 {
     width: 100%;
@@ -319,8 +357,8 @@ header {
     }
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 3 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 3 */
 
 .art03 {
     width: 100%;
@@ -392,8 +430,8 @@ header {
     color: var(--colormio00);
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 4 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 4 */
 
 .art04 {
     width: 100%;
@@ -493,8 +531,8 @@ header {
     }
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 5 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 5 */
 
 .art05 {
     width: 100%;
@@ -560,8 +598,8 @@ header {
     font-style: italic;
     color: var(--colormio03);
 }
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 6 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 6 */
 .art06 {
     width: 100%;
     display: flex;
@@ -616,7 +654,7 @@ header {
     }
 }
 
-/* MODULO GRID */
+    /* MODULO GRID */
 .modulogrid {
     width: 100%;
     height: 90vh;
@@ -677,8 +715,8 @@ header {
     grid-area: area06;
 }
 
-/* RECURSOS------- */
-/* ARTÍCULO TIPO 7 */
+    /* RECURSOS------- */
+    /* ARTÍCULO TIPO 7 */
 
 .art07 {
     width: 100%;
