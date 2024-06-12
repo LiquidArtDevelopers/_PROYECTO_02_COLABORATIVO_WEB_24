@@ -14,6 +14,7 @@ function cambiarNav() {
         navegador.style.backgroundColor = "#b37bad29";
         navegador.style.height="50px";
         
+        
         /* for(const item of document.getElementsByTagName("a")){
             item.style.color="pink";            
             item.style.transition="1s";
