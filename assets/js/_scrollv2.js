@@ -24,20 +24,24 @@ Desarrollado por la magnifica clase del curso de desarrollo web
 const izquierdas = document.getElementsByClassName("izquierda")
 const derechas = document.getElementsByClassName("derecha")
 const centros = document.getElementsByClassName("centro")
+
 //cogemos el navegador para el efecto del nav
 const navegador = document.getElementById("navegador")
-const boton = document.getElementById("boton")
+const subNav01 = document.getElementById("subNav01")
+const toggleLabel = document.getElementById("toggleLabel")
 
 
 //listener de scroll para modificar el nav y ejecutar animaciones
-window.onscroll=function(){
+window.onscroll=function(){    
     cambiarNav()
-    
-    for(const item of izquierdas){
-        animaciones(item, "izd")
-    }
-    for(const item of derechas){
-        animaciones(item, "der")
+    /* Entro si el tamaño útil del navegador es mayor o igual a 800px */   
+    if(window.innerWidth>="800"){
+        for(const item of izquierdas){
+            animaciones(item, "izd")
+        }
+        for(const item of derechas){
+            animaciones(item, "der")
+        }        
     }
     for(const item of centros){
         animaciones(item, "cen")
@@ -46,14 +50,18 @@ window.onscroll=function(){
 
 //función a la que sólo entraremos cuando esta sea llamada desde el evento
 function cambiarNav(){    
-        
+    
     //si el top del scroll del body es superior a 80 de posición, 
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        navegador.style.backgroundColor = "rgba(44, 44, 44, 0.8)";
-        /* navegador.style.height="50px"; */
+        navegador.style.backgroundColor = "rgba(44, 44, 44, 0.5)";
+        subNav01.style.height="60px";
+        toggleLabel.style.width="35px";
+        toggleLabel.style.height="35px";
     }else{
         navegador.style.backgroundColor = "rgb(44, 44, 44)";
-        /* navegador.style.height="100px";  */       
+        subNav01.style.height="100px";
+        toggleLabel.style.width="50px";
+        toggleLabel.style.height="50px";      
     }
 }
 

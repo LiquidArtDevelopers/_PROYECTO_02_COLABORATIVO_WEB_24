@@ -10,6 +10,7 @@
 :root{
     --color00: white;
     --color01: rgb(44, 44, 44);
+    --color01bis: rgba(44, 44, 44, 0.5);
     --color02:rgb(174, 255, 217);
     --color03: #959595;
     --fuente01: Verdana, Geneva, Tahoma, sans-serif;
@@ -148,13 +149,53 @@ cite span{
     transform: scale(.95);
 }
 
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 90;    
+    background-color: var(--color01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+nav >div{
+    width: 100%;
+}
+nav >:nth-child(1){
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    transition: 0.5s;
+}
+nav >:nth-child(1) >img{
+    height: 100%;
+}
+nav >:nth-child(2){
+    height: 0;
+    transition: 0.5s;  
+    overflow: hidden;
+}
+nav >:nth-child(2) ul{
+    padding: 2rem 0;    
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+}
+nav >:nth-child(2) a{
+    font-size: 2rem;
+}
 
-
-/* REFCURSO DE TOGGLE HAMBURGUESA */
+/* RECURSO DE TOGGLE HAMBURGUESA */
 #toggle {
     display: none;
 }
-.toggleLabel {    
+#toggleLabel {    
     width: 50px;
     height: 50px;
 
@@ -164,13 +205,15 @@ cite span{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    
+    transition: 0.5s;
 }
 @media only screen and (min-width: 1350px) {
-    .toggleLabel {
+    #toggleLabel {
         display: none;
     }
 }
-.toggleLabel span {
+#toggleLabel span {
     width: 100%;
     height: 3px;
     border-radius: 3px;
@@ -185,75 +228,34 @@ cite span{
     -o-transform-origin: 0 0;
 }
 
-/* Cuando se activa el checkbox
-Entonces cambio los estilos de algunos elementos que hay a continuación del propio input checkbox*/
+/* Cuando se activa el checkboxEntonces cambio los estilos de algunos elementos que hay a continuación del propio input checkbox*/
 
-#toggle:checked ~ .toggleLabel span:nth-child(3) {
+#toggle:checked ~ #toggleLabel span:nth-child(3) {
     transform: rotate(-45deg) translate(-1px, 0px);
     -webkit-transform: rotate(-45deg) translate(-1px, 0px);
     -moz-transform: rotate(-45deg) translate(-1px, 0px);
     -o-transform: rotate(-45deg) translate(-1px, 0px);
 }
-#toggle:checked ~ .toggleLabel span:nth-child(2) {
+#toggle:checked ~ #toggleLabel span:nth-child(2) {
     transform: rotate(0deg) scale(0.2, 0.2);
     -webkit-transform: rotate(0deg) scale(0.2, 0.2);
     -moz-transform: rotate(0deg) scale(0.2, 0.2);
     -o-transform: rotate(0deg) scale(0.2, 0.2);
     opacity: 0;
 }
-#toggle:checked ~ .toggleLabel span:nth-child(1) {
+#toggle:checked ~ #toggleLabel span:nth-child(1) {
     transform: rotate(45deg) translate(0px, -1px);
     -webkit-transform: rotate(45deg) translate(0px, -1px);
     -moz-transform: rotate(45deg) translate(0px, -1px);
     -o-transform: rotate(45deg) translate(0px, -1px);
 }
-nav{
-    position: fixed;
-    top: 0;
-    z-index: 90;    
-    background-color: var(--color02);
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-nav >div{
-    width: 100%;
-}
-nav >:nth-child(1){
-    padding: 0.5rem 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-nav >:nth-child(2){
-    height: 0;
-    transition: 0.5s;
-}
-nav >:nth-child(2) ul{    
-    padding-left: 4rem;
-    display: none;  
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    row-gap: 2rem;
-}
-nav >:nth-child(2) a{
-    font-size: 2rem;
-}
-
 #toggle:checked ~ nav >:nth-child(2){
     height: 100vh!important;
-    max-height: auto!important;
-    padding: 4rem 1rem;
+    
 }
-#toggle:checked ~ nav >:nth-child(2) ul{    
+/* #toggle:checked ~ nav >:nth-child(2) ul{    
     display: flex;
-}
-
-
+} */
 
 
 
@@ -895,6 +897,44 @@ header h1{
 .art07 .custom-shape-divider-bottom-1716457141 .shape-fill {
     fill: var(--color01);
 }
+
+/* SECCIÓN PARALLAX */
+.parallax{
+    row-gap: 0;
+}
+.parallax h3{
+    font-size: 10vw;
+    color: var(--color00);
+    opacity: .5;
+    text-align: center;
+    width: 80%;
+}
+.parallax >div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+.parallax >:nth-child(1){
+    background-image: url('../img/profe/alexander-mils-bQs5_icglPs-unsplash.jpg');
+}
+.parallax >:nth-child(2){
+    background-image: url('../img/profe/frank-van-hulst-1Abashukm4o-unsplash.jpg');
+}
+.parallax >:nth-child(3){
+    background-image: url('../img/profe/getty-images-Jv2mBFW9bBk-unsplash.jpg');
+}
+.parallax >:nth-child(4){
+    background-image: url('../img/profe/getty-images-w29iJUszZ8w-unsplash.jpg');
+}
+
+/* FOOTER */
 footer{
     width: 100%;
     padding: 5rem;
