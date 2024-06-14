@@ -202,8 +202,7 @@ nav >:nth-child(2) li{
 nav >:nth-child(2) li >div{
     display: none;
 }
-nav >:nth-child(2) li:hover >div{
-    
+nav >:nth-child(2) li:hover >div{    
     width: 150px;
     padding-top: 2.5rem;
     padding-bottom: 1rem;
