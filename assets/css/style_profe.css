@@ -178,7 +178,7 @@ nav >:nth-child(2){
     height: 0;
     transition: 0.5s;  
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 1rem;    
 }
 nav >:nth-child(2) ul{
     padding: 2rem 0;    
@@ -186,11 +186,53 @@ nav >:nth-child(2) ul{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    row-gap: 1rem;
+    row-gap: 3rem;
 }
 nav >:nth-child(2) a{
     font-size: 2rem;
 }
+nav >:nth-child(2) li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 2rem;
+}
+nav >:nth-child(2) li >div{
+    display: none;
+}
+nav >:nth-child(2) li:hover >div{
+    
+    width: 150px;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    background-color: var(--color01bis); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 1rem;
+}
+@media only screen and (min-width: 1350px) {
+    nav >:nth-child(2) li:hover >div{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        transform: translateX(-25%);
+        padding-left: 1rem;
+    }
+}
+nav >:nth-child(2) li >div a{
+    font-size: 1.3rem;
+    transition: .5s;
+}
+nav >:nth-child(2) li >div a:hover{
+    color: var(--color02);
+}
+
+
 @media only screen and (min-width: 1350px) {
     nav >:nth-child(2){
         height: 100%;
@@ -200,6 +242,8 @@ nav >:nth-child(2) a{
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        padding: 0 5rem;
+        overflow: visible;
     }
     nav >:nth-child(2) ul{
         padding: 1rem 0;   

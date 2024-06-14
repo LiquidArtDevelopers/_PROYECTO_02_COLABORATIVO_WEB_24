@@ -4,7 +4,6 @@ const toggle = document.querySelector('input[name=toggle]');
 
 for(const item of contenido){
     item.addEventListener("click", function(){
-        console.log(item)    
         if(toggle){
             toggle.checked=false;
         }
