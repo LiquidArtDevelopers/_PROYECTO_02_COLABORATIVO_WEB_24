@@ -180,7 +180,7 @@ nav >:nth-child(2){
     overflow: hidden;
     padding: 0 1rem;    
 }
-nav >:nth-child(2) ul{
+nav >:nth-child(2) >ul{
     padding: 2rem 0;    
     display: flex;  
     flex-direction: column;
@@ -188,10 +188,10 @@ nav >:nth-child(2) ul{
     justify-content: flex-start;
     row-gap: 3rem;
 }
-nav >:nth-child(2) a{
+nav >:nth-child(2) >a{
     font-size: 2rem;
 }
-nav >:nth-child(2) li{
+nav >:nth-child(2) >li{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -199,10 +199,10 @@ nav >:nth-child(2) li{
     justify-content: flex-start;
     row-gap: 2rem;
 }
-nav >:nth-child(2) li >div{
+nav >:nth-child(2) >li ul{
     display: none;
 }
-nav >:nth-child(2) li:hover >div{    
+nav >:nth-child(2) >li:hover ul{    
     width: 150px;
     padding-top: 2.5rem;
     padding-bottom: 1rem;
@@ -214,7 +214,7 @@ nav >:nth-child(2) li:hover >div{
     row-gap: 1rem;
 }
 @media only screen and (min-width: 1350px) {
-    nav >:nth-child(2) li:hover >div{
+    nav >:nth-child(2) >li:hover ul{
         position: absolute;
         left: 0;
         top: 0;
@@ -223,11 +223,11 @@ nav >:nth-child(2) li:hover >div{
         padding-left: 1rem;
     }
 }
-nav >:nth-child(2) li >div a{
+nav >:nth-child(2) >li ul a{
     font-size: 1.3rem;
     transition: .5s;
 }
-nav >:nth-child(2) li >div a:hover{
+nav >:nth-child(2) >li ul a:hover{
     color: var(--color02);
 }
 
@@ -244,7 +244,7 @@ nav >:nth-child(2) li >div a:hover{
         padding: 0 5rem;
         overflow: visible;
     }
-    nav >:nth-child(2) ul{
+    nav >:nth-child(2) >ul{
         padding: 1rem 0;   
         flex-direction: row;
         column-gap: 1.3rem;
