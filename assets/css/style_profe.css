@@ -999,6 +999,31 @@ header h1{
     background-image: url('../img/profe/getty-images-w29iJUszZ8w-unsplash.jpg');
 }
 
+
+/* SECCIÓN TABLAS */
+.LADcontentTable table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+    width: 600px;
+    text-align:center;
+    font-weight: bolder;
+}
+.LADcontentTable tbody td, th {
+	padding: 30px;
+	width: 30px;
+	height: 25px;
+}
+.LADcontentTable th {
+	background: #f0e6cc;
+}
+.LADcontentTable tbody>:nth-child(even) {
+	background: #e0e0e0;
+}
+.LADcontentTable tbody>:nth-child(odd){
+	background: #fefcf9;
+}
+
+
 /* FOOTER */
 footer{
     width: 100%;
@@ -1056,10 +1081,9 @@ footer{
 
 
 /* módulo 2 de tipo grid para imágenes  */
-.modulo02{    
+.moduloGrid{    
     width: 100%;    
-    height: 90vh;
-
+    
     display: grid;
     gap: 0.5rem;
     grid-template-rows:auto;
@@ -1071,74 +1095,54 @@ footer{
     'area04'
     'area05'
     'area06'
+    'area07'
     ;
 }
-.modulo02 h4{
-    font-size:4rem;
+.moduloGrid >div{
+    overflow: hidden;
 }
-.modulo02 >div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 2rem;
-    
+.moduloGrid >div >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-@media only screen and (min-width:800px){
-    .modulo02{
+@media only screen and (min-width:700px){
+    .moduloGrid{
         grid-template-rows:
             auto;
         grid-template-columns: 
             auto;
         grid-template-areas:
-            'area01 area01 area01'
-            'area02 area02 area03'
-            'area04 area05 area03'
-            'area06 area06 area03'
+            'area01 area03'
+            'area01 area04'
+            'area02 area02'
+            'area05 area07'
+            'area06 area07'
         ;
     }
 }
-.modulo02 >:nth-child(1){
+.moduloGrid >:nth-child(1){
     grid-area: area01;
-    background-color: rgb(218, 178, 255);
     
 }
-.modulo02 >:nth-child(2){
+.moduloGrid >:nth-child(2){
     grid-area: area02;
-    background-color: rgb(178, 255, 249);
-    background-image: url('https://dummyimage.com/500x500');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;  
 }
-.modulo02 >:nth-child(3){
-    grid-area: area03;
-    background-color: rgb(178, 196, 255);
-    
+.moduloGrid >:nth-child(3){
+    grid-area: area03;    
 }
-.modulo02 >:nth-child(4){
+.moduloGrid >:nth-child(4){
     grid-area: area04;
-    background-color: rgb(255, 178, 238);
-
 }
-.modulo02 >:nth-child(5){
+.moduloGrid >:nth-child(5){
     grid-area: area05;
-    background-color: rgb(255, 178, 191);
 }
-.modulo02 >:nth-child(6){
+.moduloGrid >:nth-child(6){
     grid-area: area06;
-    background-color: rgb(255, 254, 178);
-    background-image: url('https://dummyimage.com/500x500');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
 }
-.modulo02 >:nth-child(2) h4, .modulo02 >:nth-child(6) h4{
-    color: var(--color00);
+.moduloGrid >:nth-child(7){
+    grid-area: area07;
 }
-
 
 
 /* ESTILOS DEL JAVASCRIPT DE ANIMACIONES AL HACER SCROLL */
