@@ -867,6 +867,12 @@ header h1{
     column-gap: 1rem;
     row-gap: 2rem;
     background-color: #959595;
+    >:nth-child(odd){
+        background-image: url('../img/proyecto-web-colaborativo-area_1400.jpg');
+        background-attachment: fixed;
+        background-position:300px 500px;
+        background-repeat: no-repeat;
+    }
 }
 @media only screen and (min-width:800px){
     .art07 .matrix6{
@@ -1014,14 +1020,15 @@ header h1{
 	height: 25px;
 }
 .LADcontentTable th {
-	background: #f0e6cc;
+	background: #4fa4d9;
+    color: white
 }
-.LADcontentTable tbody>:nth-child(even) {
+/* .LADcontentTable tbody>:nth-child(even) {
 	background: #e0e0e0;
 }
 .LADcontentTable tbody>:nth-child(odd){
 	background: #fefcf9;
-}
+} */
 
 
 /* FOOTER */
