@@ -870,7 +870,8 @@ header h1{
     >:nth-child(odd){
         background-image: url('../img/proyecto-web-colaborativo-area_1400.jpg');
         background-attachment: fixed;
-        background-position:300px 500px;
+        background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 }
